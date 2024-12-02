@@ -57,7 +57,7 @@
         "configurations" : {
           "schema" : [ ],
           "instances" : {
-            "HelloWorld_BW" : [ "default" ]
+            "HelloWorld_NEW" : [ "default" ]
           },
           "overrides" : { },
           "selectedInstance" : "default"
