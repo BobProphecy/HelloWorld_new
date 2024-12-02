@@ -1,0 +1,891 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "functions" : {
+      "businessRules" : {
+        "rules" : [ ],
+        "sharedRules" : [ ]
+      }
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.4.0",
+        "pyPiVersion" : "1.9.24"
+      }
+    },
+    "id" : "1",
+    "uri" : "pipelines/sales_view",
+    "pipelineSettingsInfo" : {
+      "applicationName" : "sales_view",
+      "hasApplication" : true
+    },
+    "language" : "python",
+    "fabricId" : "9631",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "bobwprophecyioteam.helloworld.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.data_quality.functions", "prophecy.spark_basic.functions", "prophecy.streaming.functions", "prophecy.warehouse.functions", "maciejdemos.dataquality.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "sales_view_raw",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true,
+          "isReferenced" : false
+        }, {
+          "name" : "sales_view_unity",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true,
+          "isReferenced" : false
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "32699",
+      "projectName" : "ProphecySparkDataQualityPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12656",
+      "projectName" : "ProphecyStreamingPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "27160",
+      "projectName" : "data_quality",
+      "externalDependencies" : [ {
+        "type" : "plibMaven",
+        "modifiedAt" : "2024-05-03T16:22:39.33938Z",
+        "name" : "plibMaven",
+        "enabled" : true,
+        "version" : "8.0.11",
+        "id" : "1766302595",
+        "createdAt" : "2024-05-03T16:22:39.339282Z",
+        "entity" : "Project"
+      }, {
+        "type" : "plibPypi",
+        "modifiedAt" : "2024-05-03T16:22:39.339487Z",
+        "name" : "plibPypi",
+        "enabled" : true,
+        "version" : "1.9.5",
+        "id" : "816884476",
+        "createdAt" : "2024-05-03T16:22:39.339452Z",
+        "entity" : "Project"
+      } ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "sales_view",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ ],
+  "processes" : {
+    "lfNMgf2vStPnFFEh7fQIv$$xc8bVYjWr5PN9OIl0XUAZ" : {
+      "id" : "lfNMgf2vStPnFFEh7fQIv$$xc8bVYjWr5PN9OIl0XUAZ",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "sales_view_raw",
+        "slug" : "sales_view_raw",
+        "x" : -1360,
+        "y" : -320,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "lz_oaLkOus2ZW7b_0bR36$$cWLiTpoQJ8XJUdK8tGZUW",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "packageName" : "sales_views",
+        "externalId" : "subgraphs/hw_sales_analysis",
+        "name" : "hw_sales_analysis_raw"
+      },
+      "connections" : [ {
+        "id" : "40xREj_9exAUkHr2jyoae",
+        "source" : "ONoIZ4aa9GH5KE-gr4veA$$4hgg2mLdmHDMO0QeH5Hj6",
+        "sourcePort" : "oZA59awCQBylIXhoCvHg_$$YQywR9l0T-SKr9R96Y-lC",
+        "target" : "ihv0VBp1AwC2uA767KTy5$$fgN9GelaPY2Il67WTTf5Q",
+        "targetPort" : "5sZ-JJTCfSw7YezxnxyLn$$712UGGPN7TUMs7Ck-aly0"
+      }, {
+        "id" : "h4CcNsVdAQwOk0zF6Qj-1",
+        "source" : "Xvmfqs-9GeObrUv3U01do$$4yCTglpjuisV-jNo2AnBJ",
+        "sourcePort" : "6ywO9Zgjd6Y8uu48s7AZM$$AqmDMUAqoPRppfMOcMK-7",
+        "target" : "ihv0VBp1AwC2uA767KTy5$$fgN9GelaPY2Il67WTTf5Q",
+        "targetPort" : "MTgk0M0N8kFaaThsXc9pc$$u6duJZKP2RhI85gtjtish"
+      }, {
+        "id" : "9aBXizpYvBmLESWmQGLzZ",
+        "source" : "ihv0VBp1AwC2uA767KTy5$$fgN9GelaPY2Il67WTTf5Q",
+        "sourcePort" : "bpI5i5g9f7IAAynKtpZWb$$D5fazr7GQTankkzyT7jde",
+        "target" : "lfNMgf2vStPnFFEh7fQIv$$xc8bVYjWr5PN9OIl0XUAZ",
+        "targetPort" : "lz_oaLkOus2ZW7b_0bR36$$cWLiTpoQJ8XJUdK8tGZUW"
+      } ],
+      "processes" : {
+        "Xvmfqs-9GeObrUv3U01do$$4yCTglpjuisV-jNo2AnBJ" : {
+          "id" : "Xvmfqs-9GeObrUv3U01do$$4yCTglpjuisV-jNo2AnBJ",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "customers",
+            "slug" : "customers",
+            "x" : -720,
+            "y" : -100,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "6ywO9Zgjd6Y8uu48s7AZM$$AqmDMUAqoPRppfMOcMK-7",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "datasetId" : "datasets/customers"
+          }
+        },
+        "ONoIZ4aa9GH5KE-gr4veA$$4hgg2mLdmHDMO0QeH5Hj6" : {
+          "id" : "ONoIZ4aa9GH5KE-gr4veA$$4hgg2mLdmHDMO0QeH5Hj6",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "orders",
+            "slug" : "orders",
+            "x" : -720,
+            "y" : -240,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "oZA59awCQBylIXhoCvHg_$$YQywR9l0T-SKr9R96Y-lC",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "datasetId" : "datasets/orders"
+          }
+        },
+        "ihv0VBp1AwC2uA767KTy5$$fgN9GelaPY2Il67WTTf5Q" : {
+          "id" : "ihv0VBp1AwC2uA767KTy5$$fgN9GelaPY2Il67WTTf5Q",
+          "component" : "Join",
+          "metadata" : {
+            "label" : "orders_customers",
+            "slug" : "orders_customers",
+            "x" : -580,
+            "y" : -160,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "5sZ-JJTCfSw7YezxnxyLn$$712UGGPN7TUMs7Ck-aly0",
+              "slug" : "orders",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "order_id",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Unique identifier for each order placed by customers.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "customer_id",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Unique identifier for the customer who placed the order.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "order_status",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Current status of the order; Indicates whether the order is Finished, Started, or Approved.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "order_category",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "The category of the order, indicating the type of service or product being purchased.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "order_date",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Date when the order was placed; Format is YYYY-MM-DD.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "amount",
+                  "type" : "double",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Total monetary value of the order; Represents the cost associated with the order.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            }, {
+              "id" : "MTgk0M0N8kFaaThsXc9pc$$u6duJZKP2RhI85gtjtish",
+              "slug" : "customers",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "customer_id",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Unique identifier for each customer in the dataset.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "first_name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "The first name of the customer.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "last_name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "The surname of the customer, used for identification and personalization.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "phone",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Contact number of the customer; Format is a standard phone number.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "email",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Email address of the customer; Used for communication and account-related notifications.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "country_code",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "ISO code representing the country of the customer.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "account_open_date",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Date when the customer account was opened; Format is YYYY-MM-DD.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "account_flags",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Flags indicating the status or special conditions of the customer's account; Typically used for categorizing accounts.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "bpI5i5g9f7IAAynKtpZWb$$D5fazr7GQTankkzyT7jde",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "conditions" : [ {
+              "alias" : "customers",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "orders.customer_id=customers.customer_id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "target" : "customer_id",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "customers.customer_id"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "first_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "customers.first_name"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "last_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "customers.last_name"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "phone",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "customers.phone"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "email",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "customers.email"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "country_code",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "customers.country_code"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "account_open_date",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "customers.account_open_date"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "account_flags",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "customers.account_flags"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "order_id",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "orders.order_id"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "order_status",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "orders.order_status"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "order_category",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "orders.order_category"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "order_date",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "orders.order_date"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "order_amount",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "orders.amount"
+              },
+              "description" : "",
+              "_row_id" : null
+            } ],
+            "hints" : [ {
+              "id" : "5sZ-JJTCfSw7YezxnxyLn$$TkQXV09SzF-2s1Mac-uCW$$LiQkaacTqUeJA1b_9lTGA$$7gVNdyHXfV6-bBa0l3otP$$sRcAi_kcKJkmXWu2jNdYV$$XUVZA3kWZwWQtXJWbmF63$$W9na23bmxlr3GXyfIL9jB$$anRNck0sRvzF9ElFQbRaq$$ZNKADUPbjjXX-9bvz0bRz$$NO_9eoM4PH9olmwGcWlzU$$Mut4NHuChJxV5Zxxi55yx$$gq4qmKqHLx7eFvdtwDf3h$$yr2W40q9eKSV1IZzKnCcB$$5Pc-MYnp0XQU9tOgMYs1j$$dBm5UEWya0kttcSvGL0FZ$$MDvpwBd-jHNQiy2snCuyc$$4KKRsWgdHL9SaJj6prN63$$24IRy01dVb_5gzhknKYX3$$GhIGmeVKojvxYyi7E60ZC$$WfbzJ1M3H_W-4B-XOw7GE$$49BohAa6gCr03hUtyW9Wi$$27573Y9lLPj65SuKdWbHC$$0uhUEKjPar7v0Fe-orAHC$$FuypsQYvstGP_9hoAcTGl$$o3lhdDJCtaxJulwd2_Bvj$$3qvCgdbpZObdS2ebP4u1t$$LoS7E-JfzFMqH0yzfFUBC$$WQ0hqNPZl0QAHq8A2jpkd$$Hq1x7ys1qgBzkU-4YP5x0$$km1G_f-OMKH1xR2V2XMlO$$fztze6mRIjhzDkdjKseU2$$6byw_nV4NbH2_MXx7WGl5$$712UGGPN7TUMs7Ck-aly0",
+              "alias" : "orders",
+              "hintType" : "none",
+              "propagateColumns" : false
+            }, {
+              "id" : "MTgk0M0N8kFaaThsXc9pc$$fyKdSO8grouGnKIGFwIJk$$Cdp9qvCe-mPADs3u6OQ4p$$t8nLCro05f7m0XKNaUD7t$$aJv5qAca04jAn0PSQCJjZ$$-a2KFImqY8FmQQGvFgjMW$$mOpJM4A-Xa13269xDabjx$$1RG_LDNJayFi7LzMt1B4z$$NPjMc1lHGzmwwWI6vGY84$$jUkUqKUDcEMljQMaxZU6U$$fPTsEfhWCqegkwkKbE0P4$$LFuyHmZ6ifhrq2Q9HdyVh$$JVQCDNnGsV-pz6uGA8dhc$$GZiBLDA6hCytdfjPEfLUY$$2HLSif7CvO8HgWN_3qUOf$$BYybfBX02vVAoFKU38_fa$$DCdt_MyXGANTMVGWQU22U$$Djgnqf-8MxQBT8CTq0CzW$$dWOOLpQ719BOJBegJ2lDC$$K22S8vyMX1f0TxAXhM2lO$$3-GIJECmIft4hoqC-VrEc$$ZvskqFynUuwWosEV09dTl$$eHzHSYw-6OvLLWkQK2qIl$$1ohu9D65HwxSE-Ezqu4OT$$TweOZlqUMQP61MFh75d7k$$HNYaPwywyzyUyVDr0-zwh$$kKbii6nCiau-lhRfoioc6$$wREkWd2iGxyiFSVPB3AR1$$TthYI5csnxQ00sAjIndBv$$QlsQlAuN2BJ3PEt3rgCpc$$a0eHg8fj4tVjJCdJ7D9sM$$vVqeyUJ_AKXRrCWDVCy5v$$u6duJZKP2RhI85gtjtish",
+              "alias" : "customers",
+              "hintType" : "none",
+              "propagateColumns" : false
+            } ],
+            "allIn1" : null,
+            "activeTab" : "expressions",
+            "columnsSelector" : [ "5sZ-JJTCfSw7YezxnxyLn$$TkQXV09SzF-2s1Mac-uCW$$LiQkaacTqUeJA1b_9lTGA$$7gVNdyHXfV6-bBa0l3otP$$sRcAi_kcKJkmXWu2jNdYV$$XUVZA3kWZwWQtXJWbmF63$$W9na23bmxlr3GXyfIL9jB$$anRNck0sRvzF9ElFQbRaq$$ZNKADUPbjjXX-9bvz0bRz$$NO_9eoM4PH9olmwGcWlzU$$Mut4NHuChJxV5Zxxi55yx$$gq4qmKqHLx7eFvdtwDf3h$$yr2W40q9eKSV1IZzKnCcB$$5Pc-MYnp0XQU9tOgMYs1j$$dBm5UEWya0kttcSvGL0FZ$$MDvpwBd-jHNQiy2snCuyc$$4KKRsWgdHL9SaJj6prN63$$24IRy01dVb_5gzhknKYX3$$GhIGmeVKojvxYyi7E60ZC$$WfbzJ1M3H_W-4B-XOw7GE$$49BohAa6gCr03hUtyW9Wi$$27573Y9lLPj65SuKdWbHC$$0uhUEKjPar7v0Fe-orAHC$$FuypsQYvstGP_9hoAcTGl$$o3lhdDJCtaxJulwd2_Bvj$$3qvCgdbpZObdS2ebP4u1t$$LoS7E-JfzFMqH0yzfFUBC$$WQ0hqNPZl0QAHq8A2jpkd$$Hq1x7ys1qgBzkU-4YP5x0$$km1G_f-OMKH1xR2V2XMlO$$fztze6mRIjhzDkdjKseU2$$6byw_nV4NbH2_MXx7WGl5$$712UGGPN7TUMs7Ck-aly0##customer_id", "MTgk0M0N8kFaaThsXc9pc$$fyKdSO8grouGnKIGFwIJk$$Cdp9qvCe-mPADs3u6OQ4p$$t8nLCro05f7m0XKNaUD7t$$aJv5qAca04jAn0PSQCJjZ$$-a2KFImqY8FmQQGvFgjMW$$mOpJM4A-Xa13269xDabjx$$1RG_LDNJayFi7LzMt1B4z$$NPjMc1lHGzmwwWI6vGY84$$jUkUqKUDcEMljQMaxZU6U$$fPTsEfhWCqegkwkKbE0P4$$LFuyHmZ6ifhrq2Q9HdyVh$$JVQCDNnGsV-pz6uGA8dhc$$GZiBLDA6hCytdfjPEfLUY$$2HLSif7CvO8HgWN_3qUOf$$BYybfBX02vVAoFKU38_fa$$DCdt_MyXGANTMVGWQU22U$$Djgnqf-8MxQBT8CTq0CzW$$dWOOLpQ719BOJBegJ2lDC$$K22S8vyMX1f0TxAXhM2lO$$3-GIJECmIft4hoqC-VrEc$$ZvskqFynUuwWosEV09dTl$$eHzHSYw-6OvLLWkQK2qIl$$1ohu9D65HwxSE-Ezqu4OT$$TweOZlqUMQP61MFh75d7k$$HNYaPwywyzyUyVDr0-zwh$$kKbii6nCiau-lhRfoioc6$$wREkWd2iGxyiFSVPB3AR1$$TthYI5csnxQ00sAjIndBv$$QlsQlAuN2BJ3PEt3rgCpc$$a0eHg8fj4tVjJCdJ7D9sM$$vVqeyUJ_AKXRrCWDVCy5v$$u6duJZKP2RhI85gtjtish##customer_id", "5sZ-JJTCfSw7YezxnxyLn$$TkQXV09SzF-2s1Mac-uCW$$LiQkaacTqUeJA1b_9lTGA$$7gVNdyHXfV6-bBa0l3otP$$sRcAi_kcKJkmXWu2jNdYV$$XUVZA3kWZwWQtXJWbmF63$$W9na23bmxlr3GXyfIL9jB$$anRNck0sRvzF9ElFQbRaq$$ZNKADUPbjjXX-9bvz0bRz$$NO_9eoM4PH9olmwGcWlzU$$Mut4NHuChJxV5Zxxi55yx$$gq4qmKqHLx7eFvdtwDf3h$$yr2W40q9eKSV1IZzKnCcB$$5Pc-MYnp0XQU9tOgMYs1j$$dBm5UEWya0kttcSvGL0FZ$$MDvpwBd-jHNQiy2snCuyc$$4KKRsWgdHL9SaJj6prN63$$24IRy01dVb_5gzhknKYX3$$GhIGmeVKojvxYyi7E60ZC$$WfbzJ1M3H_W-4B-XOw7GE$$49BohAa6gCr03hUtyW9Wi$$27573Y9lLPj65SuKdWbHC$$0uhUEKjPar7v0Fe-orAHC$$FuypsQYvstGP_9hoAcTGl$$o3lhdDJCtaxJulwd2_Bvj$$3qvCgdbpZObdS2ebP4u1t$$LoS7E-JfzFMqH0yzfFUBC$$WQ0hqNPZl0QAHq8A2jpkd$$Hq1x7ys1qgBzkU-4YP5x0$$km1G_f-OMKH1xR2V2XMlO$$fztze6mRIjhzDkdjKseU2$$6byw_nV4NbH2_MXx7WGl5$$712UGGPN7TUMs7Ck-aly0##order_status", "MTgk0M0N8kFaaThsXc9pc$$fyKdSO8grouGnKIGFwIJk$$Cdp9qvCe-mPADs3u6OQ4p$$t8nLCro05f7m0XKNaUD7t$$aJv5qAca04jAn0PSQCJjZ$$-a2KFImqY8FmQQGvFgjMW$$mOpJM4A-Xa13269xDabjx$$1RG_LDNJayFi7LzMt1B4z$$NPjMc1lHGzmwwWI6vGY84$$jUkUqKUDcEMljQMaxZU6U$$fPTsEfhWCqegkwkKbE0P4$$LFuyHmZ6ifhrq2Q9HdyVh$$JVQCDNnGsV-pz6uGA8dhc$$GZiBLDA6hCytdfjPEfLUY$$2HLSif7CvO8HgWN_3qUOf$$BYybfBX02vVAoFKU38_fa$$DCdt_MyXGANTMVGWQU22U$$Djgnqf-8MxQBT8CTq0CzW$$dWOOLpQ719BOJBegJ2lDC$$K22S8vyMX1f0TxAXhM2lO$$3-GIJECmIft4hoqC-VrEc$$ZvskqFynUuwWosEV09dTl$$eHzHSYw-6OvLLWkQK2qIl$$1ohu9D65HwxSE-Ezqu4OT$$TweOZlqUMQP61MFh75d7k$$HNYaPwywyzyUyVDr0-zwh$$kKbii6nCiau-lhRfoioc6$$wREkWd2iGxyiFSVPB3AR1$$TthYI5csnxQ00sAjIndBv$$QlsQlAuN2BJ3PEt3rgCpc$$a0eHg8fj4tVjJCdJ7D9sM$$vVqeyUJ_AKXRrCWDVCy5v$$u6duJZKP2RhI85gtjtish##account_flags", "MTgk0M0N8kFaaThsXc9pc$$fyKdSO8grouGnKIGFwIJk$$Cdp9qvCe-mPADs3u6OQ4p$$t8nLCro05f7m0XKNaUD7t$$aJv5qAca04jAn0PSQCJjZ$$-a2KFImqY8FmQQGvFgjMW$$mOpJM4A-Xa13269xDabjx$$1RG_LDNJayFi7LzMt1B4z$$NPjMc1lHGzmwwWI6vGY84$$jUkUqKUDcEMljQMaxZU6U$$fPTsEfhWCqegkwkKbE0P4$$LFuyHmZ6ifhrq2Q9HdyVh$$JVQCDNnGsV-pz6uGA8dhc$$GZiBLDA6hCytdfjPEfLUY$$2HLSif7CvO8HgWN_3qUOf$$BYybfBX02vVAoFKU38_fa$$DCdt_MyXGANTMVGWQU22U$$Djgnqf-8MxQBT8CTq0CzW$$dWOOLpQ719BOJBegJ2lDC$$K22S8vyMX1f0TxAXhM2lO$$3-GIJECmIft4hoqC-VrEc$$ZvskqFynUuwWosEV09dTl$$eHzHSYw-6OvLLWkQK2qIl$$1ohu9D65HwxSE-Ezqu4OT$$TweOZlqUMQP61MFh75d7k$$HNYaPwywyzyUyVDr0-zwh$$kKbii6nCiau-lhRfoioc6$$wREkWd2iGxyiFSVPB3AR1$$TthYI5csnxQ00sAjIndBv$$QlsQlAuN2BJ3PEt3rgCpc$$a0eHg8fj4tVjJCdJ7D9sM$$vVqeyUJ_AKXRrCWDVCy5v$$u6duJZKP2RhI85gtjtish##first_name", "MTgk0M0N8kFaaThsXc9pc$$fyKdSO8grouGnKIGFwIJk$$Cdp9qvCe-mPADs3u6OQ4p$$t8nLCro05f7m0XKNaUD7t$$aJv5qAca04jAn0PSQCJjZ$$-a2KFImqY8FmQQGvFgjMW$$mOpJM4A-Xa13269xDabjx$$1RG_LDNJayFi7LzMt1B4z$$NPjMc1lHGzmwwWI6vGY84$$jUkUqKUDcEMljQMaxZU6U$$fPTsEfhWCqegkwkKbE0P4$$LFuyHmZ6ifhrq2Q9HdyVh$$JVQCDNnGsV-pz6uGA8dhc$$GZiBLDA6hCytdfjPEfLUY$$2HLSif7CvO8HgWN_3qUOf$$BYybfBX02vVAoFKU38_fa$$DCdt_MyXGANTMVGWQU22U$$Djgnqf-8MxQBT8CTq0CzW$$dWOOLpQ719BOJBegJ2lDC$$K22S8vyMX1f0TxAXhM2lO$$3-GIJECmIft4hoqC-VrEc$$ZvskqFynUuwWosEV09dTl$$eHzHSYw-6OvLLWkQK2qIl$$1ohu9D65HwxSE-Ezqu4OT$$TweOZlqUMQP61MFh75d7k$$HNYaPwywyzyUyVDr0-zwh$$kKbii6nCiau-lhRfoioc6$$wREkWd2iGxyiFSVPB3AR1$$TthYI5csnxQ00sAjIndBv$$QlsQlAuN2BJ3PEt3rgCpc$$a0eHg8fj4tVjJCdJ7D9sM$$vVqeyUJ_AKXRrCWDVCy5v$$u6duJZKP2RhI85gtjtish##country_code", "MTgk0M0N8kFaaThsXc9pc$$fyKdSO8grouGnKIGFwIJk$$Cdp9qvCe-mPADs3u6OQ4p$$t8nLCro05f7m0XKNaUD7t$$aJv5qAca04jAn0PSQCJjZ$$-a2KFImqY8FmQQGvFgjMW$$mOpJM4A-Xa13269xDabjx$$1RG_LDNJayFi7LzMt1B4z$$NPjMc1lHGzmwwWI6vGY84$$jUkUqKUDcEMljQMaxZU6U$$fPTsEfhWCqegkwkKbE0P4$$LFuyHmZ6ifhrq2Q9HdyVh$$JVQCDNnGsV-pz6uGA8dhc$$GZiBLDA6hCytdfjPEfLUY$$2HLSif7CvO8HgWN_3qUOf$$BYybfBX02vVAoFKU38_fa$$DCdt_MyXGANTMVGWQU22U$$Djgnqf-8MxQBT8CTq0CzW$$dWOOLpQ719BOJBegJ2lDC$$K22S8vyMX1f0TxAXhM2lO$$3-GIJECmIft4hoqC-VrEc$$ZvskqFynUuwWosEV09dTl$$eHzHSYw-6OvLLWkQK2qIl$$1ohu9D65HwxSE-Ezqu4OT$$TweOZlqUMQP61MFh75d7k$$HNYaPwywyzyUyVDr0-zwh$$kKbii6nCiau-lhRfoioc6$$wREkWd2iGxyiFSVPB3AR1$$TthYI5csnxQ00sAjIndBv$$QlsQlAuN2BJ3PEt3rgCpc$$a0eHg8fj4tVjJCdJ7D9sM$$vVqeyUJ_AKXRrCWDVCy5v$$u6duJZKP2RhI85gtjtish##email", "5sZ-JJTCfSw7YezxnxyLn$$TkQXV09SzF-2s1Mac-uCW$$LiQkaacTqUeJA1b_9lTGA$$7gVNdyHXfV6-bBa0l3otP$$sRcAi_kcKJkmXWu2jNdYV$$XUVZA3kWZwWQtXJWbmF63$$W9na23bmxlr3GXyfIL9jB$$anRNck0sRvzF9ElFQbRaq$$ZNKADUPbjjXX-9bvz0bRz$$NO_9eoM4PH9olmwGcWlzU$$Mut4NHuChJxV5Zxxi55yx$$gq4qmKqHLx7eFvdtwDf3h$$yr2W40q9eKSV1IZzKnCcB$$5Pc-MYnp0XQU9tOgMYs1j$$dBm5UEWya0kttcSvGL0FZ$$MDvpwBd-jHNQiy2snCuyc$$4KKRsWgdHL9SaJj6prN63$$24IRy01dVb_5gzhknKYX3$$GhIGmeVKojvxYyi7E60ZC$$WfbzJ1M3H_W-4B-XOw7GE$$49BohAa6gCr03hUtyW9Wi$$27573Y9lLPj65SuKdWbHC$$0uhUEKjPar7v0Fe-orAHC$$FuypsQYvstGP_9hoAcTGl$$o3lhdDJCtaxJulwd2_Bvj$$3qvCgdbpZObdS2ebP4u1t$$LoS7E-JfzFMqH0yzfFUBC$$WQ0hqNPZl0QAHq8A2jpkd$$Hq1x7ys1qgBzkU-4YP5x0$$km1G_f-OMKH1xR2V2XMlO$$fztze6mRIjhzDkdjKseU2$$6byw_nV4NbH2_MXx7WGl5$$712UGGPN7TUMs7Ck-aly0##order_date", "MTgk0M0N8kFaaThsXc9pc$$fyKdSO8grouGnKIGFwIJk$$Cdp9qvCe-mPADs3u6OQ4p$$t8nLCro05f7m0XKNaUD7t$$aJv5qAca04jAn0PSQCJjZ$$-a2KFImqY8FmQQGvFgjMW$$mOpJM4A-Xa13269xDabjx$$1RG_LDNJayFi7LzMt1B4z$$NPjMc1lHGzmwwWI6vGY84$$jUkUqKUDcEMljQMaxZU6U$$fPTsEfhWCqegkwkKbE0P4$$LFuyHmZ6ifhrq2Q9HdyVh$$JVQCDNnGsV-pz6uGA8dhc$$GZiBLDA6hCytdfjPEfLUY$$2HLSif7CvO8HgWN_3qUOf$$BYybfBX02vVAoFKU38_fa$$DCdt_MyXGANTMVGWQU22U$$Djgnqf-8MxQBT8CTq0CzW$$dWOOLpQ719BOJBegJ2lDC$$K22S8vyMX1f0TxAXhM2lO$$3-GIJECmIft4hoqC-VrEc$$ZvskqFynUuwWosEV09dTl$$eHzHSYw-6OvLLWkQK2qIl$$1ohu9D65HwxSE-Ezqu4OT$$TweOZlqUMQP61MFh75d7k$$HNYaPwywyzyUyVDr0-zwh$$kKbii6nCiau-lhRfoioc6$$wREkWd2iGxyiFSVPB3AR1$$TthYI5csnxQ00sAjIndBv$$QlsQlAuN2BJ3PEt3rgCpc$$a0eHg8fj4tVjJCdJ7D9sM$$vVqeyUJ_AKXRrCWDVCy5v$$u6duJZKP2RhI85gtjtish##last_name", "5sZ-JJTCfSw7YezxnxyLn$$TkQXV09SzF-2s1Mac-uCW$$LiQkaacTqUeJA1b_9lTGA$$7gVNdyHXfV6-bBa0l3otP$$sRcAi_kcKJkmXWu2jNdYV$$XUVZA3kWZwWQtXJWbmF63$$W9na23bmxlr3GXyfIL9jB$$anRNck0sRvzF9ElFQbRaq$$ZNKADUPbjjXX-9bvz0bRz$$NO_9eoM4PH9olmwGcWlzU$$Mut4NHuChJxV5Zxxi55yx$$gq4qmKqHLx7eFvdtwDf3h$$yr2W40q9eKSV1IZzKnCcB$$5Pc-MYnp0XQU9tOgMYs1j$$dBm5UEWya0kttcSvGL0FZ$$MDvpwBd-jHNQiy2snCuyc$$4KKRsWgdHL9SaJj6prN63$$24IRy01dVb_5gzhknKYX3$$GhIGmeVKojvxYyi7E60ZC$$WfbzJ1M3H_W-4B-XOw7GE$$49BohAa6gCr03hUtyW9Wi$$27573Y9lLPj65SuKdWbHC$$0uhUEKjPar7v0Fe-orAHC$$FuypsQYvstGP_9hoAcTGl$$o3lhdDJCtaxJulwd2_Bvj$$3qvCgdbpZObdS2ebP4u1t$$LoS7E-JfzFMqH0yzfFUBC$$WQ0hqNPZl0QAHq8A2jpkd$$Hq1x7ys1qgBzkU-4YP5x0$$km1G_f-OMKH1xR2V2XMlO$$fztze6mRIjhzDkdjKseU2$$6byw_nV4NbH2_MXx7WGl5$$712UGGPN7TUMs7Ck-aly0##order_id", "MTgk0M0N8kFaaThsXc9pc$$fyKdSO8grouGnKIGFwIJk$$Cdp9qvCe-mPADs3u6OQ4p$$t8nLCro05f7m0XKNaUD7t$$aJv5qAca04jAn0PSQCJjZ$$-a2KFImqY8FmQQGvFgjMW$$mOpJM4A-Xa13269xDabjx$$1RG_LDNJayFi7LzMt1B4z$$NPjMc1lHGzmwwWI6vGY84$$jUkUqKUDcEMljQMaxZU6U$$fPTsEfhWCqegkwkKbE0P4$$LFuyHmZ6ifhrq2Q9HdyVh$$JVQCDNnGsV-pz6uGA8dhc$$GZiBLDA6hCytdfjPEfLUY$$2HLSif7CvO8HgWN_3qUOf$$BYybfBX02vVAoFKU38_fa$$DCdt_MyXGANTMVGWQU22U$$Djgnqf-8MxQBT8CTq0CzW$$dWOOLpQ719BOJBegJ2lDC$$K22S8vyMX1f0TxAXhM2lO$$3-GIJECmIft4hoqC-VrEc$$ZvskqFynUuwWosEV09dTl$$eHzHSYw-6OvLLWkQK2qIl$$1ohu9D65HwxSE-Ezqu4OT$$TweOZlqUMQP61MFh75d7k$$HNYaPwywyzyUyVDr0-zwh$$kKbii6nCiau-lhRfoioc6$$wREkWd2iGxyiFSVPB3AR1$$TthYI5csnxQ00sAjIndBv$$QlsQlAuN2BJ3PEt3rgCpc$$a0eHg8fj4tVjJCdJ7D9sM$$vVqeyUJ_AKXRrCWDVCy5v$$u6duJZKP2RhI85gtjtish##account_open_date", "MTgk0M0N8kFaaThsXc9pc$$fyKdSO8grouGnKIGFwIJk$$Cdp9qvCe-mPADs3u6OQ4p$$t8nLCro05f7m0XKNaUD7t$$aJv5qAca04jAn0PSQCJjZ$$-a2KFImqY8FmQQGvFgjMW$$mOpJM4A-Xa13269xDabjx$$1RG_LDNJayFi7LzMt1B4z$$NPjMc1lHGzmwwWI6vGY84$$jUkUqKUDcEMljQMaxZU6U$$fPTsEfhWCqegkwkKbE0P4$$LFuyHmZ6ifhrq2Q9HdyVh$$JVQCDNnGsV-pz6uGA8dhc$$GZiBLDA6hCytdfjPEfLUY$$2HLSif7CvO8HgWN_3qUOf$$BYybfBX02vVAoFKU38_fa$$DCdt_MyXGANTMVGWQU22U$$Djgnqf-8MxQBT8CTq0CzW$$dWOOLpQ719BOJBegJ2lDC$$K22S8vyMX1f0TxAXhM2lO$$3-GIJECmIft4hoqC-VrEc$$ZvskqFynUuwWosEV09dTl$$eHzHSYw-6OvLLWkQK2qIl$$1ohu9D65HwxSE-Ezqu4OT$$TweOZlqUMQP61MFh75d7k$$HNYaPwywyzyUyVDr0-zwh$$kKbii6nCiau-lhRfoioc6$$wREkWd2iGxyiFSVPB3AR1$$TthYI5csnxQ00sAjIndBv$$QlsQlAuN2BJ3PEt3rgCpc$$a0eHg8fj4tVjJCdJ7D9sM$$vVqeyUJ_AKXRrCWDVCy5v$$u6duJZKP2RhI85gtjtish##customer_id", "MTgk0M0N8kFaaThsXc9pc$$fyKdSO8grouGnKIGFwIJk$$Cdp9qvCe-mPADs3u6OQ4p$$t8nLCro05f7m0XKNaUD7t$$aJv5qAca04jAn0PSQCJjZ$$-a2KFImqY8FmQQGvFgjMW$$mOpJM4A-Xa13269xDabjx$$1RG_LDNJayFi7LzMt1B4z$$NPjMc1lHGzmwwWI6vGY84$$jUkUqKUDcEMljQMaxZU6U$$fPTsEfhWCqegkwkKbE0P4$$LFuyHmZ6ifhrq2Q9HdyVh$$JVQCDNnGsV-pz6uGA8dhc$$GZiBLDA6hCytdfjPEfLUY$$2HLSif7CvO8HgWN_3qUOf$$BYybfBX02vVAoFKU38_fa$$DCdt_MyXGANTMVGWQU22U$$Djgnqf-8MxQBT8CTq0CzW$$dWOOLpQ719BOJBegJ2lDC$$K22S8vyMX1f0TxAXhM2lO$$3-GIJECmIft4hoqC-VrEc$$ZvskqFynUuwWosEV09dTl$$eHzHSYw-6OvLLWkQK2qIl$$1ohu9D65HwxSE-Ezqu4OT$$TweOZlqUMQP61MFh75d7k$$HNYaPwywyzyUyVDr0-zwh$$kKbii6nCiau-lhRfoioc6$$wREkWd2iGxyiFSVPB3AR1$$TthYI5csnxQ00sAjIndBv$$QlsQlAuN2BJ3PEt3rgCpc$$a0eHg8fj4tVjJCdJ7D9sM$$vVqeyUJ_AKXRrCWDVCy5v$$u6duJZKP2RhI85gtjtish##phone", "5sZ-JJTCfSw7YezxnxyLn$$TkQXV09SzF-2s1Mac-uCW$$LiQkaacTqUeJA1b_9lTGA$$7gVNdyHXfV6-bBa0l3otP$$sRcAi_kcKJkmXWu2jNdYV$$XUVZA3kWZwWQtXJWbmF63$$W9na23bmxlr3GXyfIL9jB$$anRNck0sRvzF9ElFQbRaq$$ZNKADUPbjjXX-9bvz0bRz$$NO_9eoM4PH9olmwGcWlzU$$Mut4NHuChJxV5Zxxi55yx$$gq4qmKqHLx7eFvdtwDf3h$$yr2W40q9eKSV1IZzKnCcB$$5Pc-MYnp0XQU9tOgMYs1j$$dBm5UEWya0kttcSvGL0FZ$$MDvpwBd-jHNQiy2snCuyc$$4KKRsWgdHL9SaJj6prN63$$24IRy01dVb_5gzhknKYX3$$GhIGmeVKojvxYyi7E60ZC$$WfbzJ1M3H_W-4B-XOw7GE$$49BohAa6gCr03hUtyW9Wi$$27573Y9lLPj65SuKdWbHC$$0uhUEKjPar7v0Fe-orAHC$$FuypsQYvstGP_9hoAcTGl$$o3lhdDJCtaxJulwd2_Bvj$$3qvCgdbpZObdS2ebP4u1t$$LoS7E-JfzFMqH0yzfFUBC$$WQ0hqNPZl0QAHq8A2jpkd$$Hq1x7ys1qgBzkU-4YP5x0$$km1G_f-OMKH1xR2V2XMlO$$fztze6mRIjhzDkdjKseU2$$6byw_nV4NbH2_MXx7WGl5$$712UGGPN7TUMs7Ck-aly0##order_category", "5sZ-JJTCfSw7YezxnxyLn$$TkQXV09SzF-2s1Mac-uCW$$LiQkaacTqUeJA1b_9lTGA$$7gVNdyHXfV6-bBa0l3otP$$sRcAi_kcKJkmXWu2jNdYV$$XUVZA3kWZwWQtXJWbmF63$$W9na23bmxlr3GXyfIL9jB$$anRNck0sRvzF9ElFQbRaq$$ZNKADUPbjjXX-9bvz0bRz$$NO_9eoM4PH9olmwGcWlzU$$Mut4NHuChJxV5Zxxi55yx$$gq4qmKqHLx7eFvdtwDf3h$$yr2W40q9eKSV1IZzKnCcB$$5Pc-MYnp0XQU9tOgMYs1j$$dBm5UEWya0kttcSvGL0FZ$$MDvpwBd-jHNQiy2snCuyc$$4KKRsWgdHL9SaJj6prN63$$24IRy01dVb_5gzhknKYX3$$GhIGmeVKojvxYyi7E60ZC$$WfbzJ1M3H_W-4B-XOw7GE$$49BohAa6gCr03hUtyW9Wi$$27573Y9lLPj65SuKdWbHC$$0uhUEKjPar7v0Fe-orAHC$$FuypsQYvstGP_9hoAcTGl$$o3lhdDJCtaxJulwd2_Bvj$$3qvCgdbpZObdS2ebP4u1t$$LoS7E-JfzFMqH0yzfFUBC$$WQ0hqNPZl0QAHq8A2jpkd$$Hq1x7ys1qgBzkU-4YP5x0$$km1G_f-OMKH1xR2V2XMlO$$fztze6mRIjhzDkdjKseU2$$6byw_nV4NbH2_MXx7WGl5$$712UGGPN7TUMs7Ck-aly0##amount" ],
+            "allIn0" : null,
+            "whereClause" : null,
+            "headAlias" : "orders"
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.35&projectSubscriptionProjectId=12654&path=gems/Join",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        }
+      }
+    },
+    "96F0cp50nwrdAtsNVevIM$$GUwrWZbUcyN4YyFi61Ex0" : {
+      "id" : "96F0cp50nwrdAtsNVevIM$$GUwrWZbUcyN4YyFi61Ex0",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "sales_view_unity",
+        "slug" : "sales_view_unity",
+        "x" : -1360,
+        "y" : -480,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "n_PXNZYhQw7Xj7FDoJ71d$$9wfgpKchb_jT8q_WpwzIH",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "packageName" : "sales_views",
+        "externalId" : "subgraphs/hw_sales_analysis_unity",
+        "name" : "hw_sales_analysis_unity"
+      },
+      "connections" : [ {
+        "id" : "2Ob9hTFiTyP8vgyYS1329",
+        "source" : "LSv9REHs8HZ4C32_6hb1u$$wftVefQtzo3jEUPLhxv3w",
+        "sourcePort" : "TKAY_p6xklDfh08c4eDK0$$cI9c9YYtA2uOHL2eaeWRr",
+        "target" : "aYmzpAaaIcN_15aWl4o4u$$uNCehH6NItZN2tzGVq5cO",
+        "targetPort" : "1XYmbWm3-0LXc9iI-j85M$$dk0WexQiPLkOMtx7l5X_A"
+      }, {
+        "id" : "tAnI5xIP8z1WDYk4iPnj_",
+        "source" : "YJWPOGulnFb7xstgvDPzI$$TuWvZqi_GfA8BskAKx9vY",
+        "sourcePort" : "iKRUh19kX9X2vltRypEyf$$2FbpT_aohJ-dp3c8Us0Ja",
+        "target" : "aYmzpAaaIcN_15aWl4o4u$$uNCehH6NItZN2tzGVq5cO",
+        "targetPort" : "s7cmpGulNmdjsuufxXEqZ$$DPSUP0FjAatEAxM4p7zAW"
+      }, {
+        "id" : "9sBaUZ4duKNj9zDYzfOxO",
+        "source" : "aYmzpAaaIcN_15aWl4o4u$$uNCehH6NItZN2tzGVq5cO",
+        "sourcePort" : "79YHeigcVgHbAuXqV-LH8$$Fhn69QA14gtz6XWKfBddW",
+        "target" : "96F0cp50nwrdAtsNVevIM$$GUwrWZbUcyN4YyFi61Ex0",
+        "targetPort" : "n_PXNZYhQw7Xj7FDoJ71d$$9wfgpKchb_jT8q_WpwzIH"
+      } ],
+      "processes" : {
+        "LSv9REHs8HZ4C32_6hb1u$$wftVefQtzo3jEUPLhxv3w" : {
+          "id" : "LSv9REHs8HZ4C32_6hb1u$$wftVefQtzo3jEUPLhxv3w",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "hello_world_hw_orders",
+            "slug" : "hello_world_hw_orders",
+            "x" : -1480,
+            "y" : -600,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "comment" : "Reads data from the 'hw_orders' table in the 'hello_world' database.",
+            "autoUpdateComment" : true
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "TKAY_p6xklDfh08c4eDK0$$cI9c9YYtA2uOHL2eaeWRr",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "datasetId" : "datasets/hello_world_hw_orders"
+          }
+        },
+        "YJWPOGulnFb7xstgvDPzI$$TuWvZqi_GfA8BskAKx9vY" : {
+          "id" : "YJWPOGulnFb7xstgvDPzI$$TuWvZqi_GfA8BskAKx9vY",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "hello_world_hw_customers",
+            "slug" : "hello_world_hw_customers",
+            "x" : -1480,
+            "y" : -460,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "comment" : "Reads data from the 'hw_customers' table in the 'hello_world' database.",
+            "autoUpdateComment" : true
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "iKRUh19kX9X2vltRypEyf$$2FbpT_aohJ-dp3c8Us0Ja",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "datasetId" : "datasets/hello_world_hw_customers"
+          }
+        },
+        "aYmzpAaaIcN_15aWl4o4u$$uNCehH6NItZN2tzGVq5cO" : {
+          "id" : "aYmzpAaaIcN_15aWl4o4u$$uNCehH6NItZN2tzGVq5cO",
+          "component" : "Join",
+          "metadata" : {
+            "label" : "join_sales",
+            "slug" : "join_sales",
+            "x" : -1340,
+            "y" : -540,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "comment" : "Combines order details with customer information to provide a comprehensive view of customer transactions.",
+            "autoUpdateComment" : true
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "1XYmbWm3-0LXc9iI-j85M$$dk0WexQiPLkOMtx7l5X_A",
+              "slug" : "hello_world_hw_orders",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "order_id",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Unique identifier for each order placed",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "customer_id",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "The unique ID of the customer who placed the order",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "order_status",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Current status of the customer's order",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "order_category",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Category of the order placed by the customer",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "order_date",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Date when the order was placed",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "amount",
+                  "type" : "double",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Total monetary value of the order",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            }, {
+              "id" : "s7cmpGulNmdjsuufxXEqZ$$DPSUP0FjAatEAxM4p7zAW",
+              "slug" : "hello_world_hw_customers",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "customer_id",
+                  "type" : "integer",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Unique identifier for each customer",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "first_name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "The first name of the customer",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "last_name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "The last name of the customer",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "phone",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Contact phone number of the customer",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "email",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Email address of the customer",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "country_code",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Code representing the customer's country of residence",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "account_open_date",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Date when the customer account was opened",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "account_flags",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Flags indicating the status or characteristics of the customer's account",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "79YHeigcVgHbAuXqV-LH8$$Fhn69QA14gtz6XWKfBddW",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "conditions" : [ {
+              "alias" : "hello_world_hw_customers",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "hello_world_hw_orders.customer_id=hello_world_hw_customers.customer_id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "target" : "customer_id",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "hello_world_hw_orders.customer_id"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "order_id",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "hello_world_hw_orders.order_id"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "first_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "hello_world_hw_customers.first_name"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "last_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "hello_world_hw_customers.last_name"
+              },
+              "description" : "",
+              "_row_id" : null
+            }, {
+              "target" : "amount",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "hello_world_hw_orders.amount"
+              },
+              "description" : "",
+              "_row_id" : null
+            } ],
+            "hints" : [ {
+              "id" : "1XYmbWm3-0LXc9iI-j85M$$7dfa_D-If91_msb27GjbJ$$LxeiYvOyuEmQQect1XHOo$$2pIn8VX0VYiqODX_Ijjqu$$XBUAx_1gUxuaGOIh6hflk$$YyIwG0y6G-ZYkw-65Pmyg$$EYs-h35B_kmWyBuArI12e$$OcPEEGHOG5QJ9SV80Tlo9$$XDge47_ka659CLY7C5b9j$$2eLuagRS7_CL3cG7ER3h8$$wG4-6WfN6H3ZSqla99ZOS$$4UJmPG3f2WOAkpGPVJexb$$d4EefjUdj4RlRoBm1kUws$$GIhG41BsU3eKtAYCYf90L$$8e_4bilkm_VNQ32oGuqgJ$$QYMRqRmSSJh8lqvwcAOAc$$MIyBN1H10tkhteLfi62eE",
+              "alias" : "hello_world_hw_orders",
+              "hintType" : "none",
+              "propagateColumns" : false
+            }, {
+              "id" : "s7cmpGulNmdjsuufxXEqZ$$Z1yWGoUNs0FwPxmPXOPpd$$FKqx41HadUcMoYc32y7OQ$$nBB9Lx0KYhNzV5oFveS2R$$zV6HXDQy4PNTGly3Xv_Ua$$QLtKJZeRGQcNjzJkkZlfc$$HhyMyc_WOe_OVZddkPmXf$$fGmGcAdSo5b5ZETkD-9-K$$LWVbtUF1s_Ti2PT2Nu48L$$j2epE9Nwmu1R9xEC7qCr0$$UpR9d30D_bAqmd8ZLTWFu$$ipt_Q_ASmqOudwVPL0z9a$$atWMiT5NsjyWU59ticUiN$$s3uU_kGfiuHaU7Q1_d_K7$$382WRVt71uSbctWjBZ9Kc$$C1gRgpbHJSOv4F0Zr9ydC$$iV1c3MgcG5FeozGJamSux",
+              "alias" : "hello_world_hw_customers",
+              "hintType" : "none",
+              "propagateColumns" : false
+            } ],
+            "allIn1" : null,
+            "activeTab" : "expressions",
+            "columnsSelector" : [ "1XYmbWm3-0LXc9iI-j85M$$7dfa_D-If91_msb27GjbJ$$LxeiYvOyuEmQQect1XHOo$$2pIn8VX0VYiqODX_Ijjqu$$XBUAx_1gUxuaGOIh6hflk$$YyIwG0y6G-ZYkw-65Pmyg$$EYs-h35B_kmWyBuArI12e$$OcPEEGHOG5QJ9SV80Tlo9$$XDge47_ka659CLY7C5b9j$$2eLuagRS7_CL3cG7ER3h8$$wG4-6WfN6H3ZSqla99ZOS$$4UJmPG3f2WOAkpGPVJexb$$d4EefjUdj4RlRoBm1kUws$$GIhG41BsU3eKtAYCYf90L$$8e_4bilkm_VNQ32oGuqgJ$$QYMRqRmSSJh8lqvwcAOAc$$MIyBN1H10tkhteLfi62eE##customer_id", "s7cmpGulNmdjsuufxXEqZ$$Z1yWGoUNs0FwPxmPXOPpd$$FKqx41HadUcMoYc32y7OQ$$nBB9Lx0KYhNzV5oFveS2R$$zV6HXDQy4PNTGly3Xv_Ua$$QLtKJZeRGQcNjzJkkZlfc$$HhyMyc_WOe_OVZddkPmXf$$fGmGcAdSo5b5ZETkD-9-K$$LWVbtUF1s_Ti2PT2Nu48L$$j2epE9Nwmu1R9xEC7qCr0$$UpR9d30D_bAqmd8ZLTWFu$$ipt_Q_ASmqOudwVPL0z9a$$atWMiT5NsjyWU59ticUiN$$s3uU_kGfiuHaU7Q1_d_K7$$382WRVt71uSbctWjBZ9Kc$$C1gRgpbHJSOv4F0Zr9ydC$$iV1c3MgcG5FeozGJamSux##customer_id", "s7cmpGulNmdjsuufxXEqZ$$Z1yWGoUNs0FwPxmPXOPpd$$FKqx41HadUcMoYc32y7OQ$$nBB9Lx0KYhNzV5oFveS2R$$zV6HXDQy4PNTGly3Xv_Ua$$QLtKJZeRGQcNjzJkkZlfc$$HhyMyc_WOe_OVZddkPmXf$$fGmGcAdSo5b5ZETkD-9-K$$LWVbtUF1s_Ti2PT2Nu48L$$j2epE9Nwmu1R9xEC7qCr0$$UpR9d30D_bAqmd8ZLTWFu$$ipt_Q_ASmqOudwVPL0z9a$$atWMiT5NsjyWU59ticUiN$$s3uU_kGfiuHaU7Q1_d_K7$$382WRVt71uSbctWjBZ9Kc$$C1gRgpbHJSOv4F0Zr9ydC$$iV1c3MgcG5FeozGJamSux##last_name", "1XYmbWm3-0LXc9iI-j85M$$7dfa_D-If91_msb27GjbJ$$LxeiYvOyuEmQQect1XHOo$$2pIn8VX0VYiqODX_Ijjqu$$XBUAx_1gUxuaGOIh6hflk$$YyIwG0y6G-ZYkw-65Pmyg$$EYs-h35B_kmWyBuArI12e$$OcPEEGHOG5QJ9SV80Tlo9$$XDge47_ka659CLY7C5b9j$$2eLuagRS7_CL3cG7ER3h8$$wG4-6WfN6H3ZSqla99ZOS$$4UJmPG3f2WOAkpGPVJexb$$d4EefjUdj4RlRoBm1kUws$$GIhG41BsU3eKtAYCYf90L$$8e_4bilkm_VNQ32oGuqgJ$$QYMRqRmSSJh8lqvwcAOAc$$MIyBN1H10tkhteLfi62eE##order_id", "s7cmpGulNmdjsuufxXEqZ$$Z1yWGoUNs0FwPxmPXOPpd$$FKqx41HadUcMoYc32y7OQ$$nBB9Lx0KYhNzV5oFveS2R$$zV6HXDQy4PNTGly3Xv_Ua$$QLtKJZeRGQcNjzJkkZlfc$$HhyMyc_WOe_OVZddkPmXf$$fGmGcAdSo5b5ZETkD-9-K$$LWVbtUF1s_Ti2PT2Nu48L$$j2epE9Nwmu1R9xEC7qCr0$$UpR9d30D_bAqmd8ZLTWFu$$ipt_Q_ASmqOudwVPL0z9a$$atWMiT5NsjyWU59ticUiN$$s3uU_kGfiuHaU7Q1_d_K7$$382WRVt71uSbctWjBZ9Kc$$C1gRgpbHJSOv4F0Zr9ydC$$iV1c3MgcG5FeozGJamSux##first_name", "1XYmbWm3-0LXc9iI-j85M$$7dfa_D-If91_msb27GjbJ$$LxeiYvOyuEmQQect1XHOo$$2pIn8VX0VYiqODX_Ijjqu$$XBUAx_1gUxuaGOIh6hflk$$YyIwG0y6G-ZYkw-65Pmyg$$EYs-h35B_kmWyBuArI12e$$OcPEEGHOG5QJ9SV80Tlo9$$XDge47_ka659CLY7C5b9j$$2eLuagRS7_CL3cG7ER3h8$$wG4-6WfN6H3ZSqla99ZOS$$4UJmPG3f2WOAkpGPVJexb$$d4EefjUdj4RlRoBm1kUws$$GIhG41BsU3eKtAYCYf90L$$8e_4bilkm_VNQ32oGuqgJ$$QYMRqRmSSJh8lqvwcAOAc$$MIyBN1H10tkhteLfi62eE##amount", "1XYmbWm3-0LXc9iI-j85M$$7dfa_D-If91_msb27GjbJ$$LxeiYvOyuEmQQect1XHOo$$2pIn8VX0VYiqODX_Ijjqu$$XBUAx_1gUxuaGOIh6hflk$$YyIwG0y6G-ZYkw-65Pmyg$$EYs-h35B_kmWyBuArI12e$$OcPEEGHOG5QJ9SV80Tlo9$$XDge47_ka659CLY7C5b9j$$2eLuagRS7_CL3cG7ER3h8$$wG4-6WfN6H3ZSqla99ZOS$$4UJmPG3f2WOAkpGPVJexb$$d4EefjUdj4RlRoBm1kUws$$GIhG41BsU3eKtAYCYf90L$$8e_4bilkm_VNQ32oGuqgJ$$QYMRqRmSSJh8lqvwcAOAc$$MIyBN1H10tkhteLfi62eE##customer_id" ],
+            "allIn0" : null,
+            "whereClause" : null,
+            "headAlias" : "hello_world_hw_orders"
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.35&projectSubscriptionProjectId=12654&path=gems/Join",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        }
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

@@ -1,0 +1,867 @@
+name: HelloWorld
+description: ''
+version: 1.6.7
+author: null
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: helloworld
+  parentArtefactID: bobwprophecyioteam
+  buildSystem: wheel
+  author: null
+  createdAt: '2024-02-14 15:50:57'
+pipelines:
+  pipelines/join_agg_sort:
+    name: join_agg_sort
+    description: Show an example of joining two datasets (customers and orders), aggregating
+      (sales by customer), sorting (by totals)
+    author: bobw@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-02-14 15:50:58'
+    datasets:
+      inputs:
+      - datasets/customers
+      - datasets/orders
+      outputs:
+      - datasets/customer_totals
+    subgraphs: []
+    dependencies: {}
+  pipelines/farmers-markets-irs:
+    name: farmers-markets-irs
+    description: Exploration of Farmer's Market Locations By US Zip Code
+    author: bobw@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-02-14 15:50:58'
+    datasets:
+      inputs:
+      - datasets/farmers-markets
+      - datasets/irs-zipcode-data
+      outputs:
+      - datasets/farmers_market_tax_report
+    subgraphs: []
+    dependencies: {}
+  pipelines/TestJSON:
+    name: TestJSON
+    description: ''
+    author: bobw@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-04-05 13:29:21'
+    datasets:
+      inputs:
+      - datasets/TestJSON
+      - datasets/cc_transX
+      - datasets/old_events_JSON
+      - datasets/prophecyAPI_JSON
+      outputs:
+      - datasets/prophecy_api_uc
+    subgraphs: []
+    dependencies: {}
+  pipelines/customers_orders:
+    name: customers_orders
+    description: "This pipeline graph reads two datasets, \"OrdersDatasetInput.csv\"\
+      \ and \"CustomersDatasetInput.csv\", and performs various operations to analyze\
+      \ customer orders. \n\nThe first function, \"By_CustomerId\", joins the \"Orders\"\
+      \ and \"Customers\" datasets based on the customer_id column and selects relevant\
+      \ columns for further analysis.\n\nThe second function, \"clean_up\", combines\
+      \ the first name and last name fields into a single full name field for better\
+      \ readability.\n\nThe third function, \"Aggregate_by_customer\", groups the\
+      \ data by customer_id and full_name and calculates the count of orders and the\
+      \ total sales amount for each customer.\n\nThe fourth function, \"OrderBy_Sales\"\
+      , orders the aggregated data by sales_total in descending order.\n\nThe fifth\
+      \ function, \"Customer_Orders\", writes the final result to a CSV file named\
+      \ \"CustomersOrders.csv\" for further analysis and reporting."
+    author: bobw@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-02-14 15:50:58'
+    datasets:
+      inputs:
+      - datasets/customers
+      - datasets/orders
+      outputs:
+      - datasets/UC_sales_analysis
+      - datasets/customers_orders
+    subgraphs: []
+    dependencies: {}
+  pipelines/sales_view:
+    name: sales_view
+    description: Pre-joined data for sales analysis
+    author: bobw@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-04-23 13:45:32'
+    datasets:
+      inputs:
+      - datasets/customers
+      - datasets/hello_world_hw_customers
+      - datasets/hello_world_hw_orders
+      - datasets/orders
+      outputs: []
+    subgraphs:
+    - subgraphs/hw_sales_analysis
+    - subgraphs/hw_sales_analysis_unity
+    dependencies: {}
+  pipelines/DBX2Target:
+    name: DBX2Target
+    description: This codebase provides a pipeline for analyzing customer revenue
+      and order data. It reads in customer and order data from CSV files, joins them
+      based on customer_id, and calculates revenue and order count for each customer.
+      The resulting data is then sorted by revenue in descending order and limited
+      to the top 50 customers. Finally, the top 50 customers are written to a Snowflake
+      table for further analysis and reporting.
+    author: bobw@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-04-11 14:46:20'
+    datasets:
+      inputs:
+      - datasets/customers
+      - datasets/orders
+      outputs:
+      - datasets/tar_snow
+    subgraphs: []
+    dependencies: {}
+  pipelines/SQLScript:
+    name: SQLScript
+    description: ''
+    author: bobw@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-05-03 12:54:31'
+    datasets:
+      inputs:
+      - datasets/customers
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/DataQuality:
+    name: DataQuality
+    description: Processes and integrates customer and order data, ensuring data quality
+      and generating sales insights. It reads customer and order datasets, joins them,
+      and performs data quality checks using PyDeequ. The pipeline then cleans and
+      formats the data, aggregates customer sales, and sorts the results by total
+      sales in descending order.
+    author: bobw@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-06-13 15:37:46'
+    datasets:
+      inputs:
+      - datasets/customers
+      - datasets/orders
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/demo_new:
+    name: demo_new
+    description: Processes order and customer data to generate a sales summary. It
+      joins orders with customer details, reformats the data to include full names
+      and company names, and aggregates sales amounts and order counts by customer.
+      The results are sorted by total sales in descending order, limited to the top
+      25 entries, and saved to a specified table.
+    author: bobw@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-07-25 13:25:26'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/Streamer:
+    name: Streamer
+    description: ''
+    author: bobw@prophecy.io
+    mode: stream
+    artefactID: ''
+    language: python
+    createdAt: '2024-10-16 12:37:21'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/customer_totals:
+    name: customer_totals
+    description: Customers by total of their purchases
+    author: bobw@prophecy.io
+    createdAt: '2024-02-14 15:50:57'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-02-14 15:50:57'
+  datasets/orders:
+    name: orders
+    description: All the orders placed by the customers
+    author: bobw@prophecy.io
+    createdAt: '2024-02-14 15:50:58'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-02-14 15:50:58'
+  datasets/customers:
+    name: customers
+    description: All the customers
+    author: bobw@prophecy.io
+    createdAt: '2024-02-14 15:50:58'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-02-14 15:50:58'
+  datasets/customers_orders:
+    name: customers_orders
+    description: Customers by total of their purchases
+    author: bobw@prophecy.io
+    createdAt: '2024-02-14 15:50:58'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-02-14 15:50:58'
+  datasets/old_events:
+    name: old_events
+    description: Old events data
+    author: bobw@prophecy.io
+    createdAt: '2024-02-14 15:50:58'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-02-14 15:50:58'
+  datasets/historic_events_flat:
+    name: historic_events_flat
+    description: Historic events flat
+    author: bobw@prophecy.io
+    createdAt: '2024-02-14 15:50:58'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-02-14 15:50:58'
+  datasets/farmers-markets:
+    name: farmers-markets
+    description: Farmer's Market data
+    author: bobw@prophecy.io
+    createdAt: '2024-02-14 15:50:58'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-02-14 15:50:58'
+  datasets/irs-zipcode-data:
+    name: irs-zipcode-data
+    description: Irs zipcode data
+    author: bobw@prophecy.io
+    createdAt: '2024-02-14 15:50:58'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-02-14 15:50:58'
+  datasets/farmers_market_tax_report:
+    name: farmers_market_tax_report
+    description: Farmer's market tax report
+    author: bobw@prophecy.io
+    createdAt: '2024-02-14 15:50:58'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-02-14 15:50:58'
+  datasets/TestJSON:
+    name: TestJSON
+    description: JSON customer file
+    author: bobw@prophecy.io
+    createdAt: '2024-04-05 13:32:05'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-04-05 13:32:05'
+  datasets/cc_transX:
+    name: cc_transX
+    description: JSON CC Transactions
+    author: bobw@prophecy.io
+    createdAt: '2024-04-06 16:07:42'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-04-06 16:07:42'
+  datasets/orders_snow:
+    name: orders_snow
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-04-09 13:38:14'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Warehouse
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-04-09 13:38:14'
+  datasets/customers_snow:
+    name: customers_snow
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-04-09 13:40:42'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Warehouse
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-04-09 13:40:42'
+  datasets/old_events_JSON:
+    name: old_events_JSON
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-04-22 20:30:59'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-04-22 20:30:59'
+  datasets/tar_snow:
+    name: tar_snow
+    description: Snowflake target
+    author: bobw@prophecy.io
+    createdAt: '2024-04-06 16:02:25'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Warehouse
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-04-06 16:02:25'
+  datasets/sample_data_dedup_test:
+    name: sample_data_dedup_test
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-06-24 15:30:24'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-06-24 15:30:24'
+  datasets/mortgage_demo_mortgages_all:
+    name: mortgage_demo_mortgages_all
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-07-18 15:04:06'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-07-18 15:04:06'
+  datasets/hello_world_hw_orders:
+    name: hello_world_hw_orders
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-07-18 17:30:02'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-07-18 17:30:02'
+  datasets/hello_world_hw_customers:
+    name: hello_world_hw_customers
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-07-19 14:45:16'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-07-19 14:45:16'
+  datasets/financial_crimes_wire_transfer:
+    name: financial_crimes_wire_transfer
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-07-23 19:41:52'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-07-23 19:41:52'
+  datasets/newfile:
+    name: newfile
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-09-18 19:05:07'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-09-18 19:05:07'
+  datasets/PDF:
+    name: PDF
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-09-23 17:58:56'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-09-23 17:58:56'
+  datasets/prophecyAPI_JSON:
+    name: prophecyAPI_JSON
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-10-01 14:03:37'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-10-01 14:03:37'
+  datasets/ProphecyAPI:
+    name: ProphecyAPI
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-10-01 14:18:28'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-10-01 14:18:28'
+  datasets/prophecy_api_uc:
+    name: prophecy_api_uc
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-10-01 14:20:46'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-10-01 14:20:46'
+  datasets/test1ds:
+    name: test1ds
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-10-10 15:32:35'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-10-10 15:32:35'
+  datasets/bobtest:
+    name: bobtest
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-10-31 13:45:40'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-10-31 13:45:40'
+  datasets/UC_sales_analysis:
+    name: UC_sales_analysis
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-11-05 14:55:59'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-11-05 14:55:59'
+  datasets/demo_mas:
+    name: demo_mas
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-11-05 15:52:45'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-11-05 15:52:45'
+  datasets/demo_dbx1:
+    name: demo_dbx1
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-11-07 18:35:36'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-11-07 18:35:36'
+  datasets/demo_ey:
+    name: demo_ey
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-11-08 16:57:27'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-11-08 16:57:27'
+  datasets/demo_ws:
+    name: demo_ws
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-11-08 17:25:20'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-11-08 17:25:20'
+  datasets/demo_fire:
+    name: demo_fire
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-11-08 17:52:42'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-11-08 17:52:42'
+  datasets/demo_up:
+    name: demo_up
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-11-12 20:08:01'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-11-12 20:08:01'
+  datasets/demo_com:
+    name: demo_com
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-11-18 18:47:08'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-11-18 18:47:08'
+templates: {}
+jobs:
+  jobs/DBX_workflow:
+    name: DBX_workflow
+    description: ''
+    fabricUID: 9631
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: small
+    scheduleCron: 0 0 0 ? * 1 *
+    timeout: null
+    alerting:
+      emails: bobw@prophecy.io
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - pipelines/join_agg_sort
+    - pipelines/DataQuality
+    - pipelines/customers_orders
+    - pipelines/farmers-markets-irs
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: false
+    createdAt: '2024-03-27 22:29:40'
+    author: bobw@prophecy.io
+    models: []
+    sqlProjects: []
+  jobs/AirFlow_job1:
+    name: AirFlow_job1
+    description: ''
+    fabricUID: 13760
+    scheduler:
+      Prophecy: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0 * * 1
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - pipelines/farmers-markets-irs
+    - pipelines/join_agg_sort
+    - pipelines/customers_orders
+    jobClusterMode:
+      clusterMode:
+        Multi: {}
+      clusterId: null
+    enabled: false
+    createdAt: '2024-04-19 14:00:01'
+    author: bobw@prophecy.io
+    models: []
+    sqlProjects: []
+  jobs/demo-1:
+    name: demo-1
+    description: ''
+    fabricUID: 9631
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: small
+    scheduleCron: None
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - pipelines/customers_orders
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2024-10-18 13:14:38'
+    author: bobw@prophecy.io
+    models: []
+    sqlProjects: []
+gemContainer:
+  languageVersion: '3.10'
+  gemLibsVersion: 1.3.4.0
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2024-02-14 15:50:57'
+  udfs:
+    udfs/factorial_UDF:
+      name: factorial_UDF
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: bobw@prophecy.io
+      createdAt: '2022-12-15 18:04:50'
+    udfs/prime_factorization_UDF:
+      name: prime_factorization_UDF
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: bobw@prophecy.io
+      createdAt: '2022-12-15 18:04:50'
+    udfs/square_value_UDF:
+      name: square_value_UDF
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: bobw@prophecy.io
+      createdAt: '2022-12-15 18:04:50'
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules:
+    businessRules/Region_Bus_Rule:
+      name: Region_Bus_Rule
+      description: Region Business Rule
+      tags: []
+      inputs: []
+      outputs: []
+      author: bobw@prophecy.io
+      createdAt: '2022-12-15 18:04:50'
+subgraphs:
+  subgraphs/hw_sales_analysis:
+    name: hw_sales_analysis_raw
+    description: Pre-joined datasets commonly used for sales analysis
+    author: bobw@prophecy.io
+    language: python
+    artefactID: ''
+    mode: batch
+    createdAt: '2024-04-23 13:57:41'
+  subgraphs/hw_sales_analysis_unity:
+    name: hw_sales_analysis_unity
+    description: ''
+    author: bobw@prophecy.io
+    language: python
+    artefactID: ''
+    mode: batch
+    createdAt: '2024-07-19 14:52:47'
+sqlModels: {}
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies:
+- type: plibMaven
+  modifiedAt: '2024-10-16T13:51:29.776026Z'
+  name: plibMaven
+  version: 8.4.0
+  id: '1386789302'
+  createdAt: '2024-10-16T13:51:29.775966Z'
+  enabled: true
+  entity: Project
+- type: plibPypi
+  modifiedAt: '2024-10-16T13:51:29.776124Z'
+  name: plibPypi
+  version: 1.9.24
+  id: '1865957650'
+  createdAt: '2024-10-16T13:51:29.776093Z'
+  enabled: true
+  entity: Project
+projectDependencies:
+  '12654':
+    projectUID: 12654
+    projectName: ProphecySparkBasicsPython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=
+    version: 0.2.35
+    isDefault: true
+    author: null
+    createdAt: '2024-11-25 13:37:47'
+  '12655':
+    projectUID: 12655
+    projectName: ProphecyWarehousePython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12655.git&subPath=
+    version: 0.0.8
+    isDefault: false
+    author: null
+    createdAt: '2024-06-11 03:37:25'
+  '12656':
+    projectUID: 12656
+    projectName: ProphecyStreamingPython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12656.git&subPath=
+    version: 0.0.6
+    isDefault: false
+    author: null
+    createdAt: '2024-11-20 15:18:22'
+  '27160':
+    projectUID: 27160
+    projectName: data_quality
+    repositoryPath: gitUri=https://github.com/BobProphecy/ProphecyDataQualityDemo&subPath=/
+    version: data_quality/1.3
+    isDefault: false
+    author: null
+    createdAt: '2024-06-12 19:30:55'
+  '32699':
+    projectUID: 32699
+    projectName: ProphecySparkDataQualityPython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/gLsx7fee_project_32699.git&subPath=
+    version: 0.0.1
+    isDefault: false
+    author: null
+    createdAt: '2024-10-31 13:03:16'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: false
+pipelineConfigurations: {}

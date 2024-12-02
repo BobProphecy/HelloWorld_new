@@ -1,0 +1,1 @@
+{"initCode":"","code":"@udf(returnType=ArrayType(IntegerType()))\ndef prime_factorization(number):\n    factors = []\n    i = 2\n    while i * i <= number:\n        if number % i:\n            i += 1\n        else:\n            number //= i\n            factors.append(i)\n    if number > 1:\n        factors.append(number)\n    return factors"}

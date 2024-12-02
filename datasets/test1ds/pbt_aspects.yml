@@ -1,0 +1,51 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: order_id
+    type: integer
+    nullable: true
+    metadata:
+      description: Unique identifier for each order, allowing easy tracking and reference.
+      mappings: []
+      tags: []
+  - name: customer_id
+    type: integer
+    nullable: true
+    metadata:
+      description: Identifies the customer who placed the order, enabling customer-specific
+        analysis.
+      mappings: []
+      tags: []
+  - name: order_status
+    type: string
+    nullable: true
+    metadata:
+      description: Represents the current status of the order, such as pending, in-progress,
+        or completed.
+      mappings: []
+      tags: []
+  - name: order_category
+    type: string
+    nullable: true
+    metadata:
+      description: Describes the category or type of the order, providing insights
+        into the variety of orders.
+      mappings: []
+      tags: []
+  - name: order_date
+    type: string
+    nullable: true
+    metadata:
+      description: The date when the order was placed, allowing tracking of order
+        trends over time.
+      mappings: []
+      tags: []
+  - name: amount
+    type: double
+    nullable: true
+    metadata:
+      description: Represents the total cost of the order, providing financial insights
+        into order patterns and customer spending.
+      mappings: []
+      tags: []

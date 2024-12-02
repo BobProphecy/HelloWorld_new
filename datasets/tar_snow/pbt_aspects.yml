@@ -1,0 +1,39 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: CUSTOMER_ID
+    type: integer
+    nullable: true
+    metadata:
+      description: Unique identifier for each customer in the dataset.
+      mappings: []
+      tags: []
+  - name: FIRST_NAME
+    type: string
+    nullable: true
+    metadata:
+      description: The first name of the customer.
+      mappings: []
+      tags: []
+  - name: LAST_NAME
+    type: string
+    nullable: true
+    metadata:
+      description: The surname of the customer, used for identification and personalization.
+      mappings: []
+      tags: []
+  - name: REVENUE
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: order_count
+    type: long
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

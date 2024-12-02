@@ -1,0 +1,32 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: customer_id
+    type: integer
+    nullable: true
+    metadata:
+      description: Unique identifier for the customer who placed the order.
+      mappings: []
+      tags: []
+  - name: full_name
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: order_count
+    type: long
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: sales_total
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

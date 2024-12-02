@@ -1,0 +1,1881 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "functions" : {
+      "businessRules" : {
+        "rules" : [ ],
+        "sharedRules" : [ ]
+      }
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.4.0",
+        "pyPiVersion" : "1.9.24"
+      }
+    },
+    "id" : "1",
+    "uri" : "pipelines/TestJSON",
+    "sourceSuggestions" : [ {
+      "sourceLabel" : "hello_world_hw_customers",
+      "sourceDatasetId" : "datasets/hello_world_hw_customers",
+      "canJoinWith" : [ {
+        "processLabel" : "TestJSON",
+        "processId" : "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T",
+        "joinColumns" : [ "email", "firstname", "lastname" ],
+        "isRecommended" : true,
+        "properties" : {
+          "columnsSelector" : [ "email", "firstname", "lastname" ],
+          "conditions" : [ {
+            "alias" : "hello_world_hw_customers",
+            "expression" : "(((TestJSON.email = hello_world_hw_customers.email) AND (TestJSON.firstname = hello_world_hw_customers.first_name)) AND (TestJSON.lastname = hello_world_hw_customers.last_name))",
+            "joinType" : "inner"
+          } ],
+          "expressions" : [ {
+            "alias" : "customer_id",
+            "expression" : "hello_world_hw_customers.customer_id"
+          }, {
+            "alias" : "phone",
+            "expression" : "hello_world_hw_customers.phone"
+          }, {
+            "alias" : "country_code",
+            "expression" : "hello_world_hw_customers.country_code"
+          }, {
+            "alias" : "account_open_date",
+            "expression" : "hello_world_hw_customers.account_open_date"
+          }, {
+            "alias" : "account_flags",
+            "expression" : "hello_world_hw_customers.account_flags"
+          }, {
+            "alias" : "lastname",
+            "expression" : "TestJSON.lastname"
+          }, {
+            "alias" : "gender",
+            "expression" : "TestJSON.gender"
+          }, {
+            "alias" : "age_group",
+            "expression" : "TestJSON.age_group"
+          }, {
+            "alias" : "creation_date",
+            "expression" : "TestJSON.creation_date"
+          }, {
+            "alias" : "firstname",
+            "expression" : "TestJSON.firstname"
+          }, {
+            "alias" : "email",
+            "expression" : "TestJSON.email"
+          }, {
+            "alias" : "id",
+            "expression" : "TestJSON.id"
+          }, {
+            "alias" : "address",
+            "expression" : "TestJSON.address"
+          } ],
+          "headAlias" : "datasets/hello_world_hw_customers"
+        }
+      } ]
+    }, {
+      "sourceLabel" : "customers",
+      "sourceDatasetId" : "datasets/customers",
+      "canJoinWith" : [ {
+        "processLabel" : "TestJSON",
+        "processId" : "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T",
+        "joinColumns" : [ "email", "firstname", "lastname" ],
+        "isRecommended" : true,
+        "properties" : {
+          "columnsSelector" : [ "email", "firstname", "lastname" ],
+          "conditions" : [ {
+            "alias" : "customers",
+            "expression" : "(((TestJSON.email = customers.email) AND (TestJSON.firstname = customers.first_name)) AND (TestJSON.lastname = customers.last_name))",
+            "joinType" : "inner"
+          } ],
+          "expressions" : [ {
+            "alias" : "customer_id",
+            "expression" : "customers.customer_id"
+          }, {
+            "alias" : "phone",
+            "expression" : "customers.phone"
+          }, {
+            "alias" : "country_code",
+            "expression" : "customers.country_code"
+          }, {
+            "alias" : "account_open_date",
+            "expression" : "customers.account_open_date"
+          }, {
+            "alias" : "account_flags",
+            "expression" : "customers.account_flags"
+          }, {
+            "alias" : "lastname",
+            "expression" : "TestJSON.lastname"
+          }, {
+            "alias" : "gender",
+            "expression" : "TestJSON.gender"
+          }, {
+            "alias" : "age_group",
+            "expression" : "TestJSON.age_group"
+          }, {
+            "alias" : "creation_date",
+            "expression" : "TestJSON.creation_date"
+          }, {
+            "alias" : "firstname",
+            "expression" : "TestJSON.firstname"
+          }, {
+            "alias" : "email",
+            "expression" : "TestJSON.email"
+          }, {
+            "alias" : "id",
+            "expression" : "TestJSON.id"
+          }, {
+            "alias" : "address",
+            "expression" : "TestJSON.address"
+          } ],
+          "headAlias" : "datasets/customers"
+        }
+      } ]
+    }, {
+      "sourceLabel" : "financial_crimes_wire_transfer",
+      "sourceDatasetId" : "datasets/financial_crimes_wire_transfer",
+      "canJoinWith" : [ {
+        "processLabel" : "TestJSON",
+        "processId" : "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T",
+        "joinColumns" : [ "firstname", "lastname" ],
+        "isRecommended" : true,
+        "properties" : {
+          "columnsSelector" : [ "firstname", "lastname" ],
+          "conditions" : [ {
+            "alias" : "financial_crimes_wire_transfer",
+            "expression" : "((TestJSON.firstname = financial_crimes_wire_transfer.first_name) AND (TestJSON.lastname = financial_crimes_wire_transfer.last_name))",
+            "joinType" : "inner"
+          } ],
+          "expressions" : [ {
+            "alias" : "transaction_id",
+            "expression" : "financial_crimes_wire_transfer.transaction_id"
+          }, {
+            "alias" : "from_bank",
+            "expression" : "financial_crimes_wire_transfer.from_bank"
+          }, {
+            "alias" : "from_account_number",
+            "expression" : "financial_crimes_wire_transfer.from_account_number"
+          }, {
+            "alias" : "to_bank",
+            "expression" : "financial_crimes_wire_transfer.to_bank"
+          }, {
+            "alias" : "to_account_number",
+            "expression" : "financial_crimes_wire_transfer.to_account_number"
+          }, {
+            "alias" : "originating_country",
+            "expression" : "financial_crimes_wire_transfer.originating_country"
+          }, {
+            "alias" : "destination_country",
+            "expression" : "financial_crimes_wire_transfer.destination_country"
+          }, {
+            "alias" : "transaction_amount",
+            "expression" : "financial_crimes_wire_transfer.transaction_amount"
+          }, {
+            "alias" : "lastname",
+            "expression" : "TestJSON.lastname"
+          }, {
+            "alias" : "gender",
+            "expression" : "TestJSON.gender"
+          }, {
+            "alias" : "age_group",
+            "expression" : "TestJSON.age_group"
+          }, {
+            "alias" : "creation_date",
+            "expression" : "TestJSON.creation_date"
+          }, {
+            "alias" : "firstname",
+            "expression" : "TestJSON.firstname"
+          }, {
+            "alias" : "email",
+            "expression" : "TestJSON.email"
+          }, {
+            "alias" : "id",
+            "expression" : "TestJSON.id"
+          }, {
+            "alias" : "address",
+            "expression" : "TestJSON.address"
+          } ],
+          "headAlias" : "datasets/financial_crimes_wire_transfer"
+        }
+      } ]
+    }, {
+      "sourceLabel" : "tar_snow",
+      "sourceDatasetId" : "datasets/tar_snow",
+      "canJoinWith" : [ {
+        "processLabel" : "TestJSON",
+        "processId" : "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T",
+        "joinColumns" : [ "firstname", "lastname" ],
+        "isRecommended" : true,
+        "properties" : {
+          "columnsSelector" : [ "firstname", "lastname" ],
+          "conditions" : [ {
+            "alias" : "tar_snow",
+            "expression" : "((TestJSON.firstname = tar_snow.FIRST_NAME) AND (TestJSON.lastname = tar_snow.LAST_NAME))",
+            "joinType" : "inner"
+          } ],
+          "expressions" : [ {
+            "alias" : "CUSTOMER_ID",
+            "expression" : "tar_snow.CUSTOMER_ID"
+          }, {
+            "alias" : "REVENUE",
+            "expression" : "tar_snow.REVENUE"
+          }, {
+            "alias" : "order_count",
+            "expression" : "tar_snow.order_count"
+          }, {
+            "alias" : "lastname",
+            "expression" : "TestJSON.lastname"
+          }, {
+            "alias" : "gender",
+            "expression" : "TestJSON.gender"
+          }, {
+            "alias" : "age_group",
+            "expression" : "TestJSON.age_group"
+          }, {
+            "alias" : "creation_date",
+            "expression" : "TestJSON.creation_date"
+          }, {
+            "alias" : "firstname",
+            "expression" : "TestJSON.firstname"
+          }, {
+            "alias" : "email",
+            "expression" : "TestJSON.email"
+          }, {
+            "alias" : "id",
+            "expression" : "TestJSON.id"
+          }, {
+            "alias" : "address",
+            "expression" : "TestJSON.address"
+          } ],
+          "headAlias" : "datasets/tar_snow"
+        }
+      } ]
+    }, {
+      "sourceLabel" : "customers_snow",
+      "sourceDatasetId" : "datasets/customers_snow",
+      "canJoinWith" : [ {
+        "processLabel" : "TestJSON",
+        "processId" : "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T",
+        "joinColumns" : [ "email", "firstname", "lastname" ],
+        "isRecommended" : true,
+        "properties" : {
+          "columnsSelector" : [ "email", "firstname", "lastname" ],
+          "conditions" : [ {
+            "alias" : "customers_snow",
+            "expression" : "(((TestJSON.email = customers_snow.email) AND (TestJSON.firstname = customers_snow.first_name)) AND (TestJSON.lastname = customers_snow.last_name))",
+            "joinType" : "inner"
+          } ],
+          "expressions" : [ {
+            "alias" : "customer_id",
+            "expression" : "customers_snow.customer_id"
+          }, {
+            "alias" : "phone",
+            "expression" : "customers_snow.phone"
+          }, {
+            "alias" : "country_code",
+            "expression" : "customers_snow.country_code"
+          }, {
+            "alias" : "account_open_date",
+            "expression" : "customers_snow.account_open_date"
+          }, {
+            "alias" : "account_flags",
+            "expression" : "customers_snow.account_flags"
+          }, {
+            "alias" : "lastname",
+            "expression" : "TestJSON.lastname"
+          }, {
+            "alias" : "gender",
+            "expression" : "TestJSON.gender"
+          }, {
+            "alias" : "age_group",
+            "expression" : "TestJSON.age_group"
+          }, {
+            "alias" : "creation_date",
+            "expression" : "TestJSON.creation_date"
+          }, {
+            "alias" : "firstname",
+            "expression" : "TestJSON.firstname"
+          }, {
+            "alias" : "email",
+            "expression" : "TestJSON.email"
+          }, {
+            "alias" : "id",
+            "expression" : "TestJSON.id"
+          }, {
+            "alias" : "address",
+            "expression" : "TestJSON.address"
+          } ],
+          "headAlias" : "datasets/customers_snow"
+        }
+      } ]
+    } ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "TestJSON",
+      "hasApplication" : true
+    },
+    "language" : "python",
+    "fabricId" : "9631",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "bobwprophecyioteam.helloworld.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.data_quality.functions", "prophecy.spark_basic.functions", "prophecy.streaming.functions", "prophecy.warehouse.functions", "maciejdemos.dataquality.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "32699",
+      "projectName" : "ProphecySparkDataQualityPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12656",
+      "projectName" : "ProphecyStreamingPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "27160",
+      "projectName" : "data_quality",
+      "externalDependencies" : [ {
+        "type" : "plibMaven",
+        "modifiedAt" : "2024-05-03T16:22:39.33938Z",
+        "name" : "plibMaven",
+        "enabled" : true,
+        "version" : "8.0.11",
+        "id" : "1766302595",
+        "createdAt" : "2024-05-03T16:22:39.339282Z",
+        "entity" : "Project"
+      }, {
+        "type" : "plibPypi",
+        "modifiedAt" : "2024-05-03T16:22:39.339487Z",
+        "name" : "plibPypi",
+        "enabled" : true,
+        "version" : "1.9.5",
+        "id" : "816884476",
+        "createdAt" : "2024-05-03T16:22:39.339452Z",
+        "entity" : "Project"
+      } ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "testjson",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "HXTnwKnShcAgIXpvQsyCg$$62paAOalYYCCeD0sVlwRb",
+    "source" : "pGLan62ylCwAWVLmoKyy8$$zJ64sR_3LaxGSf-mu8j-I",
+    "sourcePort" : "o8zPUnsx4-6RXg6lulSmj$$IHvNmSsnUgtw5IzseHHuE",
+    "target" : "JisB36sz5RBVGh1ZVrYqg$$BBD2zNk4JJSMfNAslE3F1",
+    "targetPort" : "3LUvlWDmryFqrPFMlKcc5$$HpQsOlhtVt1_0HjuEhV3V"
+  }, {
+    "id" : "hWy4Xw0TW-rGyEHU65Qvo$$FOSQheOZ2MgSlq6d3ktj6",
+    "source" : "JisB36sz5RBVGh1ZVrYqg$$BBD2zNk4JJSMfNAslE3F1",
+    "sourcePort" : "-b7dj9SrpV8HrS7wqELem$$EVQokmfvdbzs2pql93wy4",
+    "target" : "u7GcSMY0_5-Y2qZ3lKawY$$7-q-xpQVj3gazRbYTHlhr",
+    "targetPort" : "6vQeBHffaIhokWKiiLFHr$$LLnazDDQNSYdLL3lgYU_c"
+  }, {
+    "id" : "nTicgePjfYKSR6nZMtpME$$NyfC65JyDg32A0nWtJstG",
+    "source" : "nIxcx9GLuW6S2G8iVTTG4$$XhaYoB27VI1sEyOT8wLZi",
+    "sourcePort" : "M-S3nYGcEwxqzX-wwfRpE$$xrK59WvE4sRHPdgV6CqXS",
+    "target" : "Ds83ub0hG0-edf3A6UURd$$7vJSwwkaFu0ZBcpricxp6",
+    "targetPort" : "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-"
+  }, {
+    "id" : "IUL-1cvTKX2Nrwt1gUaWp$$7NbSlnDiytM78MfrBYPsW",
+    "source" : "Ds83ub0hG0-edf3A6UURd$$7vJSwwkaFu0ZBcpricxp6",
+    "sourcePort" : "XRRpxnYzcKC3auZn9NOve$$j9wtFbcV0jSKEDuON_ZcC",
+    "target" : "V8g8o93aPDgA92xxNM-Ew$$W8T7wrn6NVZUBiztOrhjG",
+    "targetPort" : "TFj2zIFJDZUYh6NPzLRSq$$YBzffXUViN-CoFFooOZLx"
+  }, {
+    "id" : "VYPa2gEMVsu1vSkQiBvxg$$dtgAJEAsfuV6nvwT741b1",
+    "source" : "w-P-JprWH1MeXSYFJh4Ov$$DYncvH9QtHD_cyy_8h1Vd",
+    "sourcePort" : "LpZN2cqzCtcdNthyS95pN$$zbyX8ycOKr1A5QOUrgTv1",
+    "target" : "BM_qmxwWal4R7lL_1QWmp$$kb7EEbpKf28lsLONGydKo",
+    "targetPort" : "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB"
+  } ],
+  "processes" : {
+    "BM_qmxwWal4R7lL_1QWmp$$kb7EEbpKf28lsLONGydKo" : {
+      "id" : "BM_qmxwWal4R7lL_1QWmp$$kb7EEbpKf28lsLONGydKo",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "cc_transaction_reformat",
+        "slug" : "cc_transaction_reformat",
+        "x" : -1060,
+        "y" : -680,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Reformats credit card transaction data for better clarity and usability in analysis.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB",
+          "slug" : "CC_TranX",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "_corrupt_record",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "This column stores any corrupt or invalid records found in the dataset. The values in this column are of string data type and indicate the presence of any data inconsistencies or errors in the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "card_holder_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each card holder. It stores the ID of the card holder as a string data type. This column provides a way to uniquely identify each card holder in the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "card_number",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Stores the unique identification number associated with each credit card. The values in this column are of string data type and provide a way to uniquely identify each credit card.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "card_type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Represents the type of credit card used for the transaction. It stores the category or brand of the credit card, such as Visa, Mastercard, or American Express. The values in this column are of string data type and provide information about the payment method used by customers.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "merchant_address",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Represents the address of the merchant where the transaction took place. It stores the physical address of the merchant location as a string value. This column provides information about the location of the merchant for each transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "merchant_category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Represents the category or type of merchant where the transaction took place. It stores values of string data type, indicating the specific category or type of business associated with each transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "merchant_city",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Represents the city where the merchant is located. It stores the name of the city as a string value. This column provides information about the geographical location of the merchant.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "merchant_country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Represents the country where the merchant is located. It stores the name of the country as a string value. This column provides information about the geographical location of the merchant.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "merchant_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Stores the name of the merchant where the transaction took place. The values in this column are of string data type and provide information about the specific merchant associated with each transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "merchant_postal_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Represents the postal code of the merchant's location. It stores string values that indicate the postal code of the merchant's address. This column provides information about the geographical location of the merchant.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "merchant_state",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Represents the state where the merchant is located. It stores the name of the state as a string value. This column provides information about the geographical location of the merchant.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "transaction_amount",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Represents the monetary value of a transaction. It stores numerical values in double data type, indicating the amount of money involved in each transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "transaction_datetime",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Represents the date and time when a transaction took place. It stores values in string data type, following a specific format to indicate the exact date and time of each transaction.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "transaction_id",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each transaction. It stores numerical values in long data type, providing a way to uniquely identify each transaction in the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "transaction_seatlement_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Represents the date on which a transaction is settled. It stores the settlement date of each transaction in string format. The settlement date is the date on which the funds from a transaction are transferred to the merchant's account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "qVWuOhsYR8RxWGSLBP6Q4$$9W56_ocEf1vM9z8pX_aP-",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "_corrupt_record",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "_corrupt_record"
+          },
+          "description" : ""
+        }, {
+          "target" : "card_holder_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "card_holder_id"
+          },
+          "description" : ""
+        }, {
+          "target" : "card_number",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "card_number"
+          },
+          "description" : ""
+        }, {
+          "target" : "card_type",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "card_type"
+          },
+          "description" : ""
+        }, {
+          "target" : "merchant_address",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "merchant_address"
+          },
+          "description" : ""
+        }, {
+          "target" : "merchant_category",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "merchant_category"
+          },
+          "description" : ""
+        }, {
+          "target" : "merchant_city",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "merchant_city"
+          },
+          "description" : ""
+        }, {
+          "target" : "merchant_country",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "merchant_country"
+          },
+          "description" : ""
+        }, {
+          "target" : "merchant_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "merchant_name"
+          },
+          "description" : ""
+        }, {
+          "target" : "merchant_postal_code",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "merchant_postal_code"
+          },
+          "description" : ""
+        }, {
+          "target" : "merchant_state",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "merchant_state"
+          },
+          "description" : ""
+        }, {
+          "target" : "transaction_amount",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "transaction_amount"
+          },
+          "description" : ""
+        }, {
+          "target" : "transaction_datetime",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "transaction_datetime"
+          },
+          "description" : ""
+        }, {
+          "target" : "transaction_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "transaction_id"
+          },
+          "description" : ""
+        }, {
+          "target" : "isNew",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "\"\""
+          },
+          "description" : ""
+        }, {
+          "target" : "transaction_seatlement_date",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "transaction_seatlement_date"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##merchant_address", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##transaction_amount", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##merchant_name", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##merchant_city", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##merchant_country", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##card_type", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##merchant_state", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##transaction_id", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##_corrupt_record", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##card_number", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##transaction_seatlement_date", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##card_holder_id", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##merchant_postal_code", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##merchant_category", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##transaction_datetime" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.35&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "w-P-JprWH1MeXSYFJh4Ov$$DYncvH9QtHD_cyy_8h1Vd" : {
+      "id" : "w-P-JprWH1MeXSYFJh4Ov$$DYncvH9QtHD_cyy_8h1Vd",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "CC_TranX",
+        "slug" : "CC_TranX",
+        "x" : -1220,
+        "y" : -680,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Reads credit card transaction data from a JSON file and loads it into a DataFrame for further analysis.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "LpZN2cqzCtcdNthyS95pN$$zbyX8ycOKr1A5QOUrgTv1",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/cc_transX"
+      }
+    },
+    "V8g8o93aPDgA92xxNM-Ew$$W8T7wrn6NVZUBiztOrhjG" : {
+      "id" : "V8g8o93aPDgA92xxNM-Ew$$W8T7wrn6NVZUBiztOrhjG",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "prophecy_api_uc",
+        "slug" : "prophecy_api_uc",
+        "x" : -880,
+        "y" : -980,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "TFj2zIFJDZUYh6NPzLRSq$$YBzffXUViN-CoFFooOZLx",
+          "slug" : "flatten_api_schema",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "info-_exporter_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the exporter of the dataset",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "info-_postman_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the Postman collection",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "info-description",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Description of the API dataset",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "info-name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the dataset",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "info-schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The schema definition of the dataset",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "item-item-name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the item in the dataset",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "item-item-request-body-graphql-query",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The GraphQL query string used in the API request",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "item-item-request-body-graphql-variables",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Variables associated with the GraphQL query in the API request",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "item-item-request-body-mode",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The mode of the request body used in the API call",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "item-item-request-header",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "item-item-request-method",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The HTTP method used for the API request",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "item-item-request-url-host",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "item-item-request-url-raw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The raw URL used for the API request",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "item-item-response",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "item-name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the API item",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "variable-key",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The key associated with each variable in the API",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "variable-type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The data type of the variable used in the API",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "variable-value",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The value assigned to the variable in the API",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/prophecy_api_uc"
+      }
+    },
+    "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T" : {
+      "id" : "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "TestJSON",
+        "slug" : "TestJSON",
+        "x" : -1220,
+        "y" : -540,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "LsUNWoG_Y3JfAWfObjUtP$$3dSEdsSuo85Ds18wWxOzB",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/TestJSON"
+      }
+    },
+    "Ds83ub0hG0-edf3A6UURd$$7vJSwwkaFu0ZBcpricxp6" : {
+      "id" : "Ds83ub0hG0-edf3A6UURd$$7vJSwwkaFu0ZBcpricxp6",
+      "component" : "FlattenSchema",
+      "metadata" : {
+        "label" : "flatten_api_schema",
+        "slug" : "flatten_api_schema",
+        "x" : -1040,
+        "y" : -980,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Simplifies and organizes complex API data structures for easier analysis and reporting.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-",
+          "slug" : "ProphecyAPI",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "info",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "_exporter_id",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Unique identifier for the exporter of the dataset",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "_postman_id",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Unique identifier for the Postman collection",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "description",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Description of the API dataset",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "name",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "The name of the dataset",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "schema",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "The schema definition of the dataset",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Metadata containing details about the dataset",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "item",
+              "type" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "item",
+                    "type" : {
+                      "type" : "array",
+                      "elementType" : {
+                        "type" : "struct",
+                        "fields" : [ {
+                          "name" : "name",
+                          "type" : "string",
+                          "nullable" : true,
+                          "metadata" : {
+                            "description" : "The name of the item in the dataset",
+                            "mappings" : [ ],
+                            "tags" : [ ]
+                          }
+                        }, {
+                          "name" : "request",
+                          "type" : {
+                            "type" : "struct",
+                            "fields" : [ {
+                              "name" : "body",
+                              "type" : {
+                                "type" : "struct",
+                                "fields" : [ {
+                                  "name" : "graphql",
+                                  "type" : {
+                                    "type" : "struct",
+                                    "fields" : [ {
+                                      "name" : "query",
+                                      "type" : "string",
+                                      "nullable" : true,
+                                      "metadata" : {
+                                        "description" : "The GraphQL query string used in the API request",
+                                        "mappings" : [ ],
+                                        "tags" : [ ]
+                                      }
+                                    }, {
+                                      "name" : "variables",
+                                      "type" : "string",
+                                      "nullable" : true,
+                                      "metadata" : {
+                                        "description" : "Variables associated with the GraphQL query in the API request",
+                                        "mappings" : [ ],
+                                        "tags" : [ ]
+                                      }
+                                    } ]
+                                  },
+                                  "nullable" : true,
+                                  "metadata" : {
+                                    "description" : "GraphQL query and variables used in the request",
+                                    "mappings" : [ ],
+                                    "tags" : [ ]
+                                  }
+                                }, {
+                                  "name" : "mode",
+                                  "type" : "string",
+                                  "nullable" : true,
+                                  "metadata" : {
+                                    "description" : "The mode of the request body used in the API call",
+                                    "mappings" : [ ],
+                                    "tags" : [ ]
+                                  }
+                                } ]
+                              },
+                              "nullable" : true,
+                              "metadata" : {
+                                "description" : "The body of the request containing the main data payload",
+                                "mappings" : [ ],
+                                "tags" : [ ]
+                              }
+                            }, {
+                              "name" : "header",
+                              "type" : {
+                                "type" : "array",
+                                "elementType" : "string",
+                                "containsNull" : true
+                              },
+                              "nullable" : true,
+                              "metadata" : {
+                                "description" : "Headers included in the API request",
+                                "mappings" : [ ],
+                                "tags" : [ ]
+                              }
+                            }, {
+                              "name" : "method",
+                              "type" : "string",
+                              "nullable" : true,
+                              "metadata" : {
+                                "description" : "The HTTP method used for the API request",
+                                "mappings" : [ ],
+                                "tags" : [ ]
+                              }
+                            }, {
+                              "name" : "url",
+                              "type" : {
+                                "type" : "struct",
+                                "fields" : [ {
+                                  "name" : "host",
+                                  "type" : {
+                                    "type" : "array",
+                                    "elementType" : "string",
+                                    "containsNull" : true
+                                  },
+                                  "nullable" : true,
+                                  "metadata" : {
+                                    "description" : "The host URL for the API request",
+                                    "mappings" : [ ],
+                                    "tags" : [ ]
+                                  }
+                                }, {
+                                  "name" : "raw",
+                                  "type" : "string",
+                                  "nullable" : true,
+                                  "metadata" : {
+                                    "description" : "The raw URL used for the API request",
+                                    "mappings" : [ ],
+                                    "tags" : [ ]
+                                  }
+                                } ]
+                              },
+                              "nullable" : true,
+                              "metadata" : {
+                                "description" : "The URL endpoint for the API request",
+                                "mappings" : [ ],
+                                "tags" : [ ]
+                              }
+                            } ]
+                          },
+                          "nullable" : true,
+                          "metadata" : {
+                            "description" : "Details of the request associated with the item",
+                            "mappings" : [ ],
+                            "tags" : [ ]
+                          }
+                        }, {
+                          "name" : "response",
+                          "type" : {
+                            "type" : "array",
+                            "elementType" : "string",
+                            "containsNull" : true
+                          },
+                          "nullable" : true,
+                          "metadata" : {
+                            "description" : "Responses associated with the API requests",
+                            "mappings" : [ ],
+                            "tags" : [ ]
+                          }
+                        } ]
+                      },
+                      "containsNull" : true
+                    },
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "Details of each individual API item within the collection",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "name",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "Name of the API item",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  } ]
+                },
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Collection of API items defined in the dataset",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "variable",
+              "type" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "struct",
+                  "fields" : [ {
+                    "name" : "key",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "The key associated with each variable in the API",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "type",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "The data type of the variable used in the API",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  }, {
+                    "name" : "value",
+                    "type" : "string",
+                    "nullable" : true,
+                    "metadata" : {
+                      "description" : "The value assigned to the variable in the API",
+                      "mappings" : [ ],
+                      "tags" : [ ]
+                    }
+                  } ]
+                },
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Collection of variables used in the API requests",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "XRRpxnYzcKC3auZn9NOve$$j9wtFbcV0jSKEDuON_ZcC",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "explodedColsNewName" : [ {
+          "originalColToExplode" : "item",
+          "updatedColToExplode" : "item",
+          "colNameAfterExplode" : "item"
+        }, {
+          "originalColToExplode" : "variable",
+          "updatedColToExplode" : "variable",
+          "colNameAfterExplode" : "variable"
+        }, {
+          "originalColToExplode" : "item.item",
+          "updatedColToExplode" : "item.item",
+          "colNameAfterExplode" : "item-item"
+        }, {
+          "originalColToExplode" : "item.item.response",
+          "updatedColToExplode" : "item-item.response",
+          "colNameAfterExplode" : "item-item-response"
+        }, {
+          "originalColToExplode" : "item.item.request.header",
+          "updatedColToExplode" : "item-item.request.header",
+          "colNameAfterExplode" : "item-item-request-header"
+        }, {
+          "originalColToExplode" : "item.item.request.url.host",
+          "updatedColToExplode" : "item-item.request.url.host",
+          "colNameAfterExplode" : "item-item-request-url-host"
+        } ],
+        "fsExpressions" : [ {
+          "exploded" : "",
+          "flattenedExpression" : "info._exporter_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "info._exporter_id"
+          },
+          "targetTokens" : [ "info", "_exporter_id" ],
+          "target" : "info-_exporter_id"
+        }, {
+          "exploded" : "",
+          "flattenedExpression" : "info._postman_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "info._postman_id"
+          },
+          "targetTokens" : [ "info", "_postman_id" ],
+          "target" : "info-_postman_id"
+        }, {
+          "exploded" : "",
+          "flattenedExpression" : "info.description",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "info.description"
+          },
+          "targetTokens" : [ "info", "description" ],
+          "target" : "info-description"
+        }, {
+          "exploded" : "",
+          "flattenedExpression" : "info.name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "info.name"
+          },
+          "targetTokens" : [ "info", "name" ],
+          "target" : "info-name"
+        }, {
+          "exploded" : "",
+          "flattenedExpression" : "info.schema",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "info.schema"
+          },
+          "targetTokens" : [ "info", "schema" ],
+          "target" : "info-schema"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "item-item.name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "item.item.name"
+          },
+          "targetTokens" : [ "item", "item", "name" ],
+          "target" : "item-item-name"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "item-item.request.body.graphql.query",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "item.item.request.body.graphql.query"
+          },
+          "targetTokens" : [ "item", "item", "request", "body", "graphql", "query" ],
+          "target" : "item-item-request-body-graphql-query"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "item-item.request.body.graphql.variables",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "item.item.request.body.graphql.variables"
+          },
+          "targetTokens" : [ "item", "item", "request", "body", "graphql", "variables" ],
+          "target" : "item-item-request-body-graphql-variables"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "item-item.request.body.mode",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "item.item.request.body.mode"
+          },
+          "targetTokens" : [ "item", "item", "request", "body", "mode" ],
+          "target" : "item-item-request-body-mode"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "item-item.request.header",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "item.item.request.header"
+          },
+          "targetTokens" : [ "item", "item", "request", "header" ],
+          "target" : "item-item-request-header"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "item-item.request.method",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "item.item.request.method"
+          },
+          "targetTokens" : [ "item", "item", "request", "method" ],
+          "target" : "item-item-request-method"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "item-item.request.url.host",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "item.item.request.url.host"
+          },
+          "targetTokens" : [ "item", "item", "request", "url", "host" ],
+          "target" : "item-item-request-url-host"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "item-item.request.url.raw",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "item.item.request.url.raw"
+          },
+          "targetTokens" : [ "item", "item", "request", "url", "raw" ],
+          "target" : "item-item-request-url-raw"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "item-item.response",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "item.item.response"
+          },
+          "targetTokens" : [ "item", "item", "response" ],
+          "target" : "item-item-response"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "item.name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "item.name"
+          },
+          "targetTokens" : [ "item", "name" ],
+          "target" : "item-name"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "variable.key",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "variable.key"
+          },
+          "targetTokens" : [ "variable", "key" ],
+          "target" : "variable-key"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "variable.type",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "variable.type"
+          },
+          "targetTokens" : [ "variable", "type" ],
+          "target" : "variable-type"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "variable.value",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "variable.value"
+          },
+          "targetTokens" : [ "variable", "value" ],
+          "target" : "variable-value"
+        } ],
+        "columnsSelector" : [ "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##info._postman_id", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##variable.type", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##info.name", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##item.item.response", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##item.item.request.body.graphql.variables", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##item.item", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##variable", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##info", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##info._exporter_id", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##item.item.request.url.host", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##item.item.request.method", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##item", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##item.item.request.body.mode", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##variable.key", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##variable.value", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##item.item.request.body.graphql", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##info.schema", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##item.item.name", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##item.item.request.url", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##item.item.request.header", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##item.item.request.url.raw", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##item.name", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##info.description", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##item.item.request.body", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##item.item.request", "dMxu5CJrAUJIQkUdfu3GF$$5GE45pTNSO7si9Ch0omH-##item.item.request.body.graphql.query" ],
+        "explodeColumns" : [ ],
+        "delimiter" : "-"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.35&projectSubscriptionProjectId=12654&path=gems/FlattenSchema",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "nIxcx9GLuW6S2G8iVTTG4$$XhaYoB27VI1sEyOT8wLZi" : {
+      "id" : "nIxcx9GLuW6S2G8iVTTG4$$XhaYoB27VI1sEyOT8wLZi",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "ProphecyAPI",
+        "slug" : "ProphecyAPI",
+        "x" : -1220,
+        "y" : -980,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Loads and structures data from a JSON file related to API requests, enabling further analysis and integration into business processes.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "M-S3nYGcEwxqzX-wwfRpE$$xrK59WvE4sRHPdgV6CqXS",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/prophecyAPI_JSON"
+      }
+    },
+    "JisB36sz5RBVGh1ZVrYqg$$BBD2zNk4JJSMfNAslE3F1" : {
+      "id" : "JisB36sz5RBVGh1ZVrYqg$$BBD2zNk4JJSMfNAslE3F1",
+      "component" : "FlattenSchema",
+      "metadata" : {
+        "label" : "flatten_schema",
+        "slug" : "flatten_schema",
+        "x" : -1060,
+        "y" : -820,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "3LUvlWDmryFqrPFMlKcc5$$HpQsOlhtVt1_0HjuEhV3V",
+          "slug" : "old_events_JSON",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "result",
+              "type" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "count",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "events",
+                  "type" : {
+                    "type" : "array",
+                    "elementType" : {
+                      "type" : "struct",
+                      "fields" : [ {
+                        "name" : "category1",
+                        "type" : "string",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      }, {
+                        "name" : "category2",
+                        "type" : "string",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      }, {
+                        "name" : "date",
+                        "type" : "string",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      }, {
+                        "name" : "description",
+                        "type" : "string",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      }, {
+                        "name" : "granularity",
+                        "type" : "string",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      }, {
+                        "name" : "lang",
+                        "type" : "string",
+                        "nullable" : true,
+                        "metadata" : {
+                          "description" : "",
+                          "mappings" : [ ],
+                          "tags" : [ ]
+                        }
+                      } ]
+                    },
+                    "containsNull" : true
+                  },
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "-b7dj9SrpV8HrS7wqELem$$EVQokmfvdbzs2pql93wy4",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "explodedColsNewName" : [ {
+          "originalColToExplode" : "result.events",
+          "updatedColToExplode" : "result.events",
+          "colNameAfterExplode" : "result_events"
+        } ],
+        "fsExpressions" : [ {
+          "exploded" : "",
+          "flattenedExpression" : "result.count",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "result.count"
+          },
+          "targetTokens" : [ "result", "count" ],
+          "target" : "result_count"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "result_events.category1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "result.events.category1"
+          },
+          "targetTokens" : [ "result", "events", "category1" ],
+          "target" : "result_events_category1"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "result_events.category2",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "result.events.category2"
+          },
+          "targetTokens" : [ "result", "events", "category2" ],
+          "target" : "result_events_category2"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "result_events.date",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "result.events.date"
+          },
+          "targetTokens" : [ "result", "events", "date" ],
+          "target" : "result_events_date"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "result_events.description",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "result.events.description"
+          },
+          "targetTokens" : [ "result", "events", "description" ],
+          "target" : "result_events_description"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "result_events.granularity",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "result.events.granularity"
+          },
+          "targetTokens" : [ "result", "events", "granularity" ],
+          "target" : "result_events_granularity"
+        }, {
+          "exploded" : "✓",
+          "flattenedExpression" : "result_events.lang",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "result.events.lang"
+          },
+          "targetTokens" : [ "result", "events", "lang" ],
+          "target" : "result_events_lang"
+        } ],
+        "columnsSelector" : [ "3LUvlWDmryFqrPFMlKcc5$$HpQsOlhtVt1_0HjuEhV3V##result.events.category2", "3LUvlWDmryFqrPFMlKcc5$$HpQsOlhtVt1_0HjuEhV3V##result", "3LUvlWDmryFqrPFMlKcc5$$HpQsOlhtVt1_0HjuEhV3V##result.events.date", "3LUvlWDmryFqrPFMlKcc5$$HpQsOlhtVt1_0HjuEhV3V##result.events.description", "3LUvlWDmryFqrPFMlKcc5$$HpQsOlhtVt1_0HjuEhV3V##result.events.granularity", "3LUvlWDmryFqrPFMlKcc5$$HpQsOlhtVt1_0HjuEhV3V##result.events.category1", "3LUvlWDmryFqrPFMlKcc5$$HpQsOlhtVt1_0HjuEhV3V##result.count", "3LUvlWDmryFqrPFMlKcc5$$HpQsOlhtVt1_0HjuEhV3V##result.events", "3LUvlWDmryFqrPFMlKcc5$$HpQsOlhtVt1_0HjuEhV3V##result.events.lang" ],
+        "explodeColumns" : [ ],
+        "delimiter" : "_"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.35&projectSubscriptionProjectId=12654&path=gems/FlattenSchema",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "pGLan62ylCwAWVLmoKyy8$$zJ64sR_3LaxGSf-mu8j-I" : {
+      "id" : "pGLan62ylCwAWVLmoKyy8$$zJ64sR_3LaxGSf-mu8j-I",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "old_events_JSON",
+        "slug" : "old_events_JSON",
+        "x" : -1220,
+        "y" : -820,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "o8zPUnsx4-6RXg6lulSmj$$IHvNmSsnUgtw5IzseHHuE",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/old_events_JSON"
+      }
+    },
+    "u7GcSMY0_5-Y2qZ3lKawY$$7-q-xpQVj3gazRbYTHlhr" : {
+      "id" : "u7GcSMY0_5-Y2qZ3lKawY$$7-q-xpQVj3gazRbYTHlhr",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "events_description_by_category2",
+        "slug" : "events_description_by_category2",
+        "x" : -840,
+        "y" : -820,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "6vQeBHffaIhokWKiiLFHr$$LLnazDDQNSYdLL3lgYU_c",
+          "slug" : "flatten_schema",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "result_count",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_events_category1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_events_category2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_events_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_events_description",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_events_granularity",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "result_events_lang",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "dbs3j8tn1i7DVw_sYEg9W$$S66VF-UPy3JiTKl1kKxpt",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ {
+          "target" : "Events_Desc",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "collect_list(result_events_description)"
+          },
+          "description" : "",
+          "_row_id" : "c_9"
+        } ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "6vQeBHffaIhokWKiiLFHr$$LLnazDDQNSYdLL3lgYU_c##result_events_category2", "6vQeBHffaIhokWKiiLFHr$$LLnazDDQNSYdLL3lgYU_c##result_events_description" ],
+        "groupBy" : [ {
+          "target" : "result_events_category2",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "result_events_category2"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.35&projectSubscriptionProjectId=12654&path=gems/Aggregate",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

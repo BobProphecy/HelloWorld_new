@@ -1,0 +1,350 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "functions" : {
+      "businessRules" : {
+        "rules" : [ ],
+        "sharedRules" : [ ]
+      }
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.4.0",
+        "pyPiVersion" : "1.9.24"
+      },
+      "sparkConfigJinjaEnabled" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/Streamer",
+    "pipelineSettingsInfo" : {
+      "applicationName" : "Streamer",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true
+    },
+    "language" : "python",
+    "fabricId" : "9631",
+    "frontEndLanguage" : "sql",
+    "mode" : "stream",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "bobwprophecyioteam.helloworld.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.data_quality.functions", "prophecy.spark_basic.functions", "prophecy.streaming.functions", "prophecy.warehouse.functions", "maciejdemos.dataquality.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "32699",
+      "projectName" : "ProphecySparkDataQualityPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12656",
+      "projectName" : "ProphecyStreamingPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "27160",
+      "projectName" : "data_quality",
+      "externalDependencies" : [ {
+        "type" : "plibMaven",
+        "modifiedAt" : "2024-05-03T16:22:39.33938Z",
+        "name" : "plibMaven",
+        "enabled" : true,
+        "version" : "8.0.11",
+        "id" : "1766302595",
+        "createdAt" : "2024-05-03T16:22:39.339282Z",
+        "entity" : "Project"
+      }, {
+        "type" : "plibPypi",
+        "modifiedAt" : "2024-05-03T16:22:39.339487Z",
+        "name" : "plibPypi",
+        "enabled" : true,
+        "version" : "1.9.5",
+        "id" : "816884476",
+        "createdAt" : "2024-05-03T16:22:39.339452Z",
+        "entity" : "Project"
+      } ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "streamer",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "jbV9a6rBXuRg9_xcDXkED$$ljqRh4SVkddJ3aMK0Yxyg",
+    "source" : "aG9Br3B_wGPwA6bI_pMCj$$0QhsT4gW7ZwZCBVD2Z9tz",
+    "sourcePort" : "_2nZVMlDZmNm2SqMNpVfF$$2gD5fhD2UOknsk_PlG1py",
+    "target" : "OyTPLqt6OdEOKDPT5EwGK$$0jOaxHySrJRaPPO3gitxe",
+    "targetPort" : "vjdBBl-K7c1A1lcnbtXJB$$dHamB-Zt25WNKaC6FZhi3"
+  }, {
+    "id" : "tqAqUbcnk6SrdNCTpvGLy$$8X-9XNhK0R1YFucY6YAw3",
+    "source" : "rnhJnoFkvORPODlN1RG6s$$a7YZBPqakQCO68WxA_OD_",
+    "sourcePort" : "2frouW0r2FHEoP7URgbqJ$$jpBaVhGNfzz3QMKjcMwUc",
+    "target" : "HDiG8BFYSBDjHlfGAclT3$$jFRJUdxUJxsOP_qc44843",
+    "targetPort" : "EI4olILK5sJXciyOHt7fZ$$Wj1L7-ax2pPGWiuw0wpCN"
+  }, {
+    "id" : "HdInXmka8Yohrqe56XJel",
+    "source" : "HDiG8BFYSBDjHlfGAclT3$$jFRJUdxUJxsOP_qc44843",
+    "sourcePort" : "E0HrC7j3Z_BEUdu-xl-d0$$QILs-enZswmhza9W-6QEw",
+    "target" : "aG9Br3B_wGPwA6bI_pMCj$$0QhsT4gW7ZwZCBVD2Z9tz",
+    "targetPort" : "d-5Tcdl1ZvCfRxSvnrMtB$$SBXfeRs8s692eXPcXIIhb"
+  } ],
+  "processes" : {
+    "rnhJnoFkvORPODlN1RG6s$$a7YZBPqakQCO68WxA_OD_" : {
+      "id" : "rnhJnoFkvORPODlN1RG6s$$a7YZBPqakQCO68WxA_OD_",
+      "component" : "StreamingSource",
+      "metadata" : {
+        "label" : "StreamingSource_0",
+        "slug" : "StreamingSource_0",
+        "x" : -600,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "2frouW0r2FHEoP7URgbqJ$$jpBaVhGNfzz3QMKjcMwUc",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : { }
+    },
+    "OyTPLqt6OdEOKDPT5EwGK$$0jOaxHySrJRaPPO3gitxe" : {
+      "id" : "OyTPLqt6OdEOKDPT5EwGK$$0jOaxHySrJRaPPO3gitxe",
+      "component" : "StreamingTarget",
+      "metadata" : {
+        "label" : "StreamingTarget_1",
+        "slug" : "StreamingTarget_1",
+        "x" : -100,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "vjdBBl-K7c1A1lcnbtXJB$$dHamB-Zt25WNKaC6FZhi3",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : { }
+    },
+    "aG9Br3B_wGPwA6bI_pMCj$$0QhsT4gW7ZwZCBVD2Z9tz" : {
+      "id" : "aG9Br3B_wGPwA6bI_pMCj$$0QhsT4gW7ZwZCBVD2Z9tz",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : -280,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "d-5Tcdl1ZvCfRxSvnrMtB$$SBXfeRs8s692eXPcXIIhb",
+          "slug" : "StreamingSource_0"
+        } ],
+        "outputs" : [ {
+          "id" : "_2nZVMlDZmNm2SqMNpVfF$$2gD5fhD2UOknsk_PlG1py",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.35&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "HDiG8BFYSBDjHlfGAclT3$$jFRJUdxUJxsOP_qc44843" : {
+      "id" : "HDiG8BFYSBDjHlfGAclT3$$jFRJUdxUJxsOP_qc44843",
+      "component" : "Watermark",
+      "metadata" : {
+        "label" : "Watermark_1",
+        "slug" : "Watermark_1",
+        "x" : -460,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EI4olILK5sJXciyOHt7fZ$$Wj1L7-ax2pPGWiuw0wpCN",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "E0HrC7j3Z_BEUdu-xl-d0$$QILs-enZswmhza9W-6QEw",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "watermarks" : [ {
+          "isStreamingDF" : null,
+          "portId" : "EI4olILK5sJXciyOHt7fZ$$Wj1L7-ax2pPGWiuw0wpCN",
+          "disableTextBox" : true,
+          "portSlug" : "in0",
+          "expression" : "",
+          "watermarkValue" : ""
+        } ],
+        "isWatermarkingEnabled" : false
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12656.git&subPath=&tag=0.0.6&projectSubscriptionProjectId=12656&path=gems/Watermark",
+        "projectName" : "ProphecyStreamingPython"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.rnhJnoFkvORPODlN1RG6s$$a7YZBPqakQCO68WxA_OD_.properties.datasetId",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "dataset id missing",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.HDiG8BFYSBDjHlfGAclT3$$jFRJUdxUJxsOP_qc44843",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.aG9Br3B_wGPwA6bI_pMCj$$0QhsT4gW7ZwZCBVD2Z9tz",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.OyTPLqt6OdEOKDPT5EwGK$$0jOaxHySrJRaPPO3gitxe",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.OyTPLqt6OdEOKDPT5EwGK$$0jOaxHySrJRaPPO3gitxe.properties.datasetId",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "dataset id missing",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
+}

@@ -1,0 +1,32 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: path
+    type: string
+    nullable: true
+    metadata:
+      description: The location or address of the file in the system
+      mappings: []
+      tags: []
+  - name: modificationTime
+    type: timestamp
+    nullable: true
+    metadata:
+      description: The timestamp indicating when the file was last modified
+      mappings: []
+      tags: []
+  - name: length
+    type: long
+    nullable: true
+    metadata:
+      description: The size of the file in bytes
+      mappings: []
+      tags: []
+  - name: content
+    type: binary
+    nullable: true
+    metadata:
+      description: The binary data representing the file's content
+      mappings: []
+      tags: []

@@ -1,0 +1,81 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: PropID
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for the property
+      mappings: []
+      tags: []
+  - name: City
+    type: string
+    nullable: true
+    metadata:
+      description: The city where the property is located
+      mappings: []
+      tags: []
+  - name: State
+    type: string
+    nullable: true
+    metadata:
+      description: The state where the property is located
+      mappings: []
+      tags: []
+  - name: PropertyType
+    type: string
+    nullable: true
+    metadata:
+      description: Type of the property associated with the mortgage
+      mappings: []
+      tags: []
+  - name: Servicer
+    type: string
+    nullable: true
+    metadata:
+      description: The company responsible for managing the mortgage loan
+      mappings: []
+      tags: []
+  - name: ServicerType
+    type: string
+    nullable: true
+    metadata:
+      description: Type of the entity servicing the mortgage
+      mappings: []
+      tags: []
+  - name: LoanType
+    type: string
+    nullable: true
+    metadata:
+      description: Type of loan associated with the mortgage
+      mappings: []
+      tags: []
+  - name: UnPaidBalance
+    type: double
+    nullable: true
+    metadata:
+      description: The remaining unpaid balance on the mortgage
+      mappings: []
+      tags: []
+  - name: CurrentPropValue
+    type: double
+    nullable: true
+    metadata:
+      description: The current market value of the property.
+      mappings: []
+      tags: []
+  - name: LoanStatus
+    type: string
+    nullable: true
+    metadata:
+      description: Current status of the mortgage loan
+      mappings: []
+      tags: []
+  - name: UPB_to_Value_Ratio
+    type: double
+    nullable: true
+    metadata:
+      description: Ratio of the unpaid balance to the current property value
+      mappings: []
+      tags: []

@@ -1,0 +1,69 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "9631",
+    "jobId" : "jobs/demo-1",
+    "name" : "demo-1",
+    "schedule" : "None",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : false,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    }
+  },
+  "processes" : {
+    "Wfl7hJ1lxM4nFjo_yjKXI$$0KxmbkmKe23Kdum_PQIBS" : {
+      "id" : "Wfl7hJ1lxM4nFjo_yjKXI$$0KxmbkmKe23Kdum_PQIBS",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "customers_orders",
+        "slug" : "customers_orders",
+        "x" : -250.66673278808594,
+        "y" : -127.46251678466797
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "wmkR3p09qkTbEDylGt_2e$$1OIUYk7rTvFN_jRHshOES",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "vQImaWUYlV82oV4_1SCNr$$44-9Ghphi40XxaZByF-ah",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/customers_orders",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "HelloWorld_BW" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
+    }
+  },
+  "connections" : [ ]
+}
