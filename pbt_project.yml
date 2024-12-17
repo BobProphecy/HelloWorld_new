@@ -165,19 +165,22 @@ pipelines:
     dependencies: {}
   pipelines/demo_new:
     name: demo_new
-    description: Processes order and customer data to generate a summary of total
-      sales per customer. It joins orders with customer details, reformats the data
-      to include full names and company names, and aggregates sales amounts and order
-      counts. The results are sorted by total sales, limited to the top 25 customers,
-      and saved to a specified table.
+    description: Processes customer and order data to generate a summary of total
+      sales per customer. It joins customer details with their respective orders,
+      reformats the data for clarity, and aggregates sales amounts and order counts.
+      The results are sorted and limited to the top 25 customers, which are then saved
+      to a specified table.
     author: bobw@prophecy.io
     mode: batch
     artefactID: ''
     language: python
     createdAt: '2024-07-25 13:25:26'
     datasets:
-      inputs: []
-      outputs: []
+      inputs:
+      - datasets/customers
+      - datasets/orders
+      outputs:
+      - datasets/demo_callum
     subgraphs: []
     dependencies: {}
   pipelines/Streamer:
@@ -584,6 +587,32 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2024-12-10 17:20:17'
+  datasets/demo_cibc:
+    name: demo_cibc
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-12-12 18:25:28'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-12-12 18:25:28'
+  datasets/demo_callum:
+    name: demo_callum
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2024-12-13 21:23:16'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2024-12-13 21:23:16'
 templates: {}
 jobs:
   jobs/DBX_workflow:
@@ -743,7 +772,7 @@ dependencies:
 - type: plibMaven
   modifiedAt: '2024-10-16T13:51:29.776026Z'
   name: plibMaven
-  version: 8.4.0
+  version: 8.6.0
   id: '1386789302'
   createdAt: '2024-10-16T13:51:29.775966Z'
   enabled: true
@@ -751,7 +780,7 @@ dependencies:
 - type: plibPypi
   modifiedAt: '2024-10-16T13:51:29.776124Z'
   name: plibPypi
-  version: 1.9.24
+  version: 1.9.28
   id: '1865957650'
   createdAt: '2024-10-16T13:51:29.776093Z'
   enabled: true
@@ -761,10 +790,10 @@ projectDependencies:
     projectUID: 12654
     projectName: ProphecySparkBasicsPython
     repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=
-    version: 0.2.36
+    version: 0.2.38
     isDefault: true
     author: null
-    createdAt: '2024-12-03 14:59:17'
+    createdAt: '2024-12-17 13:50:04'
   '12655':
     projectUID: 12655
     projectName: ProphecyWarehousePython
@@ -793,10 +822,10 @@ projectDependencies:
     projectUID: 32699
     projectName: ProphecySparkDataQualityPython
     repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/gLsx7fee_project_32699.git&subPath=
-    version: 0.0.1
+    version: 0.0.2
     isDefault: false
     author: null
-    createdAt: '2024-10-31 13:03:16'
+    createdAt: '2024-12-17 13:50:07'
 flags:
   shouldAddDefaultDependenciesIfAbsent: false
 pipelineConfigurations: {}
