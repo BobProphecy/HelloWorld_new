@@ -19,6 +19,7 @@ def pipeline(spark: SparkSession) -> None:
     df_customer_count_by_region = customer_count_by_region(spark, df_apply_region_business_rule)
     df_row_number_by_customer_count = row_number_by_customer_count(spark, df_customer_count_by_region)
     df_Ranked = Ranked(spark, df_row_number_by_customer_count)
+    df_data_quality_checks_out0, df_data_quality_checks_out1 = data_quality_checks(spark, df_Orders)
 
 def main():
     spark = SparkSession.builder\

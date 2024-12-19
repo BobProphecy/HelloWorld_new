@@ -1,3 +1,4 @@
+from .data_quality_checks import data_quality_checks
 from .Unity import Unity
 from .row_number_by_customer_count import row_number_by_customer_count
 from .customer_count_by_region import customer_count_by_region
