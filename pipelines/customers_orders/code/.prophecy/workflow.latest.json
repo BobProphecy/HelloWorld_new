@@ -1074,7 +1074,7 @@
         "slug" : "Customers",
         "x" : 120,
         "y" : 320,
-        "phase" : 0,
+        "phase" : -2,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
@@ -1428,7 +1428,7 @@
         "slug" : "Orders",
         "x" : 120,
         "y" : 120,
-        "phase" : 0,
+        "phase" : -2,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
@@ -1456,11 +1456,11 @@
         "slug" : "data_quality_checks",
         "x" : 360,
         "y" : 0,
-        "phase" : 0,
+        "phase" : -1,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Conducts data quality checks to ensure the integrity and reliability of order data, identifying potential issues such as duplicates, missing values, and invalid statuses.",
+        "comment" : "Conducts thorough data quality checks to ensure the integrity and reliability of order data, identifying any issues that could impact business decisions.",
         "autoUpdateComment" : true
       },
       "ports" : {
@@ -2016,10 +2016,10 @@
             }
           } ]
         },
-        "activeTab" : "dq_check_tab",
+        "activeTab" : "settings",
         "columnsSelector" : [ ],
-        "minFailedChecks" : "",
-        "postAction" : "continue_execution"
+        "minFailedChecks" : "1",
+        "postAction" : "terminate_execution"
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/gLsx7fee_project_32699.git&subPath=&tag=0.0.3&projectSubscriptionProjectId=32699&path=gems/dataQualityCheck",

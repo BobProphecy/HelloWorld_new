@@ -7,8 +7,9 @@ from prophecy.utils import *
 from job.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_Orders = Orders(spark)
     df_Customers = Customers(spark)
+    df_Orders = Orders(spark)
+    df_data_quality_checks_out0, df_data_quality_checks_out1 = data_quality_checks(spark, df_Orders)
     df_By_CustomerId = By_CustomerId(spark, df_Orders, df_Customers)
     df_clean_up = clean_up(spark, df_By_CustomerId)
     df_Aggregate_by_customer = Aggregate_by_customer(spark, df_clean_up)
@@ -19,7 +20,6 @@ def pipeline(spark: SparkSession) -> None:
     df_customer_count_by_region = customer_count_by_region(spark, df_apply_region_business_rule)
     df_row_number_by_customer_count = row_number_by_customer_count(spark, df_customer_count_by_region)
     df_Ranked = Ranked(spark, df_row_number_by_customer_count)
-    df_data_quality_checks_out0, df_data_quality_checks_out1 = data_quality_checks(spark, df_Orders)
 
 def main():
     spark = SparkSession.builder\
