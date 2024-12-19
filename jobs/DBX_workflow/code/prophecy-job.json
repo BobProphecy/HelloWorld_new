@@ -261,9 +261,7 @@
         "pipelineId" : "pipelines/DataQuality",
         "configurations" : {
           "schema" : [ ],
-          "instances" : {
-            "HelloWorld_NEW" : [ "default" ]
-          },
+          "instances" : { },
           "overrides" : { },
           "selectedInstance" : "default"
         }

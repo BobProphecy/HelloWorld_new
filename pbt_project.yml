@@ -144,25 +144,6 @@ pipelines:
       outputs: []
     subgraphs: []
     dependencies: {}
-  pipelines/DataQuality:
-    name: DataQuality
-    description: Processes and integrates customer and order data, ensuring data quality
-      and generating sales insights. It reads customer and order datasets, joins them,
-      and performs data quality checks using PyDeequ. The pipeline then cleans and
-      formats the data, aggregates customer sales, and sorts the results by total
-      sales in descending order.
-    author: bobw@prophecy.io
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2024-06-13 15:37:46'
-    datasets:
-      inputs:
-      - datasets/customers
-      - datasets/orders
-      outputs: []
-    subgraphs: []
-    dependencies: {}
   pipelines/demo_new:
     name: demo_new
     description: Processes customer and order data to generate a summary of total

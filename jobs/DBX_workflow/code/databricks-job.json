@@ -9,10 +9,10 @@
     }
   }, {
     "PipelineComponent" : {
-      "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/DataQuality-1.0-py3-none-any.whl",
+      "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/DataQuality.jar",
       "nodeName" : "DataQuality",
       "id" : "XTlJ06UrAlYvLs1ZeeiKS$$-5DUDyaxhSEUtNC8L3Vxz",
-      "language" : "python",
+      "language" : "scala",
       "pipelineId" : "pipelines/DataQuality"
     }
   }, {
@@ -69,7 +69,8 @@
           "spark.databricks.isv.product" : "prophecy"
         },
         "spark_env_vars" : {
-          "PYSPARK_PYTHON" : "/databricks/python3/bin/python3"
+          "PYSPARK_PYTHON" : "/databricks/python3/bin/python3",
+          "SPARK_VERSION" : "3.5"
         },
         "runtime_engine" : "STANDARD",
         "aws_attributes" : {
@@ -107,7 +108,7 @@
           "spark.databricks.isv.product" : "prophecy"
         },
         "spark_env_vars" : {
-          "SPARK_VERSION" : "3.2"
+          "SPARK_VERSION" : "3.5"
         },
         "cluster_source" : "API",
         "runtime_engine" : "STANDARD",
@@ -146,7 +147,8 @@
           "spark.databricks.isv.product" : "prophecy"
         },
         "spark_env_vars" : {
-          "PYSPARK_PYTHON" : "/databricks/python3/bin/python3"
+          "PYSPARK_PYTHON" : "/databricks/python3/bin/python3",
+          "SPARK_VERSION" : "3.5"
         },
         "runtime_engine" : "PHOTON",
         "aws_attributes" : {
@@ -170,30 +172,16 @@
     }, {
       "task_key" : "DataQuality",
       "job_cluster_key" : "Prep_Pipelines",
-      "python_wheel_task" : {
-        "package_name" : "DataQuality",
-        "entry_point" : "main",
-        "parameters" : [ "-i", "default", "-O", "{}" ]
+      "spark_jar_task" : {
+        "main_class_name" : "",
+        "parameters" : [ "-O", "{}" ]
       },
       "libraries" : [ {
         "maven" : {
           "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-8.6.0"
         }
       }, {
-        "pypi" : {
-          "package" : "prophecy-libs==1.9.28"
-        }
-      }, {
-        "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/DataQuality-1.0-py3-none-any.whl"
-      }, {
-        "maven" : {
-          "coordinates" : "com.amazon.deequ:deequ:2.0.7-spark-3.3",
-          "exclusions" : [ ]
-        }
-      }, {
-        "pypi" : {
-          "package" : "pydeequ"
-        }
+        "jar" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/DataQuality.jar"
       } ],
       "email_notifications" : { },
       "max_retries" : 0
