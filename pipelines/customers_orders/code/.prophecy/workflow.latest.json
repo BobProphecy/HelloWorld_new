@@ -707,7 +707,7 @@
         "slug" : "row_number_by_customer_count",
         "x" : 760,
         "y" : 420,
-        "phase" : 0,
+        "phase" : 1,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
@@ -930,7 +930,7 @@
         "slug" : "customer_count_by_region",
         "x" : 560,
         "y" : 420,
-        "phase" : 0,
+        "phase" : 1,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false
@@ -1102,7 +1102,7 @@
         "slug" : "Ranked",
         "x" : 920,
         "y" : 420,
-        "phase" : 0,
+        "phase" : 1,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
@@ -1180,7 +1180,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "iDAWcpkOS5A6hSC1HeBzT$$bzcrsSbQxR8PwNteDCbwc##CUSTOMER_COUNT", "iDAWcpkOS5A6hSC1HeBzT$$bzcrsSbQxR8PwNteDCbwc##region", "iDAWcpkOS5A6hSC1HeBzT$$bzcrsSbQxR8PwNteDCbwc##row_count" ]
+        "columnsSelector" : [ "iDAWcpkOS5A6hSC1HeBzT$$bzcrsSbQxR8PwNteDCbwc##CUSTOMER_COUNT", "iDAWcpkOS5A6hSC1HeBzT$$bzcrsSbQxR8PwNteDCbwc##row_count", "iDAWcpkOS5A6hSC1HeBzT$$bzcrsSbQxR8PwNteDCbwc##region" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
@@ -1195,7 +1195,7 @@
         "slug" : "apply_region_business_rule",
         "x" : 380,
         "y" : 420,
-        "phase" : 0,
+        "phase" : 1,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
