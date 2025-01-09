@@ -153,6 +153,69 @@
       },
       "parent" : "UqpOQBsuk67fy71AJpxg5"
     },
+    "tkhCEAUy1XsyORXviMSfQ$$15wPcM6FQBZ5abZDROHj8" : {
+      "id" : "tkhCEAUy1XsyORXviMSfQ$$15wPcM6FQBZ5abZDROHj8",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "demo_new",
+        "slug" : "demo_new",
+        "x" : 100,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "k2-v914rF2P0VpWx3HuRc$$ziY6mJKdlD2onq4rbkyIZ",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "_9DpzO09_y0BLWRdhsoxD$$RNH_evbWQXzPy5if2mtLV",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/demo_new",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "HelloWorld_NEW" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      },
+      "parent" : "noHUNh33dQ8KwI6CS8qcB"
+    },
+    "noHUNh33dQ8KwI6CS8qcB" : {
+      "id" : "noHUNh33dQ8KwI6CS8qcB",
+      "component" : "Cluster",
+      "metadata" : {
+        "label" : "Cluster_1",
+        "slug" : "Cluster_1",
+        "x" : 500,
+        "y" : -280,
+        "width" : 280,
+        "height" : 280
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ ]
+      },
+      "properties" : {
+        "clusterSize" : "medium"
+      }
+    },
     "YLq8y_je8yRbeODsVkHGW$$kgIafwRgMG0eswJkHwgVq" : {
       "id" : "YLq8y_je8yRbeODsVkHGW$$kgIafwRgMG0eswJkHwgVq",
       "component" : "DLTPipeline",
@@ -228,45 +291,6 @@
       "properties" : {
         "clusterSize" : "job cluster-small"
       }
-    },
-    "XTlJ06UrAlYvLs1ZeeiKS$$-5DUDyaxhSEUtNC8L3Vxz" : {
-      "id" : "XTlJ06UrAlYvLs1ZeeiKS$$-5DUDyaxhSEUtNC8L3Vxz",
-      "component" : "Pipeline",
-      "metadata" : {
-        "label" : "DataQuality",
-        "slug" : "DataQuality",
-        "x" : 60,
-        "y" : 320
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "FrS5CW7tvGRM-bYiZfZr3$$yZ7eSBBKBH3oIkZmNSm4p",
-          "slug" : ""
-        } ],
-        "outputs" : [ {
-          "id" : "DnsLjjQOzBzwLLCzUFa4b$$jr_ws2KjByw2EKPI9vJ-U",
-          "slug" : ""
-        } ]
-      },
-      "settings" : {
-        "type" : "Inherited",
-        "alerting" : {
-          "emails" : "",
-          "onStart" : false,
-          "onSuccess" : false,
-          "onFailure" : false
-        }
-      },
-      "properties" : {
-        "pipelineId" : "pipelines/DataQuality",
-        "configurations" : {
-          "schema" : [ ],
-          "instances" : { },
-          "overrides" : { },
-          "selectedInstance" : "default"
-        }
-      },
-      "parent" : "FMl2UHxiNsK6TwaOlXMp_"
     }
   },
   "connections" : [ {
@@ -294,10 +318,10 @@
     "sourcePort" : "OHEf84POPJm54ctA4rQcK$$lgo2ouSImJm4K7YFEqQl6",
     "targetPort" : "aZwy7TcoaxtgVHVW0X5ZT$$2A8XRnTahPE-nvnJpXwx5"
   }, {
-    "id" : "8BLwWYmXYGk5pXrzOT4e8",
-    "source" : "XTlJ06UrAlYvLs1ZeeiKS$$-5DUDyaxhSEUtNC8L3Vxz",
-    "target" : "hfQhk96Zjj_cbva8GatRx$$Tis8soV25YfGSVuKoP3Ff",
-    "sourcePort" : "DnsLjjQOzBzwLLCzUFa4b$$jr_ws2KjByw2EKPI9vJ-U",
-    "targetPort" : "aZwy7TcoaxtgVHVW0X5ZT$$2A8XRnTahPE-nvnJpXwx5"
+    "id" : "UhZ-wPvgbrVjjEsPPQMzh",
+    "source" : "tkhCEAUy1XsyORXviMSfQ$$15wPcM6FQBZ5abZDROHj8",
+    "target" : "XzqbboOqkhSr3-S-USd8o$$qfEp85McJkgVu5tLVSR59",
+    "sourcePort" : "_9DpzO09_y0BLWRdhsoxD$$RNH_evbWQXzPy5if2mtLV",
+    "targetPort" : "WvwEhCZTiJdd6ZnjB832C$$mF44vmQZGbdB0gEteHnR6"
   } ]
 }

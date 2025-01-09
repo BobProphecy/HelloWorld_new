@@ -30,7 +30,7 @@ def customers_orders(ti=None, params=None, **context):
               "spark.databricks.isv.product": "prophecy", 
               "spark.prophecy.metadata.job.branch": "__PROJECT_RELEASE_VERSION_PLACEHOLDER__", 
               "spark.databricks.cluster.profile": "singleNode", 
-              "spark.prophecy.execution.service.url": "wss://execution.dp.app.prophecy.io/eventws"
+              "spark.prophecy.execution.service.url": "wss://app.prophecy.io/execution:443/eventws"
             }, 
             "driver_node_type_id": "i4i.large", 
             "cluster_source": "API", 
@@ -40,7 +40,7 @@ def customers_orders(ti=None, params=None, **context):
               "zone_id": "auto", 
               "spot_bid_price_percent": 100.0
             }, 
-            "spark_env_vars": {"SPARK_VERSION" : "3.2"}, 
+            "spark_env_vars": {"SPARK_VERSION" : "3.5"}, 
             "enable_elastic_disk": True
           }, 
           "python_wheel_task": {
@@ -48,7 +48,7 @@ def customers_orders(ti=None, params=None, **context):
             "entry_point": "main", 
             "parameters": ["-i", "default", "-O", "{}"]
           }, 
-          "libraries": [{"maven" : {"coordinates" : "io.prophecy:prophecy-libs_2.12:3.5.0-8.6.0"}},                          {"pypi" : {"package" : "prophecy-libs==1.9.28"}},                          {
+          "libraries": [{"maven" : {"coordinates" : "io.prophecy:prophecy-libs_2.12:3.5.0-8.7.0"}},                          {"pypi" : {"package" : "prophecy-libs==1.9.29"}},                          {
                            "whl": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/customers_orders-1.0-py3-none-any.whl"
                          }]
         },

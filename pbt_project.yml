@@ -157,9 +157,7 @@ pipelines:
     language: python
     createdAt: '2024-07-25 13:25:26'
     datasets:
-      inputs:
-      - datasets/customers
-      - datasets/orders
+      inputs: []
       outputs: []
     subgraphs: []
     dependencies: {}
@@ -624,8 +622,8 @@ jobs:
       onSuccess: false
       onFailure: false
     pipelines:
+    - pipelines/demo_new
     - pipelines/join_agg_sort
-    - pipelines/DataQuality
     - pipelines/customers_orders
     - pipelines/farmers-markets-irs
     jobClusterMode:
@@ -765,7 +763,7 @@ dependencies:
 - type: plibMaven
   modifiedAt: '2024-10-16T13:51:29.776026Z'
   name: plibMaven
-  version: 8.6.0
+  version: 8.7.0
   id: '1386789302'
   createdAt: '2024-10-16T13:51:29.775966Z'
   enabled: true
@@ -773,7 +771,7 @@ dependencies:
 - type: plibPypi
   modifiedAt: '2024-10-16T13:51:29.776124Z'
   name: plibPypi
-  version: 1.9.28
+  version: 1.9.29
   id: '1865957650'
   createdAt: '2024-10-16T13:51:29.776093Z'
   enabled: true

@@ -13,8 +13,8 @@
     "codeGenConfiguration" : {
       "editableConfig" : false,
       "plibVersion" : {
-        "mavenVersion" : "8.6.0",
-        "pyPiVersion" : "1.9.28"
+        "mavenVersion" : "8.7.0",
+        "pyPiVersion" : "1.9.29"
       }
     },
     "id" : "19954/pipelines/farmers-markets-irs",
