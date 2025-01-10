@@ -146,18 +146,20 @@ pipelines:
     dependencies: {}
   pipelines/demo_new:
     name: demo_new
-    description: Processes customer and order data to generate a sales summary. It
-      joins customer details with order information, reformats the data to include
-      full names and company names, and aggregates sales amounts and order counts
-      by customer. The results are sorted by total sales, limited to the top 25 entries,
-      and saved to a specified table.
+    description: Processes order and customer data to generate a summary of total
+      sales by customer. It joins orders with customer details, reformats the data,
+      and aggregates sales amounts and order counts. The results are sorted in descending
+      order of total sales, limited to the top 25 entries, and saved to a specified
+      table.
     author: bobw@prophecy.io
     mode: batch
     artefactID: ''
     language: python
     createdAt: '2024-07-25 13:25:26'
     datasets:
-      inputs: []
+      inputs:
+      - datasets/customers
+      - datasets/orders
       outputs: []
     subgraphs: []
     dependencies: {}
@@ -539,6 +541,19 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2024-11-05 14:55:59'
+  datasets/demo_eric:
+    name: demo_eric
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-01-10 16:28:38'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-01-10 16:28:38'
 templates: {}
 jobs:
   jobs/DBX_workflow:
