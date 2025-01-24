@@ -7,7 +7,7 @@ from job.config.ConfigStore import *
 from job.udfs import *
 
 @instrument
-def Customers(spark: SparkSession) -> DataFrame:
+def load_customers_dataset(spark: SparkSession) -> DataFrame:
     return spark.read\
         .schema(
           StructType([

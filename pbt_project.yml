@@ -64,18 +64,12 @@ pipelines:
     dependencies: {}
   pipelines/customers_orders:
     name: customers_orders
-    description: "This pipeline graph reads two datasets, \"OrdersDatasetInput.csv\"\
-      \ and \"CustomersDatasetInput.csv\", and performs various operations to analyze\
-      \ customer orders. \n\nThe first function, \"By_CustomerId\", joins the \"Orders\"\
-      \ and \"Customers\" datasets based on the customer_id column and selects relevant\
-      \ columns for further analysis.\n\nThe second function, \"clean_up\", combines\
-      \ the first name and last name fields into a single full name field for better\
-      \ readability.\n\nThe third function, \"Aggregate_by_customer\", groups the\
-      \ data by customer_id and full_name and calculates the count of orders and the\
-      \ total sales amount for each customer.\n\nThe fourth function, \"OrderBy_Sales\"\
-      , orders the aggregated data by sales_total in descending order.\n\nThe fifth\
-      \ function, \"Customer_Orders\", writes the final result to a CSV file named\
-      \ \"CustomersOrders.csv\" for further analysis and reporting."
+    description: Analyzes customer orders by integrating customer and order datasets.
+      It performs data quality checks, joins data on customer IDs, and cleans up the
+      resulting DataFrame. The pipeline aggregates sales data by customer, orders
+      it by total sales, and applies regional business rules. Finally, it counts customers
+      by region and ranks them based on customer count. The results are saved in both
+      Delta format and CSV.
     author: bobw@prophecy.io
     mode: batch
     artefactID: ''
@@ -146,10 +140,11 @@ pipelines:
     dependencies: {}
   pipelines/demo_new:
     name: demo_new
-    description: Processes order and customer data to generate a summary of total
-      sales by customer. It joins orders with customer details, reformats the data,
-      and aggregates sales amounts and order counts. The results are sorted in descending
-      order of total sales, limited to the top 25 entries, and saved to a Delta table.
+    description: Processes order and customer data to generate a sales summary. It
+      joins orders with customer details, reformats the data to include full names
+      and company names, and aggregates sales amounts and order counts by customer.
+      The results are sorted by total sales, limited to the top 25 entries, and saved
+      to a specified table.
     author: bobw@prophecy.io
     mode: batch
     artefactID: ''
@@ -577,6 +572,19 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2025-01-15 18:23:23'
+  datasets/demo_bob4:
+    name: demo_bob4
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-01-22 18:27:57'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-01-22 18:27:57'
 templates: {}
 jobs:
   jobs/DBX_workflow:

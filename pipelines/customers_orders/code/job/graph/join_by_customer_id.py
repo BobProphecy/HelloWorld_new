@@ -7,7 +7,7 @@ from job.config.ConfigStore import *
 from job.udfs import *
 
 @instrument
-def By_CustomerId(spark: SparkSession, in0: DataFrame, in1: DataFrame, ) -> DataFrame:
+def join_by_customer_id(spark: SparkSession, in0: DataFrame, in1: DataFrame, ) -> DataFrame:
     return in0\
         .alias("in0")\
         .join(in1.alias("in1"), (col("in0.customer_id") == col("in1.customer_id")), "inner")\

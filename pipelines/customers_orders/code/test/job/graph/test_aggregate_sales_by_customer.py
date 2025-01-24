@@ -4,26 +4,26 @@ from pyspark.sql.types import *
 from argparse import Namespace
 from prophecy.test import BaseTestCase
 from prophecy.test.utils import *
-from job.graph.OrderBy_Sales import *
+from job.graph.aggregate_sales_by_customer import *
 from job.config.ConfigStore import *
 
 
-class OrderBy_SalesTest(BaseTestCase):
+class aggregate_sales_by_customerTest(BaseTestCase):
 
     def test_unit_test_(self):
-        dfAggregate_by_customer = createDfFromResourceFiles(
+        dfClean_up = createDfFromResourceFiles(
             self.spark,
-            'test/resources/data/job/graph/OrderBy_Sales/Aggregate_by_customer/schema.json',
-            'test/resources/data/job/graph/OrderBy_Sales/Aggregate_by_customer/data/test_unit_test_.json',
-            'Aggregate_by_customer'
+            'test/resources/data/job/graph/aggregate_sales_by_customer/clean_up/schema.json',
+            'test/resources/data/job/graph/aggregate_sales_by_customer/clean_up/data/test_unit_test_.json',
+            'clean_up'
         )
         dfOut = createDfFromResourceFiles(
             self.spark,
-            'test/resources/data/job/graph/OrderBy_Sales/out/schema.json',
-            'test/resources/data/job/graph/OrderBy_Sales/out/data/test_unit_test_.json',
+            'test/resources/data/job/graph/aggregate_sales_by_customer/out/schema.json',
+            'test/resources/data/job/graph/aggregate_sales_by_customer/out/data/test_unit_test_.json',
             'out'
         )
-        dfOutComputed = OrderBy_Sales(self.spark, dfAggregate_by_customer)
+        dfOutComputed = aggregate_sales_by_customer(self.spark, dfClean_up)
         assertDFEquals(
             dfOut.select("customer_id", "full_name", "order_count", "sales_total"),
             dfOutComputed.select("customer_id", "full_name", "order_count", "sales_total"),

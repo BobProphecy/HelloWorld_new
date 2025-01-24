@@ -7,5 +7,5 @@ from job.config.ConfigStore import *
 from job.udfs import *
 
 @instrument
-def Unity(spark: SparkSession, in0: DataFrame):
+def save_us_sales_analysis(spark: SparkSession, in0: DataFrame):
     in0.write.format("delta").mode("overwrite").saveAsTable("`bobwelshmer`.`demo_output`.`US_sales_analysis`")

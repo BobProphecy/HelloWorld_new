@@ -7,5 +7,5 @@ from job.config.ConfigStore import *
 from job.udfs import *
 
 @instrument
-def Ranked(spark: SparkSession, row_number_by_customer_count: DataFrame) -> DataFrame:
-    return row_number_by_customer_count.select(col("row_count"), col("region"), col("CUSTOMER_COUNT"))
+def by_sales_total_desc(spark: SparkSession, Aggregate_by_customer: DataFrame) -> DataFrame:
+    return Aggregate_by_customer.orderBy(col("sales_total").desc())

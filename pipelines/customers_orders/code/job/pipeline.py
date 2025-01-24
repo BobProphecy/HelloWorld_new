@@ -7,19 +7,19 @@ from prophecy.utils import *
 from job.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_Customers = Customers(spark)
-    df_Orders = Orders(spark)
-    df_data_quality_checks_out0, df_data_quality_checks_out1 = data_quality_checks(spark, df_Orders)
-    df_By_CustomerId = By_CustomerId(spark, df_Orders, df_Customers)
-    df_clean_up = clean_up(spark, df_By_CustomerId)
-    df_Aggregate_by_customer = Aggregate_by_customer(spark, df_clean_up)
-    df_OrderBy_Sales = OrderBy_Sales(spark, df_Aggregate_by_customer)
-    Unity(spark, df_OrderBy_Sales)
-    CSV(spark, df_OrderBy_Sales)
-    df_apply_region_business_rule = apply_region_business_rule(spark, df_Customers)
+    df_load_customers_dataset = load_customers_dataset(spark)
+    df_load_orders_dataset = load_orders_dataset(spark)
+    df_data_quality_checks_out0, df_data_quality_checks_out1 = data_quality_checks(spark, df_load_orders_dataset)
+    df_join_by_customer_id = join_by_customer_id(spark, df_load_orders_dataset, df_load_customers_dataset)
+    df_customer_data_cleanup = customer_data_cleanup(spark, df_join_by_customer_id)
+    df_aggregate_sales_by_customer = aggregate_sales_by_customer(spark, df_customer_data_cleanup)
+    df_by_sales_total_desc = by_sales_total_desc(spark, df_aggregate_sales_by_customer)
+    save_us_sales_analysis(spark, df_by_sales_total_desc)
+    write_customers_orders_csv(spark, df_by_sales_total_desc)
+    df_apply_region_business_rule = apply_region_business_rule(spark, df_load_customers_dataset)
     df_customer_count_by_region = customer_count_by_region(spark, df_apply_region_business_rule)
     df_row_number_by_customer_count = row_number_by_customer_count(spark, df_customer_count_by_region)
-    df_Ranked = Ranked(spark, df_row_number_by_customer_count)
+    df_select_ranked_customers = select_ranked_customers(spark, df_row_number_by_customer_count)
 
 def main():
     spark = SparkSession.builder\

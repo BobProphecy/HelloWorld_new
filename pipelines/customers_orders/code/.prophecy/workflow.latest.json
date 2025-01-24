@@ -185,15 +185,16 @@
       "id" : "Join_98619",
       "component" : "Join",
       "metadata" : {
-        "label" : "By CustomerId",
-        "slug" : "By_CustomerId",
+        "label" : "join_by_customer_id",
+        "slug" : "join_by_customer_id",
         "x" : 320,
         "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Joins customer information with order details based on customer ID, combining relevant fields such as account open date, order ID, customer ID, amount, first name, and last name."
+        "comment" : "Links customer orders with their account opening dates and personal details, providing a comprehensive view of customer transactions.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -418,7 +419,7 @@
         } ],
         "allIn1" : null,
         "activeTab" : "expressions",
-        "columnsSelector" : [ "47810##customer_id", "2322##customer_id", "47810##customer_id", "2322##last_name", "2322##first_name", "47810##amount", "47810##order_id", "2322##account_open_date" ],
+        "columnsSelector" : [ "2322##customer_id", "47810##customer_id", "47810##amount", "47810##customer_id", "2322##account_open_date", "47810##order_id", "2322##first_name", "2322##last_name" ],
         "allIn0" : null,
         "whereClause" : null,
         "headAlias" : "in0"
@@ -432,14 +433,16 @@
       "id" : "bO5d7MpgS8dLT1jZLhQma$$xZAizwwmdMAKrPH6-9nQO",
       "component" : "Target",
       "metadata" : {
-        "label" : "Unity",
-        "slug" : "Unity",
+        "label" : "save_us_sales_analysis",
+        "slug" : "save_us_sales_analysis",
         "x" : 1140,
         "y" : 60,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Saves sales analysis data in a structured format for future reference and reporting.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -500,15 +503,16 @@
       "id" : "DWvA5KPv63hWAzzvnwzXY$$0vuyboMiK36qHkuIkAEGQ",
       "component" : "Aggregate",
       "metadata" : {
-        "label" : "Aggregate_by_customer",
-        "slug" : "Aggregate_by_customer",
+        "label" : "aggregate_sales_by_customer",
+        "slug" : "aggregate_sales_by_customer",
         "x" : 720,
         "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Aggregates customer data by customer ID and full name, calculating the order count and total sales for each customer."
+        "comment" : "Aggregates sales data by customer, providing insights into the number of orders and total sales for each customer.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -606,7 +610,7 @@
         "pivotColumn" : null,
         "pivotValues" : [ ],
         "activeTab" : "aggregate",
-        "columnsSelector" : [ "2T9gL1JVIp_GrcqL42djp$$-w93lO6ccI981o47KQ_S4##full_name", "2T9gL1JVIp_GrcqL42djp$$-w93lO6ccI981o47KQ_S4##amount", "2T9gL1JVIp_GrcqL42djp$$-w93lO6ccI981o47KQ_S4##customer_id", "2T9gL1JVIp_GrcqL42djp$$-w93lO6ccI981o47KQ_S4##order_id" ],
+        "columnsSelector" : [ "2T9gL1JVIp_GrcqL42djp$$-w93lO6ccI981o47KQ_S4##order_id", "2T9gL1JVIp_GrcqL42djp$$-w93lO6ccI981o47KQ_S4##full_name", "2T9gL1JVIp_GrcqL42djp$$-w93lO6ccI981o47KQ_S4##customer_id", "2T9gL1JVIp_GrcqL42djp$$-w93lO6ccI981o47KQ_S4##amount" ],
         "groupBy" : [ {
           "target" : "customer_id",
           "expression" : {
@@ -634,15 +638,16 @@
       "id" : "Target_63106",
       "component" : "Target",
       "metadata" : {
-        "label" : "CSV",
-        "slug" : "CSV",
+        "label" : "write_customers_orders_csv",
+        "slug" : "write_customers_orders_csv",
         "x" : 1140,
         "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Writes customer orders data to a CSV file."
+        "comment" : "Exports customer order data to a CSV file for reporting and analysis.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -711,7 +716,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Ranks customers based on their transaction count, facilitating targeted marketing and customer engagement strategies.",
+        "comment" : "Ranks customers based on their transaction counts, helping to identify the most active customers.",
         "autoUpdateComment" : true
       },
       "ports" : {
@@ -786,15 +791,16 @@
       "id" : "Zndsv8a2N-PN_HvqR5rC6$$orMQPI5swaFTOQioyhGEN",
       "component" : "Reformat",
       "metadata" : {
-        "label" : "clean_up",
-        "slug" : "clean_up",
+        "label" : "customer_data_cleanup",
+        "slug" : "customer_data_cleanup",
         "x" : 520,
         "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Cleans up the joined data by selecting relevant columns and creating a full name column."
+        "comment" : "Enhances customer data by creating full names and generating unique hashes for customer and order identifiers.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -915,7 +921,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##first_name", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##last_name", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##customer_id", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##order_id", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##amount" ]
+        "columnsSelector" : [ "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##order_id", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##last_name", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##customer_id", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##amount", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##first_name" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
@@ -933,7 +939,9 @@
         "phase" : 1,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Counts the number of customers in each region, providing insights into regional customer distribution.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -1070,15 +1078,16 @@
       "id" : "Source_51275",
       "component" : "Source",
       "metadata" : {
-        "label" : "Customers",
-        "slug" : "Customers",
+        "label" : "load_customers_dataset",
+        "slug" : "load_customers_dataset",
         "x" : 120,
         "y" : 320,
         "phase" : -2,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Reads customer data from a CSV file, specifying the schema and options for reading."
+        "comment" : "Loads customer data from a CSV file, ensuring proper formatting and structure for further analysis.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ ],
@@ -1098,15 +1107,15 @@
       "id" : "6VpI2JP_0dZYrodyDt2OQ$$Aux3NL14G7HEUtvQgo15L",
       "component" : "Reformat",
       "metadata" : {
-        "label" : "Ranked",
-        "slug" : "Ranked",
+        "label" : "select_ranked_customers",
+        "slug" : "select_ranked_customers",
         "x" : 920,
         "y" : 420,
         "phase" : 1,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Displays customer counts by region, providing insights into regional customer distribution.",
+        "comment" : "Displays customer counts by region along with their respective rankings.",
         "autoUpdateComment" : true
       },
       "ports" : {
@@ -1180,7 +1189,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "iDAWcpkOS5A6hSC1HeBzT$$bzcrsSbQxR8PwNteDCbwc##CUSTOMER_COUNT", "iDAWcpkOS5A6hSC1HeBzT$$bzcrsSbQxR8PwNteDCbwc##row_count", "iDAWcpkOS5A6hSC1HeBzT$$bzcrsSbQxR8PwNteDCbwc##region" ]
+        "columnsSelector" : [ "iDAWcpkOS5A6hSC1HeBzT$$bzcrsSbQxR8PwNteDCbwc##row_count", "iDAWcpkOS5A6hSC1HeBzT$$bzcrsSbQxR8PwNteDCbwc##region", "iDAWcpkOS5A6hSC1HeBzT$$bzcrsSbQxR8PwNteDCbwc##CUSTOMER_COUNT" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.39&projectSubscriptionProjectId=12654&path=gems/Reformat",
@@ -1199,7 +1208,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Applies a specific business rule related to regional data to enhance data quality and compliance.",
+        "comment" : "Applies regional business rules to enhance data accuracy and compliance.",
         "autoUpdateComment" : true
       },
       "ports" : {
@@ -1341,15 +1350,16 @@
       "id" : "tca79Iw71O4ymnCmQglrz$$Cf_cVIUt-zwvFM-Yfz4sv",
       "component" : "OrderBy",
       "metadata" : {
-        "label" : "OrderBy_Sales",
-        "slug" : "OrderBy_Sales",
+        "label" : "by_sales_total_desc",
+        "slug" : "by_sales_total_desc",
         "x" : 920,
         "y" : 220,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Orders the aggregated customer data by sales total in descending order."
+        "comment" : "Ranks customers based on their total sales, highlighting top-performing clients.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {
@@ -1424,15 +1434,16 @@
       "id" : "Source_28006",
       "component" : "Source",
       "metadata" : {
-        "label" : "Orders",
-        "slug" : "Orders",
+        "label" : "load_orders_dataset",
+        "slug" : "load_orders_dataset",
         "x" : 120,
         "y" : 120,
         "phase" : -2,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Reads order data from a CSV file, specifying the schema and options for reading."
+        "comment" : "Loads order data from a CSV file, ensuring proper formatting for analysis.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ ],
@@ -1460,7 +1471,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Conducts thorough data quality checks to ensure the integrity and reliability of order data, identifying any issues that could impact business decisions.",
+        "comment" : "Conducts data quality checks to ensure the integrity and reliability of order data, identifying any issues that could impact business decisions.",
         "autoUpdateComment" : true
       },
       "ports" : {

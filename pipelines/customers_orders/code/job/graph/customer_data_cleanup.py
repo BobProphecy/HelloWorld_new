@@ -7,7 +7,7 @@ from job.config.ConfigStore import *
 from job.udfs import *
 
 @instrument
-def clean_up(spark: SparkSession, By_CustomerId: DataFrame) -> DataFrame:
+def customer_data_cleanup(spark: SparkSession, By_CustomerId: DataFrame) -> DataFrame:
     return By_CustomerId.select(
         col("customer_id"), 
         concat(col("first_name"), lit(" "), col("last_name")).alias("full_name"), 

@@ -7,7 +7,7 @@ from job.config.ConfigStore import *
 from job.udfs import *
 
 @instrument
-def CSV(spark: SparkSession, in0: DataFrame):
+def write_customers_orders_csv(spark: SparkSession, in0: DataFrame):
     in0.write\
         .option("header", True)\
         .option("sep", ",")\
