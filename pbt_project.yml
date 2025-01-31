@@ -151,7 +151,9 @@ pipelines:
     language: python
     createdAt: '2024-07-25 13:25:26'
     datasets:
-      inputs: []
+      inputs:
+      - datasets/customers
+      - datasets/orders
       outputs: []
     subgraphs: []
     dependencies: {}
@@ -820,10 +822,10 @@ projectDependencies:
     projectUID: 32699
     projectName: ProphecySparkDataQualityPython
     repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/gLsx7fee_project_32699.git&subPath=
-    version: 0.0.3
+    version: 0.0.4
     isDefault: false
     author: null
-    createdAt: '2024-12-18 13:53:40'
+    createdAt: '2025-01-31 14:05:31'
 flags:
   shouldAddDefaultDependenciesIfAbsent: false
 pipelineConfigurations: {}

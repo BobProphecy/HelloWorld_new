@@ -2033,7 +2033,7 @@
         "postAction" : "terminate_execution"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/gLsx7fee_project_32699.git&subPath=&tag=0.0.3&projectSubscriptionProjectId=32699&path=gems/dataQualityCheck",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/gLsx7fee_project_32699.git&subPath=&tag=0.0.4&projectSubscriptionProjectId=32699&path=gems/dataQualityCheck",
         "projectName" : "ProphecySparkDataQualityPython"
       }
     }

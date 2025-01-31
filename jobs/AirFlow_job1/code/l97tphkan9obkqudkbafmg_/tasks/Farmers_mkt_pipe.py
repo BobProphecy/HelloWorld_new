@@ -29,7 +29,7 @@ def Farmers_mkt_pipe(ti=None, params=None, **context):
               "spark.databricks.isv.product": "prophecy", 
               "spark.prophecy.metadata.job.branch": "__PROJECT_RELEASE_VERSION_PLACEHOLDER__", 
               "spark.databricks.cluster.profile": "singleNode", 
-              "spark.prophecy.execution.service.url": "wss://app.prophecy.io/execution:443/eventws"
+              "spark.prophecy.execution.service.url": "wss://app.prophecy.io/execution/eventws"
             }, 
             "aws_attributes": {
               "first_on_demand": 1.0, 
@@ -49,5 +49,5 @@ def Farmers_mkt_pipe(ti=None, params=None, **context):
                            "whl": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/farmers_markets_irs-1.0-py3-none-any.whl"
                          }]
         },
-        databricks_conn_id = "6ByEIr95xN-jNmQlYY-s9",
+        databricks_conn_id = "",
     )
