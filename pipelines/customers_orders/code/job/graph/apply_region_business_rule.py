@@ -8,4 +8,4 @@ from job.udfs import *
 
 @instrument
 def apply_region_business_rule(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0.withColumn(get_alias(Region_Bus_Rule()), Region_Bus_Rule())
+    return add_rule(in0, Region_Bus_Rule())

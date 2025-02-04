@@ -63,6 +63,7 @@
       "settings" : { },
       "properties" : {
         "runJson" : null,
+        "projectId" : "37461",
         "databricksConnId" : "",
         "clusterSize" : "9631/small",
         "configurations" : {
@@ -107,6 +108,7 @@
       "settings" : { },
       "properties" : {
         "runJson" : null,
+        "projectId" : "37461",
         "databricksConnId" : "",
         "clusterSize" : "9631/small",
         "configurations" : {
@@ -151,6 +153,7 @@
       "settings" : { },
       "properties" : {
         "runJson" : null,
+        "projectId" : "37461",
         "databricksConnId" : "",
         "clusterSize" : "9631/medium",
         "configurations" : {
