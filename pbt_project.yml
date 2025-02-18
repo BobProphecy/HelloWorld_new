@@ -140,10 +140,11 @@ pipelines:
     dependencies: {}
   pipelines/demo_new:
     name: demo_new
-    description: Processes customer and order data to generate a sales summary. It
-      joins customer details with order information, reformats the data, and aggregates
-      sales amounts by customer. The results are sorted by total sales, limited to
-      the top 30 entries, and saved to a specified table.
+    description: Processes order and customer data to generate a summary of total
+      sales by customer. It joins orders with customer details, reformats the data
+      to include full names and company names, and aggregates sales amounts and order
+      counts. The results are sorted in descending order of total sales, limited to
+      the top 25 entries, and saved to a specified Delta table.
     author: bobw@prophecy.io
     mode: batch
     artefactID: ''
@@ -623,6 +624,19 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2025-02-10 18:34:48'
+  datasets/demo_dbx10:
+    name: demo_dbx10
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-02-11 18:36:46'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-02-11 18:36:46'
 templates: {}
 jobs:
   jobs/DBX_workflow:
@@ -816,10 +830,10 @@ projectDependencies:
     projectUID: 12656
     projectName: ProphecyStreamingPython
     repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12656.git&subPath=
-    version: 0.0.6
+    version: 0.0.7
     isDefault: false
     author: null
-    createdAt: '2024-11-20 15:18:22'
+    createdAt: '2025-02-18 14:50:03'
   '27160':
     projectUID: 27160
     projectName: data_quality

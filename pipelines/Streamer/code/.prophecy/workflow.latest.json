@@ -256,7 +256,7 @@
         "isWatermarkingEnabled" : false
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12656.git&subPath=&tag=0.0.6&projectSubscriptionProjectId=12656&path=gems/Watermark",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12656.git&subPath=&tag=0.0.7&projectSubscriptionProjectId=12656&path=gems/Watermark",
         "projectName" : "ProphecyStreamingPython"
       }
     }
