@@ -155,19 +155,6 @@ pipelines:
       outputs: []
     subgraphs: []
     dependencies: {}
-  pipelines/Streamer:
-    name: Streamer
-    description: ''
-    author: bobw@prophecy.io
-    mode: stream
-    artefactID: ''
-    language: python
-    createdAt: '2024-10-16 12:37:21'
-    datasets:
-      inputs: []
-      outputs: []
-    subgraphs: []
-    dependencies: {}
 datasets:
   datasets/customer_totals:
     name: customer_totals
