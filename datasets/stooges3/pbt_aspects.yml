@@ -1,0 +1,39 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: employee_id
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for each employee
+      mappings: []
+      tags: []
+  - name: f_name
+    type: string
+    nullable: true
+    metadata:
+      description: First name of the employee
+      mappings: []
+      tags: []
+  - name: l_name
+    type: string
+    nullable: true
+    metadata:
+      description: The last name of the employee
+      mappings: []
+      tags: []
+  - name: title
+    type: string
+    nullable: true
+    metadata:
+      description: The job title of the employee
+      mappings: []
+      tags: []
+  - name: manager_id
+    type: string
+    nullable: true
+    metadata:
+      description: The ID of the employee's manager
+      mappings: []
+      tags: []

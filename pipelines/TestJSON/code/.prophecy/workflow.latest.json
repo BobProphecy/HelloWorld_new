@@ -312,6 +312,61 @@
           "headAlias" : "datasets/customers_snow"
         }
       } ]
+    }, {
+      "sourceLabel" : "stooges3",
+      "sourceDatasetId" : "datasets/stooges3",
+      "canJoinWith" : [ {
+        "processLabel" : "TestJSON",
+        "processId" : "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T",
+        "joinColumns" : [ "firstname" ],
+        "isRecommended" : false,
+        "properties" : {
+          "columnsSelector" : [ "firstname" ],
+          "conditions" : [ {
+            "alias" : "stooges3",
+            "expression" : "(TestJSON.firstname = stooges3.f_name)",
+            "joinType" : "inner"
+          } ],
+          "expressions" : [ {
+            "alias" : "employee_id",
+            "expression" : "stooges3.employee_id"
+          }, {
+            "alias" : "l_name",
+            "expression" : "stooges3.l_name"
+          }, {
+            "alias" : "title",
+            "expression" : "stooges3.title"
+          }, {
+            "alias" : "manager_id",
+            "expression" : "stooges3.manager_id"
+          }, {
+            "alias" : "lastname",
+            "expression" : "TestJSON.lastname"
+          }, {
+            "alias" : "gender",
+            "expression" : "TestJSON.gender"
+          }, {
+            "alias" : "age_group",
+            "expression" : "TestJSON.age_group"
+          }, {
+            "alias" : "creation_date",
+            "expression" : "TestJSON.creation_date"
+          }, {
+            "alias" : "firstname",
+            "expression" : "TestJSON.firstname"
+          }, {
+            "alias" : "email",
+            "expression" : "TestJSON.email"
+          }, {
+            "alias" : "id",
+            "expression" : "TestJSON.id"
+          }, {
+            "alias" : "address",
+            "expression" : "TestJSON.address"
+          } ],
+          "headAlias" : "datasets/stooges3"
+        }
+      } ]
     } ],
     "pipelineSettingsInfo" : {
       "applicationName" : "TestJSON",
