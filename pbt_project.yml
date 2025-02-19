@@ -143,16 +143,19 @@ pipelines:
     description: Processes order and customer data to generate a summary of total
       sales per customer. It joins orders with customer details, reformats the data
       to include full names and company names, and aggregates sales amounts and order
-      counts. The results are sorted in descending order of total sales, limited to
-      the top 25 entries, and saved to a Delta table.
+      counts. The results are sorted by total sales, limited to the top 25 customers,
+      and saved to a Delta table.
     author: bobw@prophecy.io
     mode: batch
     artefactID: ''
     language: python
     createdAt: '2024-07-25 13:25:26'
     datasets:
-      inputs: []
-      outputs: []
+      inputs:
+      - datasets/customers
+      - datasets/orders
+      outputs:
+      - datasets/demo_rt
     subgraphs: []
     dependencies: {}
 datasets:
@@ -520,6 +523,19 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2025-02-18 19:42:30'
+  datasets/demo_rt:
+    name: demo_rt
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-02-19 20:37:21'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-02-19 20:37:21'
 templates: {}
 jobs:
   jobs/DBX_workflow:
@@ -602,6 +618,32 @@ jobs:
       clusterId: null
     enabled: null
     createdAt: '2024-10-18 13:14:38'
+    author: bobw@prophecy.io
+    models: []
+    sqlProjects: []
+  jobs/nightlyrun:
+    name: nightlyrun
+    description: ''
+    fabricUID: 9631
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: small
+    scheduleCron: 0 0 0 * * ? *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - pipelines/demo_new
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2025-02-19 20:40:01'
     author: bobw@prophecy.io
     models: []
     sqlProjects: []
