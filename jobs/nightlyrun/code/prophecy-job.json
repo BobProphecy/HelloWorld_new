@@ -68,12 +68,11 @@
         "pipelineId" : "pipelines/demo_new",
         "configurations" : {
           "schema" : [ ],
-          "instances" : {
-            "HelloWorld_NEW" : [ "default" ]
-          },
+          "instances" : { },
           "overrides" : { },
           "selectedInstance" : "default"
-        }
+        },
+        "projectId" : "37461"
       }
     }
   },

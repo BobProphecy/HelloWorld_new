@@ -2,10 +2,10 @@
   "fabric_id" : "9631",
   "components" : [ {
     "PipelineComponent" : {
-      "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/demo_new-1.0-py3-none-any.whl",
+      "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/demo_new.jar",
       "nodeName" : "demo_new",
       "id" : "FwjDJhG_Mi3OVXNOADQ6R",
-      "language" : "python",
+      "language" : "scala",
       "pipelineId" : "pipelines/demo_new"
     }
   } ],
@@ -55,21 +55,16 @@
     "tasks" : [ {
       "task_key" : "demo_new",
       "job_cluster_key" : "nightlyrun_default_small",
-      "python_wheel_task" : {
-        "package_name" : "demo_new",
-        "entry_point" : "main",
-        "parameters" : [ "-i", "default", "-O", "{}" ]
+      "spark_jar_task" : {
+        "main_class_name" : "",
+        "parameters" : [ "-O", "{}" ]
       },
       "libraries" : [ {
         "maven" : {
           "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-8.8.0"
         }
       }, {
-        "pypi" : {
-          "package" : "prophecy-libs==1.9.33"
-        }
-      }, {
-        "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/demo_new-1.0-py3-none-any.whl"
+        "jar" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/demo_new.jar"
       } ],
       "email_notifications" : { }
     } ],

@@ -138,24 +138,17 @@ pipelines:
       outputs: []
     subgraphs: []
     dependencies: {}
-  pipelines/demo_new:
-    name: demo_new
-    description: Processes order and customer data to generate a summary of total
-      sales per customer. It joins orders with customer details, reformats the data
-      to include full names and company names, and aggregates sales amounts and order
-      counts. The results are sorted by total sales, limited to the top 25 customers,
-      and saved to a Delta table.
+  pipelines/demo_bob1:
+    name: demo_bob1
+    description: ''
     author: bobw@prophecy.io
     mode: batch
     artefactID: ''
     language: python
-    createdAt: '2024-07-25 13:25:26'
+    createdAt: '2025-02-20 16:07:31'
     datasets:
-      inputs:
-      - datasets/customers
-      - datasets/orders
-      outputs:
-      - datasets/demo_rt
+      inputs: []
+      outputs: []
     subgraphs: []
     dependencies: {}
 datasets:
