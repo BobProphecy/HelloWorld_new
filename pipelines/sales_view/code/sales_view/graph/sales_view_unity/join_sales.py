@@ -18,4 +18,4 @@ def join_sales(
           (col("hello_world_hw_orders.customer_id") == col("hello_world_hw_customers.customer_id")),
           "inner"
         )\
-        .select(col("hello_world_hw_orders.customer_id").alias("customer_id"), col("hello_world_hw_orders.order_id").alias("order_id"), col("hello_world_hw_customers.first_name").alias("first_name"), col("hello_world_hw_customers.last_name").alias("last_name"), col("hello_world_hw_orders.amount").alias("amount"))
+        .select(col("hello_world_hw_orders.customer_id").alias("customer_id"), col("hello_world_hw_orders.order_id").alias("order_id"), col("hello_world_hw_customers.first_name").alias("first_name"), col("hello_world_hw_customers.last_name").alias("last_name"), col("hello_world_hw_orders.amount").alias("amount"), col("hello_world_hw_customers.email").alias("email"))

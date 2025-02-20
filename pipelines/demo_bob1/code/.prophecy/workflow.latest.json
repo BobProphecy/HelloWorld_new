@@ -20,6 +20,7 @@
     },
     "id" : "1",
     "uri" : "pipelines/demo_bob1",
+    "sourceSuggestions" : [ ],
     "pipelineSettingsInfo" : {
       "applicationName" : "demo_bob1",
       "hasApplication" : true,

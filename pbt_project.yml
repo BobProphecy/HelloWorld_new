@@ -529,6 +529,19 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2025-02-19 20:37:21'
+  datasets/HW_customers_sample:
+    name: HW_customers_sample
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-02-20 16:13:23'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-02-20 16:13:23'
 templates: {}
 jobs:
   jobs/DBX_workflow:
