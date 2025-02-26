@@ -32,19 +32,19 @@
     "packageName" : "sales_views"
   },
   "connections" : [ {
-    "id" : "vPZHFv5Vcz1RpWZItG09r",
+    "id" : "H6IEeVjakm5gyywPmXGKu",
     "source" : "LSv9REHs8HZ4C32_6hb1u",
     "sourcePort" : "TKAY_p6xklDfh08c4eDK0",
     "target" : "aYmzpAaaIcN_15aWl4o4u",
     "targetPort" : "1XYmbWm3-0LXc9iI-j85M"
   }, {
-    "id" : "4L3cyTOvNx-QWtW7PyOqE",
+    "id" : "ZOnceTsU5uht4uIBv_li6",
     "source" : "YJWPOGulnFb7xstgvDPzI",
     "sourcePort" : "iKRUh19kX9X2vltRypEyf",
     "target" : "aYmzpAaaIcN_15aWl4o4u",
     "targetPort" : "s7cmpGulNmdjsuufxXEqZ"
   }, {
-    "id" : "5KZAgERO038PryWIF0_Es",
+    "id" : "aKm9-xkvJ0WHjxb8FBvNK",
     "source" : "aYmzpAaaIcN_15aWl4o4u",
     "sourcePort" : "79YHeigcVgHbAuXqV-LH8",
     "target" : "96F0cp50nwrdAtsNVevIM",
@@ -985,19 +985,19 @@
           "_row_id" : null
         } ],
         "hints" : [ {
-          "id" : "1XYmbWm3-0LXc9iI-j85M$$y-srvtynF0J4eq3J6Ryzn",
+          "id" : "1XYmbWm3-0LXc9iI-j85M$$eTYjC34B1nN3YFLTuHnex$$y-srvtynF0J4eq3J6Ryzn",
           "alias" : "hello_world_hw_orders",
           "hintType" : "none",
           "propagateColumns" : false
         }, {
-          "id" : "s7cmpGulNmdjsuufxXEqZ$$6MJIWWN3VgjXm2L5dsOhy",
+          "id" : "s7cmpGulNmdjsuufxXEqZ$$UxkAoZYiysc_91gbSjx6L$$6MJIWWN3VgjXm2L5dsOhy",
           "alias" : "hello_world_hw_customers",
           "hintType" : "none",
           "propagateColumns" : false
         } ],
         "allIn1" : null,
         "activeTab" : "expressions",
-        "columnsSelector" : [ "1XYmbWm3-0LXc9iI-j85M$$y-srvtynF0J4eq3J6Ryzn##customer_id", "s7cmpGulNmdjsuufxXEqZ$$6MJIWWN3VgjXm2L5dsOhy##customer_id", "1XYmbWm3-0LXc9iI-j85M$$y-srvtynF0J4eq3J6Ryzn##order_id", "1XYmbWm3-0LXc9iI-j85M$$y-srvtynF0J4eq3J6Ryzn##amount", "s7cmpGulNmdjsuufxXEqZ$$6MJIWWN3VgjXm2L5dsOhy##email", "1XYmbWm3-0LXc9iI-j85M$$y-srvtynF0J4eq3J6Ryzn##customer_id", "s7cmpGulNmdjsuufxXEqZ$$6MJIWWN3VgjXm2L5dsOhy##first_name", "s7cmpGulNmdjsuufxXEqZ$$6MJIWWN3VgjXm2L5dsOhy##last_name" ],
+        "columnsSelector" : [ "1XYmbWm3-0LXc9iI-j85M$$eTYjC34B1nN3YFLTuHnex$$y-srvtynF0J4eq3J6Ryzn##customer_id", "s7cmpGulNmdjsuufxXEqZ$$UxkAoZYiysc_91gbSjx6L$$6MJIWWN3VgjXm2L5dsOhy##customer_id", "1XYmbWm3-0LXc9iI-j85M$$eTYjC34B1nN3YFLTuHnex$$y-srvtynF0J4eq3J6Ryzn##order_id", "1XYmbWm3-0LXc9iI-j85M$$eTYjC34B1nN3YFLTuHnex$$y-srvtynF0J4eq3J6Ryzn##amount", "s7cmpGulNmdjsuufxXEqZ$$UxkAoZYiysc_91gbSjx6L$$6MJIWWN3VgjXm2L5dsOhy##email", "1XYmbWm3-0LXc9iI-j85M$$eTYjC34B1nN3YFLTuHnex$$y-srvtynF0J4eq3J6Ryzn##customer_id", "s7cmpGulNmdjsuufxXEqZ$$UxkAoZYiysc_91gbSjx6L$$6MJIWWN3VgjXm2L5dsOhy##first_name", "s7cmpGulNmdjsuufxXEqZ$$UxkAoZYiysc_91gbSjx6L$$6MJIWWN3VgjXm2L5dsOhy##last_name" ],
         "allIn0" : null,
         "whereClause" : null,
         "headAlias" : "hello_world_hw_orders"

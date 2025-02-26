@@ -140,7 +140,11 @@ pipelines:
     dependencies: {}
   pipelines/demo_bob1:
     name: demo_bob1
-    description: ''
+    description: Processes order and customer data to generate a sales summary. It
+      joins orders with customer details, reformats the data to include full names
+      and company names, and aggregates sales amounts and order counts by customer.
+      The results are sorted by total sales and limited to the top 25 entries before
+      being saved to a specified table.
     author: bobw@prophecy.io
     mode: batch
     artefactID: ''
@@ -542,6 +546,19 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2025-02-20 16:13:23'
+  datasets/demo_kpmg:
+    name: demo_kpmg
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-02-20 21:36:36'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-02-20 21:36:36'
 templates: {}
 jobs:
   jobs/DBX_workflow:
@@ -650,6 +667,33 @@ jobs:
       clusterId: null
     enabled: null
     createdAt: '2025-02-19 20:40:01'
+    author: bobw@prophecy.io
+    models: []
+    sqlProjects: []
+  jobs/nightly_run:
+    name: nightly_run
+    description: ''
+    fabricUID: 9631
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: small
+    scheduleCron: 0 0 0 * * ? *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - pipelines/demo_bob1
+    - pipelines/customers_orders
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2025-02-20 21:38:40'
     author: bobw@prophecy.io
     models: []
     sqlProjects: []

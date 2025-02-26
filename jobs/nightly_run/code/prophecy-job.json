@@ -1,0 +1,215 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "9631",
+    "jobId" : "jobs/nightly_run",
+    "name" : "nightly_run",
+    "schedule" : "0 0 0 * * ? *",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : false,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    }
+  },
+  "processes" : {
+    "SnmXNwObLXq7k2VLyT-fR$$iLT0L7xjXhmvf5oUc7jdp" : {
+      "id" : "SnmXNwObLXq7k2VLyT-fR$$iLT0L7xjXhmvf5oUc7jdp",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "customers_orders",
+        "slug" : "customers_orders",
+        "x" : 100,
+        "y" : 360
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "dmMUs9lH3N-ONuuC4va5Y$$emPJJg2rMSNjw5SJGvJbV",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "TvdkuqbxQPLw0PTjUInZA$$Dli95g7UyOzxh8A2cskLq",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/customers_orders",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "HelloWorld_NEW" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        },
+        "projectId" : "37461"
+      },
+      "parent" : "MoGCT_PqBFQe_WEunnRx2"
+    },
+    "DKbJq79NkMh4WeeujIpiB" : {
+      "id" : "DKbJq79NkMh4WeeujIpiB",
+      "component" : "Cluster",
+      "metadata" : {
+        "label" : "Cluster_2",
+        "slug" : "Cluster_2",
+        "x" : -220,
+        "y" : -100,
+        "width" : 280,
+        "height" : 280
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ ]
+      },
+      "properties" : {
+        "clusterSize" : "small"
+      }
+    },
+    "IqCokV0IwCqFsCg19mZF9" : {
+      "id" : "IqCokV0IwCqFsCg19mZF9",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "demo_bob1",
+        "slug" : "demo_bob1",
+        "x" : 100,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "out",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/demo_bob1",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "HelloWorld_NEW" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      },
+      "parent" : "DKbJq79NkMh4WeeujIpiB"
+    },
+    "S2OOqqxEJy89rOMhXLB9u$$EbzqGJQIC1m8XUV01dITz" : {
+      "id" : "S2OOqqxEJy89rOMhXLB9u$$EbzqGJQIC1m8XUV01dITz",
+      "component" : "DLTPipeline",
+      "metadata" : {
+        "label" : "DLTPipeline_1",
+        "slug" : "DLTPipeline_1",
+        "x" : 100,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "-NzmbjISnU0FyVfLeuofY$$Wqw4vQ7mgt17K-9FHEUit",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "PfY89Q9O6_2YbCDZld-S9$$TdGPKXlYKCI-c1exw1YWS",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "properties" : {
+        "pipelineId" : "",
+        "configurations" : { },
+        "dltPipelineId" : "b130888b-c347-4df5-813f-6129e1951770"
+      },
+      "parent" : "MoGCT_PqBFQe_WEunnRx2"
+    },
+    "MoGCT_PqBFQe_WEunnRx2" : {
+      "id" : "MoGCT_PqBFQe_WEunnRx2",
+      "component" : "Cluster",
+      "metadata" : {
+        "label" : "Cluster_1",
+        "slug" : "Cluster_1",
+        "x" : -620,
+        "y" : -320,
+        "width" : 280,
+        "height" : 520
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ ]
+      },
+      "properties" : {
+        "clusterSize" : "medium"
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "Kq0z32XW6wWQqqSsKUecv",
+    "source" : "SnmXNwObLXq7k2VLyT-fR$$iLT0L7xjXhmvf5oUc7jdp",
+    "target" : "IqCokV0IwCqFsCg19mZF9",
+    "sourcePort" : "TvdkuqbxQPLw0PTjUInZA$$Dli95g7UyOzxh8A2cskLq",
+    "targetPort" : "in"
+  }, {
+    "id" : "gPK_NvUoq6XPmZrmObcUP",
+    "source" : "S2OOqqxEJy89rOMhXLB9u$$EbzqGJQIC1m8XUV01dITz",
+    "target" : "IqCokV0IwCqFsCg19mZF9",
+    "sourcePort" : "PfY89Q9O6_2YbCDZld-S9$$TdGPKXlYKCI-c1exw1YWS",
+    "targetPort" : "in"
+  } ]
+}
