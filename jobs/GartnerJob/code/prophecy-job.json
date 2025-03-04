@@ -1,0 +1,172 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "9631",
+    "jobId" : "jobs/GartnerJob",
+    "name" : "GartnerJob",
+    "schedule" : "None",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : false,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    }
+  },
+  "processes" : {
+    "vS9p_r9iURcet4IHz-lL2$$FhoIzc5Hh-FC4i1nPtF0o" : {
+      "id" : "vS9p_r9iURcet4IHz-lL2$$FhoIzc5Hh-FC4i1nPtF0o",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "customers_orders",
+        "slug" : "customers_orders",
+        "x" : 100,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "oTvddpczMz5ZUPVoqUap-$$59Q-ENZoht6G0Tgu_kCkU",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "2xqlwnw9nSQnUmHnqkSWl$$O9TXxnrfhz_yepd-TgNxl",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/customers_orders",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "HelloWorld_NEW" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        },
+        "projectId" : "37461"
+      },
+      "parent" : "BPyT3-48SofncFtDeUQs9"
+    },
+    "oAR_dRNHEBElUArtZcnR1$$yT0FzYgnkKPHi2UvHyK4m" : {
+      "id" : "oAR_dRNHEBElUArtZcnR1$$yT0FzYgnkKPHi2UvHyK4m",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "join_agg_sort",
+        "slug" : "join_agg_sort",
+        "x" : 100,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "_YW3SwTN1IDzQszGUaBK5$$4FAOQfand9y5wCk5Vi6Bx",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "8h47LO8G78hXlXfh60RY-$$SylBDFYYcBLSmkbSki8zX",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/join_agg_sort",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "HelloWorld_NEW" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        },
+        "projectId" : "37461"
+      },
+      "parent" : "DN-atEyINU9F_MVxeckpE"
+    },
+    "DN-atEyINU9F_MVxeckpE" : {
+      "id" : "DN-atEyINU9F_MVxeckpE",
+      "component" : "Cluster",
+      "metadata" : {
+        "label" : "Cluster_1",
+        "slug" : "Cluster_1",
+        "x" : -660,
+        "y" : -280,
+        "width" : 280,
+        "height" : 280
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ ]
+      },
+      "properties" : {
+        "clusterSize" : "medium"
+      }
+    },
+    "BPyT3-48SofncFtDeUQs9" : {
+      "id" : "BPyT3-48SofncFtDeUQs9",
+      "component" : "Cluster",
+      "metadata" : {
+        "label" : "Cluster_2",
+        "slug" : "Cluster_2",
+        "x" : -260,
+        "y" : -300,
+        "width" : 280,
+        "height" : 280
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ ]
+      },
+      "properties" : {
+        "clusterSize" : "small"
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "Zui0ifXNJ28j52jCwUuiU",
+    "source" : "oAR_dRNHEBElUArtZcnR1$$yT0FzYgnkKPHi2UvHyK4m",
+    "target" : "vS9p_r9iURcet4IHz-lL2$$FhoIzc5Hh-FC4i1nPtF0o",
+    "sourcePort" : "8h47LO8G78hXlXfh60RY-$$SylBDFYYcBLSmkbSki8zX",
+    "targetPort" : "oTvddpczMz5ZUPVoqUap-$$59Q-ENZoht6G0Tgu_kCkU"
+  } ]
+}

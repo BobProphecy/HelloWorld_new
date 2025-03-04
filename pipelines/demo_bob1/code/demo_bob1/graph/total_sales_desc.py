@@ -7,5 +7,5 @@ from demo_bob1.config.ConfigStore import *
 from demo_bob1.functions import *
 
 @instrument
-def sorted_by_total_sales(spark: SparkSession, sales_summary: DataFrame) -> DataFrame:
+def total_sales_desc(spark: SparkSession, sales_summary: DataFrame) -> DataFrame:
     return sales_summary.orderBy(col("TOTAL_SALES").desc())

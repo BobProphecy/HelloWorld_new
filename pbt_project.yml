@@ -154,8 +154,7 @@ pipelines:
       inputs:
       - datasets/customers
       - datasets/orders
-      outputs:
-      - datasets/demo_web1
+      outputs: []
     subgraphs: []
     dependencies: {}
 datasets:
@@ -736,6 +735,33 @@ jobs:
       clusterId: null
     enabled: null
     createdAt: '2025-02-20 21:38:40'
+    author: bobw@prophecy.io
+    models: []
+    sqlProjects: []
+  jobs/GartnerJob:
+    name: GartnerJob
+    description: ''
+    fabricUID: 9631
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: small
+    scheduleCron: None
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - pipelines/customers_orders
+    - pipelines/join_agg_sort
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2025-03-04 18:09:38'
     author: bobw@prophecy.io
     models: []
     sqlProjects: []
