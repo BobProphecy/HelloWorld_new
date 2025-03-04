@@ -20,7 +20,7 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: Current status of the customer's order
+      description: Current status of the order
       mappings: []
       tags: []
   - name: order_category

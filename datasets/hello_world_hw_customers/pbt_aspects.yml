@@ -41,7 +41,7 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: Code representing the customer's country of residence
+      description: Code representing the customer's country
       mappings: []
       tags: []
   - name: account_open_date

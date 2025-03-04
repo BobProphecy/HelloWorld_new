@@ -140,19 +140,22 @@ pipelines:
     dependencies: {}
   pipelines/demo_bob1:
     name: demo_bob1
-    description: Processes order and customer data to generate a sales summary. It
-      joins orders with customer details, reformats the data to include full names
-      and company names, and aggregates sales amounts and order counts by customer.
-      The results are sorted by total sales and limited to the top 25 entries before
-      being saved to a specified table.
+    description: Processes customer and order data to generate a sales summary. It
+      combines customer details with order information, reformats the data, and aggregates
+      sales amounts and order counts by customer. The results are sorted by total
+      sales and limited to the top 25 entries, which are then saved to a specified
+      table.
     author: bobw@prophecy.io
     mode: batch
     artefactID: ''
     language: python
     createdAt: '2025-02-20 16:07:31'
     datasets:
-      inputs: []
-      outputs: []
+      inputs:
+      - datasets/customers
+      - datasets/orders
+      outputs:
+      - datasets/demo_web1
     subgraphs: []
     dependencies: {}
 datasets:
@@ -559,6 +562,45 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2025-02-20 21:36:36'
+  datasets/demo_webinar1:
+    name: demo_webinar1
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-02-27 17:29:37'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-02-27 17:29:37'
+  datasets/demo_orlando:
+    name: demo_orlando
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-03-03 23:40:54'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-03-03 23:40:54'
+  datasets/demo_web1:
+    name: demo_web1
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-03-04 16:46:50'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-03-04 16:46:50'
 templates: {}
 jobs:
   jobs/DBX_workflow:

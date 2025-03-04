@@ -20,7 +20,7 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: The last name of the individual initiating the wire transfer
+      description: The last name of the individual involved in the wire transfer
       mappings: []
       tags: []
   - name: from_bank
@@ -55,7 +55,7 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: Country from which the wire transfer is initiated
+      description: Country from which the wire transfer originates
       mappings: []
       tags: []
   - name: destination_country
