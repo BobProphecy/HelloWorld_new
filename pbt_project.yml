@@ -1,6 +1,6 @@
 name: HelloWorld
 description: USE THIS for DBX Spark demos
-version: 1.6.7
+version: 1.6.2
 author: null
 language: python
 buildSystem: ''
