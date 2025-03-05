@@ -5,7 +5,7 @@ db_pipeline_id_to_path_dict = {
     "pipelines/SQLScript": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/SQLScript-1.0-py3-none-any.whl", 
     "pipelines/TestJSON": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/TestJSON-1.0-py3-none-any.whl", 
     "pipelines/customers_orders": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/customers_orders-1.0-py3-none-any.whl", 
-    "pipelines/demo_new": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/demo_new-1.0-py3-none-any.whl", 
+    "pipelines/demo_bob1": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/demo_bob1-1.0-py3-none-any.whl", 
     "pipelines/farmers-markets-irs": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/farmers_markets_irs-1.0-py3-none-any.whl", 
     "pipelines/join_agg_sort": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/join_agg_sort-1.0-py3-none-any.whl", 
     "pipelines/sales_view": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/sales_view-1.0-py3-none-any.whl"
@@ -27,11 +27,11 @@ def task_wrapper(task_id):
 
 pipeline_package_name = {
     "pipelines/SQLScript": "SQLScript", 
-    "pipelines/demo_new": "demo_new", 
     "pipelines/join_agg_sort": "join_agg_sort", 
     "pipelines/DBX2Target": "DBX2Target", 
     "pipelines/customers_orders": "customers_orders", 
     "pipelines/sales_view": "sales_view", 
+    "pipelines/demo_bob1": "demo_bob1", 
     "pipelines/TestJSON": "TestJSON", 
     "pipelines/farmers-markets-irs": "farmers-markets-irs"
 }

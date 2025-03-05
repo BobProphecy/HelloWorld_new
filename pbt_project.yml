@@ -154,7 +154,8 @@ pipelines:
       inputs:
       - datasets/customers
       - datasets/orders
-      outputs: []
+      outputs:
+      - datasets/demo_gart22
     subgraphs: []
     dependencies: {}
 datasets:
@@ -600,6 +601,19 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2025-03-04 16:46:50'
+  datasets/demo_gart22:
+    name: demo_gart22
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-03-04 18:37:05'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-03-04 18:37:05'
 templates: {}
 jobs:
   jobs/DBX_workflow:
@@ -839,7 +853,7 @@ dependencies:
 - type: plibMaven
   modifiedAt: '2024-10-16T13:51:29.776026Z'
   name: plibMaven
-  version: 8.8.0
+  version: 8.8.2
   id: '1386789302'
   createdAt: '2024-10-16T13:51:29.775966Z'
   enabled: true
@@ -847,7 +861,7 @@ dependencies:
 - type: plibPypi
   modifiedAt: '2024-10-16T13:51:29.776124Z'
   name: plibPypi
-  version: 1.9.33
+  version: 1.9.36
   id: '1865957650'
   createdAt: '2024-10-16T13:51:29.776093Z'
   enabled: true

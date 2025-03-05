@@ -7,5 +7,8 @@ from demo_bob1.config.ConfigStore import *
 from demo_bob1.functions import *
 
 @instrument
-def total_sales_desc(spark: SparkSession, customer_sales_summary: DataFrame) -> DataFrame:
-    return customer_sales_summary.orderBy(col("TOTAL_SALES").desc())
+def demo_gart22(spark: SparkSession, limited_sort_results: DataFrame):
+    limited_sort_results.write\
+        .format("delta")\
+        .mode("overwrite")\
+        .saveAsTable("`bobwelshmer`.`demo_output`.`demo_gart22`")

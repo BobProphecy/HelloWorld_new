@@ -13,13 +13,71 @@
     "codeGenConfiguration" : {
       "editableConfig" : true,
       "plibVersion" : {
-        "mavenVersion" : "8.8.0",
-        "pyPiVersion" : "1.9.33"
+        "mavenVersion" : "8.8.2",
+        "pyPiVersion" : "1.9.36"
       }
     },
     "id" : "1",
     "uri" : "pipelines/TestJSON",
     "sourceSuggestions" : [ {
+      "sourceLabel" : "HW_customers_sample",
+      "sourceDatasetId" : "datasets/HW_customers_sample",
+      "canJoinWith" : [ {
+        "processLabel" : "TestJSON",
+        "processId" : "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T",
+        "joinColumns" : [ "email", "firstname", "lastname" ],
+        "isRecommended" : true,
+        "properties" : {
+          "columnsSelector" : [ "email", "firstname", "lastname" ],
+          "conditions" : [ {
+            "alias" : "HW_customers_sample",
+            "expression" : "(((TestJSON.email = HW_customers_sample.email) AND (TestJSON.firstname = HW_customers_sample.first_name)) AND (TestJSON.lastname = HW_customers_sample.last_name))",
+            "joinType" : "inner"
+          } ],
+          "expressions" : [ {
+            "alias" : "customer_id",
+            "expression" : "HW_customers_sample.customer_id"
+          }, {
+            "alias" : "phone",
+            "expression" : "HW_customers_sample.phone"
+          }, {
+            "alias" : "country_code",
+            "expression" : "HW_customers_sample.country_code"
+          }, {
+            "alias" : "account_open_date",
+            "expression" : "HW_customers_sample.account_open_date"
+          }, {
+            "alias" : "account_flags",
+            "expression" : "HW_customers_sample.account_flags"
+          }, {
+            "alias" : "lastname",
+            "expression" : "TestJSON.lastname"
+          }, {
+            "alias" : "gender",
+            "expression" : "TestJSON.gender"
+          }, {
+            "alias" : "age_group",
+            "expression" : "TestJSON.age_group"
+          }, {
+            "alias" : "creation_date",
+            "expression" : "TestJSON.creation_date"
+          }, {
+            "alias" : "firstname",
+            "expression" : "TestJSON.firstname"
+          }, {
+            "alias" : "email",
+            "expression" : "TestJSON.email"
+          }, {
+            "alias" : "id",
+            "expression" : "TestJSON.id"
+          }, {
+            "alias" : "address",
+            "expression" : "TestJSON.address"
+          } ],
+          "headAlias" : "datasets/HW_customers_sample"
+        }
+      } ]
+    }, {
       "sourceLabel" : "hello_world_hw_customers",
       "sourceDatasetId" : "datasets/hello_world_hw_customers",
       "canJoinWith" : [ {
@@ -203,58 +261,6 @@
         }
       } ]
     }, {
-      "sourceLabel" : "tar_snow",
-      "sourceDatasetId" : "datasets/tar_snow",
-      "canJoinWith" : [ {
-        "processLabel" : "TestJSON",
-        "processId" : "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T",
-        "joinColumns" : [ "firstname", "lastname" ],
-        "isRecommended" : true,
-        "properties" : {
-          "columnsSelector" : [ "firstname", "lastname" ],
-          "conditions" : [ {
-            "alias" : "tar_snow",
-            "expression" : "((TestJSON.firstname = tar_snow.FIRST_NAME) AND (TestJSON.lastname = tar_snow.LAST_NAME))",
-            "joinType" : "inner"
-          } ],
-          "expressions" : [ {
-            "alias" : "CUSTOMER_ID",
-            "expression" : "tar_snow.CUSTOMER_ID"
-          }, {
-            "alias" : "REVENUE",
-            "expression" : "tar_snow.REVENUE"
-          }, {
-            "alias" : "order_count",
-            "expression" : "tar_snow.order_count"
-          }, {
-            "alias" : "lastname",
-            "expression" : "TestJSON.lastname"
-          }, {
-            "alias" : "gender",
-            "expression" : "TestJSON.gender"
-          }, {
-            "alias" : "age_group",
-            "expression" : "TestJSON.age_group"
-          }, {
-            "alias" : "creation_date",
-            "expression" : "TestJSON.creation_date"
-          }, {
-            "alias" : "firstname",
-            "expression" : "TestJSON.firstname"
-          }, {
-            "alias" : "email",
-            "expression" : "TestJSON.email"
-          }, {
-            "alias" : "id",
-            "expression" : "TestJSON.id"
-          }, {
-            "alias" : "address",
-            "expression" : "TestJSON.address"
-          } ],
-          "headAlias" : "datasets/tar_snow"
-        }
-      } ]
-    }, {
       "sourceLabel" : "customers_snow",
       "sourceDatasetId" : "datasets/customers_snow",
       "canJoinWith" : [ {
@@ -365,6 +371,58 @@
             "expression" : "TestJSON.address"
           } ],
           "headAlias" : "datasets/stooges3"
+        }
+      } ]
+    }, {
+      "sourceLabel" : "tar_snow",
+      "sourceDatasetId" : "datasets/tar_snow",
+      "canJoinWith" : [ {
+        "processLabel" : "TestJSON",
+        "processId" : "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T",
+        "joinColumns" : [ "firstname", "lastname" ],
+        "isRecommended" : false,
+        "properties" : {
+          "columnsSelector" : [ "firstname", "lastname" ],
+          "conditions" : [ {
+            "alias" : "tar_snow",
+            "expression" : "((TestJSON.firstname = tar_snow.FIRST_NAME) AND (TestJSON.lastname = tar_snow.LAST_NAME))",
+            "joinType" : "inner"
+          } ],
+          "expressions" : [ {
+            "alias" : "CUSTOMER_ID",
+            "expression" : "tar_snow.CUSTOMER_ID"
+          }, {
+            "alias" : "REVENUE",
+            "expression" : "tar_snow.REVENUE"
+          }, {
+            "alias" : "order_count",
+            "expression" : "tar_snow.order_count"
+          }, {
+            "alias" : "lastname",
+            "expression" : "TestJSON.lastname"
+          }, {
+            "alias" : "gender",
+            "expression" : "TestJSON.gender"
+          }, {
+            "alias" : "age_group",
+            "expression" : "TestJSON.age_group"
+          }, {
+            "alias" : "creation_date",
+            "expression" : "TestJSON.creation_date"
+          }, {
+            "alias" : "firstname",
+            "expression" : "TestJSON.firstname"
+          }, {
+            "alias" : "email",
+            "expression" : "TestJSON.email"
+          }, {
+            "alias" : "id",
+            "expression" : "TestJSON.id"
+          }, {
+            "alias" : "address",
+            "expression" : "TestJSON.address"
+          } ],
+          "headAlias" : "datasets/tar_snow"
         }
       } ]
     } ],
