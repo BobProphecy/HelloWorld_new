@@ -140,11 +140,11 @@ pipelines:
     dependencies: {}
   pipelines/demo_bob1:
     name: demo_bob1
-    description: Processes customer and order data to generate a sales summary. It
-      combines customer details with order information, reformats the data, and aggregates
-      sales amounts and order counts by customer. The results are sorted by total
-      sales and limited to the top 25 entries, which are then saved to a specified
-      table.
+    description: Processes order and customer data to generate a sales summary. It
+      merges orders with customer details, reformats the data to include full names
+      and company names, and aggregates sales amounts and order counts by customer.
+      The results are sorted by total sales, limited to the top 25 entries, and saved
+      to a specified table.
     author: bobw@prophecy.io
     mode: batch
     artefactID: ''
@@ -155,7 +155,7 @@ pipelines:
       - datasets/customers
       - datasets/orders
       outputs:
-      - datasets/demo_gart22
+      - datasets/demo_pc
     subgraphs: []
     dependencies: {}
 datasets:
@@ -614,6 +614,19 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2025-03-04 18:37:05'
+  datasets/demo_pc:
+    name: demo_pc
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-03-10 17:31:35'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-03-10 17:31:35'
 templates: {}
 jobs:
   jobs/DBX_workflow:

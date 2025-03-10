@@ -563,19 +563,19 @@
         "name" : "hw_sales_analysis_unity"
       },
       "connections" : [ {
-        "id" : "73I2Zxb1crP6OS6-JiRpS",
+        "id" : "XjovXm3-69Ck7tTCh7GH_",
         "source" : "LSv9REHs8HZ4C32_6hb1u$$wftVefQtzo3jEUPLhxv3w",
         "sourcePort" : "TKAY_p6xklDfh08c4eDK0$$cI9c9YYtA2uOHL2eaeWRr",
         "target" : "aYmzpAaaIcN_15aWl4o4u$$uNCehH6NItZN2tzGVq5cO",
         "targetPort" : "1XYmbWm3-0LXc9iI-j85M$$dk0WexQiPLkOMtx7l5X_A"
       }, {
-        "id" : "ZCr1_jl1PHjHJ3zRQQ9Ko",
+        "id" : "t0OLxhrK61FiODyXMzqHC",
         "source" : "YJWPOGulnFb7xstgvDPzI$$TuWvZqi_GfA8BskAKx9vY",
         "sourcePort" : "iKRUh19kX9X2vltRypEyf$$2FbpT_aohJ-dp3c8Us0Ja",
         "target" : "aYmzpAaaIcN_15aWl4o4u$$uNCehH6NItZN2tzGVq5cO",
         "targetPort" : "s7cmpGulNmdjsuufxXEqZ$$DPSUP0FjAatEAxM4p7zAW"
       }, {
-        "id" : "4j1L9I64DB3bUASwbuMfJ",
+        "id" : "4Ww-ywhwt4DuYHzAsaphL",
         "source" : "aYmzpAaaIcN_15aWl4o4u$$uNCehH6NItZN2tzGVq5cO",
         "sourcePort" : "79YHeigcVgHbAuXqV-LH8$$Fhn69QA14gtz6XWKfBddW",
         "target" : "96F0cp50nwrdAtsNVevIM$$GUwrWZbUcyN4YyFi61Ex0",
@@ -866,19 +866,19 @@
               "_row_id" : null
             } ],
             "hints" : [ {
-              "id" : "1XYmbWm3-0LXc9iI-j85M$$U4NkT0_JR3WpUVov1olqc$$nNR-3pFv5zvNpcF0Hy-Zw$$K62R2As-9tMbEOLUA4vae$$eTYjC34B1nN3YFLTuHnex$$y-srvtynF0J4eq3J6Ryzn",
+              "id" : "1XYmbWm3-0LXc9iI-j85M$$kQt9hPp4Mw-rtv1OFp54S$$aN24DM_Tse5DN_R_2wzfn$$U4NkT0_JR3WpUVov1olqc$$nNR-3pFv5zvNpcF0Hy-Zw$$K62R2As-9tMbEOLUA4vae$$eTYjC34B1nN3YFLTuHnex$$y-srvtynF0J4eq3J6Ryzn",
               "alias" : "hello_world_hw_orders",
               "hintType" : "none",
               "propagateColumns" : false
             }, {
-              "id" : "s7cmpGulNmdjsuufxXEqZ$$urRQZ8fZFh1kVS235bif7$$nvfAv7mkk64NmN89EYRZR$$D3Ke2HMHHwdp3Le9YGG0k$$UxkAoZYiysc_91gbSjx6L$$6MJIWWN3VgjXm2L5dsOhy",
+              "id" : "s7cmpGulNmdjsuufxXEqZ$$OnGw0VU2No3Uq7JGRqcB2$$bbs7CAe7eMaeRuZQKEXim$$urRQZ8fZFh1kVS235bif7$$nvfAv7mkk64NmN89EYRZR$$D3Ke2HMHHwdp3Le9YGG0k$$UxkAoZYiysc_91gbSjx6L$$6MJIWWN3VgjXm2L5dsOhy",
               "alias" : "hello_world_hw_customers",
               "hintType" : "none",
               "propagateColumns" : false
             } ],
             "allIn1" : null,
             "activeTab" : "expressions",
-            "columnsSelector" : [ "1XYmbWm3-0LXc9iI-j85M$$U4NkT0_JR3WpUVov1olqc$$nNR-3pFv5zvNpcF0Hy-Zw$$K62R2As-9tMbEOLUA4vae$$eTYjC34B1nN3YFLTuHnex$$y-srvtynF0J4eq3J6Ryzn##customer_id", "s7cmpGulNmdjsuufxXEqZ$$urRQZ8fZFh1kVS235bif7$$nvfAv7mkk64NmN89EYRZR$$D3Ke2HMHHwdp3Le9YGG0k$$UxkAoZYiysc_91gbSjx6L$$6MJIWWN3VgjXm2L5dsOhy##customer_id", "1XYmbWm3-0LXc9iI-j85M$$U4NkT0_JR3WpUVov1olqc$$nNR-3pFv5zvNpcF0Hy-Zw$$K62R2As-9tMbEOLUA4vae$$eTYjC34B1nN3YFLTuHnex$$y-srvtynF0J4eq3J6Ryzn##order_id", "1XYmbWm3-0LXc9iI-j85M$$U4NkT0_JR3WpUVov1olqc$$nNR-3pFv5zvNpcF0Hy-Zw$$K62R2As-9tMbEOLUA4vae$$eTYjC34B1nN3YFLTuHnex$$y-srvtynF0J4eq3J6Ryzn##amount", "s7cmpGulNmdjsuufxXEqZ$$urRQZ8fZFh1kVS235bif7$$nvfAv7mkk64NmN89EYRZR$$D3Ke2HMHHwdp3Le9YGG0k$$UxkAoZYiysc_91gbSjx6L$$6MJIWWN3VgjXm2L5dsOhy##email", "1XYmbWm3-0LXc9iI-j85M$$U4NkT0_JR3WpUVov1olqc$$nNR-3pFv5zvNpcF0Hy-Zw$$K62R2As-9tMbEOLUA4vae$$eTYjC34B1nN3YFLTuHnex$$y-srvtynF0J4eq3J6Ryzn##customer_id", "s7cmpGulNmdjsuufxXEqZ$$urRQZ8fZFh1kVS235bif7$$nvfAv7mkk64NmN89EYRZR$$D3Ke2HMHHwdp3Le9YGG0k$$UxkAoZYiysc_91gbSjx6L$$6MJIWWN3VgjXm2L5dsOhy##first_name", "s7cmpGulNmdjsuufxXEqZ$$urRQZ8fZFh1kVS235bif7$$nvfAv7mkk64NmN89EYRZR$$D3Ke2HMHHwdp3Le9YGG0k$$UxkAoZYiysc_91gbSjx6L$$6MJIWWN3VgjXm2L5dsOhy##last_name" ],
+            "columnsSelector" : [ "1XYmbWm3-0LXc9iI-j85M$$kQt9hPp4Mw-rtv1OFp54S$$aN24DM_Tse5DN_R_2wzfn$$U4NkT0_JR3WpUVov1olqc$$nNR-3pFv5zvNpcF0Hy-Zw$$K62R2As-9tMbEOLUA4vae$$eTYjC34B1nN3YFLTuHnex$$y-srvtynF0J4eq3J6Ryzn##customer_id", "s7cmpGulNmdjsuufxXEqZ$$OnGw0VU2No3Uq7JGRqcB2$$bbs7CAe7eMaeRuZQKEXim$$urRQZ8fZFh1kVS235bif7$$nvfAv7mkk64NmN89EYRZR$$D3Ke2HMHHwdp3Le9YGG0k$$UxkAoZYiysc_91gbSjx6L$$6MJIWWN3VgjXm2L5dsOhy##customer_id", "1XYmbWm3-0LXc9iI-j85M$$kQt9hPp4Mw-rtv1OFp54S$$aN24DM_Tse5DN_R_2wzfn$$U4NkT0_JR3WpUVov1olqc$$nNR-3pFv5zvNpcF0Hy-Zw$$K62R2As-9tMbEOLUA4vae$$eTYjC34B1nN3YFLTuHnex$$y-srvtynF0J4eq3J6Ryzn##order_id", "1XYmbWm3-0LXc9iI-j85M$$kQt9hPp4Mw-rtv1OFp54S$$aN24DM_Tse5DN_R_2wzfn$$U4NkT0_JR3WpUVov1olqc$$nNR-3pFv5zvNpcF0Hy-Zw$$K62R2As-9tMbEOLUA4vae$$eTYjC34B1nN3YFLTuHnex$$y-srvtynF0J4eq3J6Ryzn##amount", "s7cmpGulNmdjsuufxXEqZ$$OnGw0VU2No3Uq7JGRqcB2$$bbs7CAe7eMaeRuZQKEXim$$urRQZ8fZFh1kVS235bif7$$nvfAv7mkk64NmN89EYRZR$$D3Ke2HMHHwdp3Le9YGG0k$$UxkAoZYiysc_91gbSjx6L$$6MJIWWN3VgjXm2L5dsOhy##email", "1XYmbWm3-0LXc9iI-j85M$$kQt9hPp4Mw-rtv1OFp54S$$aN24DM_Tse5DN_R_2wzfn$$U4NkT0_JR3WpUVov1olqc$$nNR-3pFv5zvNpcF0Hy-Zw$$K62R2As-9tMbEOLUA4vae$$eTYjC34B1nN3YFLTuHnex$$y-srvtynF0J4eq3J6Ryzn##customer_id", "s7cmpGulNmdjsuufxXEqZ$$OnGw0VU2No3Uq7JGRqcB2$$bbs7CAe7eMaeRuZQKEXim$$urRQZ8fZFh1kVS235bif7$$nvfAv7mkk64NmN89EYRZR$$D3Ke2HMHHwdp3Le9YGG0k$$UxkAoZYiysc_91gbSjx6L$$6MJIWWN3VgjXm2L5dsOhy##first_name", "s7cmpGulNmdjsuufxXEqZ$$OnGw0VU2No3Uq7JGRqcB2$$bbs7CAe7eMaeRuZQKEXim$$urRQZ8fZFh1kVS235bif7$$nvfAv7mkk64NmN89EYRZR$$D3Ke2HMHHwdp3Le9YGG0k$$UxkAoZYiysc_91gbSjx6L$$6MJIWWN3VgjXm2L5dsOhy##last_name" ],
             "allIn0" : null,
             "whereClause" : null,
             "headAlias" : "hello_world_hw_orders"

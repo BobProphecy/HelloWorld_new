@@ -8,4 +8,4 @@ from demo_bob1.functions import *
 
 @instrument
 def limited_sort_results(spark: SparkSession, total_sales_desc: DataFrame) -> DataFrame:
-    return total_sales_desc.limit(25)
+    return total_sales_desc.limit(50)

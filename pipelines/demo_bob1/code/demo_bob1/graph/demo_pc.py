@@ -7,8 +7,5 @@ from demo_bob1.config.ConfigStore import *
 from demo_bob1.functions import *
 
 @instrument
-def demo_gart22(spark: SparkSession, limited_sort_results: DataFrame):
-    limited_sort_results.write\
-        .format("delta")\
-        .mode("overwrite")\
-        .saveAsTable("`bobwelshmer`.`demo_output`.`demo_gart22`")
+def demo_pc(spark: SparkSession, limited_sort_results: DataFrame):
+    limited_sort_results.write.format("delta").mode("overwrite").saveAsTable("`bobwelshmer`.`demo_output`.`demo_pc`")
