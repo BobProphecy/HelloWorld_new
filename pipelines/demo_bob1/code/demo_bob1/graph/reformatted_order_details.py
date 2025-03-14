@@ -9,8 +9,9 @@ from demo_bob1.functions import *
 @instrument
 def reformatted_order_details(spark: SparkSession, order_customer_details: DataFrame) -> DataFrame:
     return order_customer_details.select(
-        concat(col("FIRST_NAME"), lit(" "), col("LAST_NAME")).alias("full_name"), 
-        col("ORDER_ID"), 
-        col("AMOUNT").alias("SALES_AMOUNT"), 
-        substring_index(col("EMAIL"), "@", -1).alias("company_name")
+        col("customer_id"), 
+        concat(col("first_name"), lit(" "), col("last_name")).alias("full_name"), 
+        col("order_id"), 
+        col("amount").alias("sales_amount"), 
+        substring_index(col("email"), "@", -1).alias("company_name")
     )

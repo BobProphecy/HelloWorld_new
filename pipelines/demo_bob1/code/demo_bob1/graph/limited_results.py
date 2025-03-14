@@ -7,5 +7,5 @@ from demo_bob1.config.ConfigStore import *
 from demo_bob1.functions import *
 
 @instrument
-def limited_sort_results(spark: SparkSession, total_sales_desc: DataFrame) -> DataFrame:
-    return total_sales_desc.limit(50)
+def limited_results(spark: SparkSession, total_sales_desc: DataFrame) -> DataFrame:
+    return total_sales_desc.limit(25)

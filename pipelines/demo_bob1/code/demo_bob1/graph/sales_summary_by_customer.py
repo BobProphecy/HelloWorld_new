@@ -10,4 +10,4 @@ from demo_bob1.functions import *
 def sales_summary_by_customer(spark: SparkSession, reformatted_order_details: DataFrame) -> DataFrame:
     df1 = reformatted_order_details.groupBy(col("full_name"), col("company_name"))
 
-    return df1.agg(sum(col("SALES_AMOUNT")).alias("SUM_SALES_AMOUNT"), count(col("ORDER_ID")).alias("ORDER_COUNT"))
+    return df1.agg(sum(col("sales_amount")).alias("SUM_sales_amount"), count(col("order_id")).alias("ORDER_COUNT"))

@@ -108,6 +108,12 @@
     "configurationVersion" : "v2"
   },
   "connections" : [ {
+    "id" : "DcBeu2yS",
+    "source" : "D7uGA61rN06GpZy6ooNN3$$IHADbZeEtr_g2Vbxil1y5",
+    "sourcePort" : "O418JZInd8aDDIU-NuOLe$$6f-FWCwBg3MeBtroy5N5f",
+    "target" : "X1hquCjL",
+    "targetPort" : "tdOaRcVh"
+  }, {
     "id" : "nGKMtFD0",
     "source" : "ZUGawTeDsnSxkK_cTxB76$$-K_Dxc1hvn1ZfZCUBT7bz",
     "sourcePort" : "rL1SR5nTnf6-iDCA8RAmb$$tqqGG9qqvEaW-8DEYJv1Y",
@@ -179,6 +185,24 @@
     "sourcePort" : "65082",
     "target" : "xQITFT2yYtq4vC-mSCg5a$$n319eswTsdtpclNApUxWg",
     "targetPort" : "3vOgvHkqLJtzNnnCd7LE5$$l9DURPGf1-3R2BicsYvQg"
+  }, {
+    "id" : "PDhjtE4Z3_QjwMuO3Hn4h",
+    "source" : "Source_28006",
+    "sourcePort" : "65082",
+    "target" : "D7uGA61rN06GpZy6ooNN3$$IHADbZeEtr_g2Vbxil1y5",
+    "targetPort" : "V7jS8jW2th4urXTbEda2G$$4YCHaMQtcs792xLnu_Pk7"
+  }, {
+    "id" : "6gicD1QPrI4lHSYX_j2uv$$oWZMZXIhg7N8tLcwcCcaB",
+    "source" : "3WHKm3qLXwsYFlutPUNRM$$G1v63p_CNkyKkvsgRDj5S",
+    "sourcePort" : "IZ3td3Ux1E3Ae7f-9Emo8$$E1z2PADH468JtSty8gfOe",
+    "target" : "KAKNcwtF2LqV-2LjIBOtR$$gXSai3I3HP2DjMyjPfXma",
+    "targetPort" : "dpVTOlMRJMi1oQC6fpGMd$$RcrIBUw8KQ7VT8gBYAoXL"
+  }, {
+    "id" : "761tlxPpLXQGiJPXRGkiw$$rO9giQr57hKn7fPmvLS_H",
+    "source" : "X1hquCjL",
+    "sourcePort" : "xj9iCrLL",
+    "target" : "KAKNcwtF2LqV-2LjIBOtR$$gXSai3I3HP2DjMyjPfXma",
+    "targetPort" : "d3Xdly-8hM2k7G_4C_00U$$_c-y6ZElPjaRE0uwDyvOa"
   } ],
   "processes" : {
     "Join_98619" : {
@@ -1346,6 +1370,140 @@
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
+    "D7uGA61rN06GpZy6ooNN3$$IHADbZeEtr_g2Vbxil1y5" : {
+      "id" : "D7uGA61rN06GpZy6ooNN3$$IHADbZeEtr_g2Vbxil1y5",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "select_customer_id",
+        "slug" : "select_customer_id",
+        "x" : 380,
+        "y" : 60,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Extracts customer IDs from the dataset for further analysis.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V7jS8jW2th4urXTbEda2G$$4YCHaMQtcs792xLnu_Pk7",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "order_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each order placed by customers.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "customer_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the customer who placed the order.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_status",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Current status of the order; Indicates whether the order is Finished, Started, or Approved.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The category of the order, indicating the type of service or product being purchased.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date when the order was placed; Format is YYYY-MM-DD.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "amount",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total monetary value of the order; Represents the cost associated with the order.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "O418JZInd8aDDIU-NuOLe$$6f-FWCwBg3MeBtroy5N5f",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "customer_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "customer_id"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "V7jS8jW2th4urXTbEda2G$$4YCHaMQtcs792xLnu_Pk7##customer_id" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.40&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "3WHKm3qLXwsYFlutPUNRM$$G1v63p_CNkyKkvsgRDj5S" : {
+      "id" : "3WHKm3qLXwsYFlutPUNRM$$G1v63p_CNkyKkvsgRDj5S",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "customers",
+        "slug" : "customers",
+        "x" : 600,
+        "y" : -100,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "IZ3td3Ux1E3Ae7f-9Emo8$$E1z2PADH468JtSty8gfOe",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/customers"
+      }
+    },
     "tca79Iw71O4ymnCmQglrz$$Cf_cVIUt-zwvFM-Yfz4sv" : {
       "id" : "tca79Iw71O4ymnCmQglrz$$Cf_cVIUt-zwvFM-Yfz4sv",
       "component" : "OrderBy",
@@ -1430,6 +1588,194 @@
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
+    "KAKNcwtF2LqV-2LjIBOtR$$gXSai3I3HP2DjMyjPfXma" : {
+      "id" : "KAKNcwtF2LqV-2LjIBOtR$$gXSai3I3HP2DjMyjPfXma",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "customers_distinct_customer_ids",
+        "slug" : "customers_distinct_customer_ids",
+        "x" : 780,
+        "y" : -20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Retrieves unique customer details by linking customer information with distinct customer IDs.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "dpVTOlMRJMi1oQC6fpGMd$$RcrIBUw8KQ7VT8gBYAoXL",
+          "slug" : "customers",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each customer in the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The first name of the customer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The surname of the customer, used for identification and personalization.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Contact number of the customer; Format is a standard phone number.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Email address of the customer; Used for communication and account-related notifications.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "ISO code representing the country of the customer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date when the customer account was opened; Format is YYYY-MM-DD.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Flags indicating the status or special conditions of the customer's account; Typically used for categorizing accounts.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "d3Xdly-8hM2k7G_4C_00U$$_c-y6ZElPjaRE0uwDyvOa",
+          "slug" : "distinct_customer_ids",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the customer who placed the order.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "jMYBhDLv0YiWsKQ8eVpHc$$DXFjezgRxBDTLtobk4FqH",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "distinct_customer_ids",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "customers.customer_id=distinct_customer_ids.customer_id"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "target" : "first_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "customers.first_name"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "last_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "customers.last_name"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "email",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "customers.email"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "phone",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "customers.phone"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "hints" : [ {
+          "id" : "dpVTOlMRJMi1oQC6fpGMd$$RcrIBUw8KQ7VT8gBYAoXL",
+          "alias" : "customers",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "d3Xdly-8hM2k7G_4C_00U$$_c-y6ZElPjaRE0uwDyvOa",
+          "alias" : "distinct_customer_ids",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "dpVTOlMRJMi1oQC6fpGMd$$RcrIBUw8KQ7VT8gBYAoXL##customer_id", "d3Xdly-8hM2k7G_4C_00U$$_c-y6ZElPjaRE0uwDyvOa##customer_id", "dpVTOlMRJMi1oQC6fpGMd$$RcrIBUw8KQ7VT8gBYAoXL##last_name", "dpVTOlMRJMi1oQC6fpGMd$$RcrIBUw8KQ7VT8gBYAoXL##phone", "dpVTOlMRJMi1oQC6fpGMd$$RcrIBUw8KQ7VT8gBYAoXL##first_name", "dpVTOlMRJMi1oQC6fpGMd$$RcrIBUw8KQ7VT8gBYAoXL##email" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "customers"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.40&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
     "Source_28006" : {
       "id" : "Source_28006",
       "component" : "Source",
@@ -1459,20 +1805,76 @@
         "datasetId" : "datasets/orders"
       }
     },
+    "X1hquCjL" : {
+      "id" : "X1hquCjL",
+      "component" : "Deduplicate",
+      "metadata" : {
+        "label" : "distinct_customer_ids",
+        "slug" : "distinct_customer_ids",
+        "x" : 600,
+        "y" : 60,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "tdOaRcVh",
+          "slug" : "select_customer_id",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the customer who placed the order.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "xj9iCrLL",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "dedupColumns" : [ {
+          "colName" : "customer_id"
+        } ],
+        "dedupType" : "distinct",
+        "columnsSelector" : [ "tdOaRcVh##customer_id" ],
+        "orders" : [ ],
+        "useOrderBy" : false
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.40&projectSubscriptionProjectId=12654&path=gems/Deduplicate",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
     "xQITFT2yYtq4vC-mSCg5a$$n319eswTsdtpclNApUxWg" : {
       "id" : "xQITFT2yYtq4vC-mSCg5a$$n319eswTsdtpclNApUxWg",
       "component" : "DataQualityCheck",
       "metadata" : {
         "label" : "data_quality_checks",
         "slug" : "data_quality_checks",
-        "x" : 360,
-        "y" : 0,
+        "x" : 380,
+        "y" : -140,
         "phase" : -1,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
         "comment" : "Conducts data quality checks to ensure the integrity and reliability of order data, identifying any issues that could impact business decisions.",
-        "autoUpdateComment" : true
+        "autoUpdateComment" : true,
+        "dataPreview" : false
       },
       "ports" : {
         "inputs" : [ {

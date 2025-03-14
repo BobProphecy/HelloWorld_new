@@ -11,6 +11,6 @@ def sales_summary(spark: SparkSession, sales_summary_by_customer: DataFrame) -> 
     return sales_summary_by_customer.select(
         col("full_name"), 
         col("company_name"), 
-        round(col("SUM_SALES_AMOUNT"), 2).alias("TOTAL_SALES"), 
+        round(col("SUM_sales_amount"), 2).alias("TOTAL_SALES"), 
         col("ORDER_COUNT")
     )
