@@ -191,18 +191,6 @@
     "sourcePort" : "65082",
     "target" : "D7uGA61rN06GpZy6ooNN3$$IHADbZeEtr_g2Vbxil1y5",
     "targetPort" : "V7jS8jW2th4urXTbEda2G$$4YCHaMQtcs792xLnu_Pk7"
-  }, {
-    "id" : "6gicD1QPrI4lHSYX_j2uv$$oWZMZXIhg7N8tLcwcCcaB",
-    "source" : "3WHKm3qLXwsYFlutPUNRM$$G1v63p_CNkyKkvsgRDj5S",
-    "sourcePort" : "IZ3td3Ux1E3Ae7f-9Emo8$$E1z2PADH468JtSty8gfOe",
-    "target" : "KAKNcwtF2LqV-2LjIBOtR$$gXSai3I3HP2DjMyjPfXma",
-    "targetPort" : "dpVTOlMRJMi1oQC6fpGMd$$RcrIBUw8KQ7VT8gBYAoXL"
-  }, {
-    "id" : "761tlxPpLXQGiJPXRGkiw$$rO9giQr57hKn7fPmvLS_H",
-    "source" : "X1hquCjL",
-    "sourcePort" : "xj9iCrLL",
-    "target" : "KAKNcwtF2LqV-2LjIBOtR$$gXSai3I3HP2DjMyjPfXma",
-    "targetPort" : "d3Xdly-8hM2k7G_4C_00U$$_c-y6ZElPjaRE0uwDyvOa"
   } ],
   "processes" : {
     "Join_98619" : {
@@ -1477,33 +1465,6 @@
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
-    "3WHKm3qLXwsYFlutPUNRM$$G1v63p_CNkyKkvsgRDj5S" : {
-      "id" : "3WHKm3qLXwsYFlutPUNRM$$G1v63p_CNkyKkvsgRDj5S",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "customers",
-        "slug" : "customers",
-        "x" : 600,
-        "y" : -100,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "IZ3td3Ux1E3Ae7f-9Emo8$$E1z2PADH468JtSty8gfOe",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/customers"
-      }
-    },
     "tca79Iw71O4ymnCmQglrz$$Cf_cVIUt-zwvFM-Yfz4sv" : {
       "id" : "tca79Iw71O4ymnCmQglrz$$Cf_cVIUt-zwvFM-Yfz4sv",
       "component" : "OrderBy",
@@ -1588,194 +1549,6 @@
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
-    "KAKNcwtF2LqV-2LjIBOtR$$gXSai3I3HP2DjMyjPfXma" : {
-      "id" : "KAKNcwtF2LqV-2LjIBOtR$$gXSai3I3HP2DjMyjPfXma",
-      "component" : "Join",
-      "metadata" : {
-        "label" : "customers_distinct_customer_ids",
-        "slug" : "customers_distinct_customer_ids",
-        "x" : 780,
-        "y" : -20,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false,
-        "comment" : "Retrieves unique customer details by linking customer information with distinct customer IDs.",
-        "autoUpdateComment" : true,
-        "dataPreview" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "dpVTOlMRJMi1oQC6fpGMd$$RcrIBUw8KQ7VT8gBYAoXL",
-          "slug" : "customers",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "customer_id",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Unique identifier for each customer in the dataset.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "first_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The first name of the customer.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "last_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The surname of the customer, used for identification and personalization.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "phone",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Contact number of the customer; Format is a standard phone number.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "email",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Email address of the customer; Used for communication and account-related notifications.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "country_code",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "ISO code representing the country of the customer.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_open_date",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Date when the customer account was opened; Format is YYYY-MM-DD.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "account_flags",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Flags indicating the status or special conditions of the customer's account; Typically used for categorizing accounts.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        }, {
-          "id" : "d3Xdly-8hM2k7G_4C_00U$$_c-y6ZElPjaRE0uwDyvOa",
-          "slug" : "distinct_customer_ids",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "customer_id",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Unique identifier for the customer who placed the order.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "jMYBhDLv0YiWsKQ8eVpHc$$DXFjezgRxBDTLtobk4FqH",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "conditions" : [ {
-          "alias" : "distinct_customer_ids",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "customers.customer_id=distinct_customer_ids.customer_id"
-          },
-          "joinType" : "inner"
-        } ],
-        "expressions" : [ {
-          "target" : "first_name",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "customers.first_name"
-          },
-          "description" : "",
-          "_row_id" : null
-        }, {
-          "target" : "last_name",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "customers.last_name"
-          },
-          "description" : "",
-          "_row_id" : null
-        }, {
-          "target" : "email",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "customers.email"
-          },
-          "description" : "",
-          "_row_id" : null
-        }, {
-          "target" : "phone",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "customers.phone"
-          },
-          "description" : "",
-          "_row_id" : null
-        } ],
-        "hints" : [ {
-          "id" : "dpVTOlMRJMi1oQC6fpGMd$$RcrIBUw8KQ7VT8gBYAoXL",
-          "alias" : "customers",
-          "hintType" : "none",
-          "propagateColumns" : false
-        }, {
-          "id" : "d3Xdly-8hM2k7G_4C_00U$$_c-y6ZElPjaRE0uwDyvOa",
-          "alias" : "distinct_customer_ids",
-          "hintType" : "none",
-          "propagateColumns" : false
-        } ],
-        "allIn1" : null,
-        "activeTab" : "expressions",
-        "columnsSelector" : [ "dpVTOlMRJMi1oQC6fpGMd$$RcrIBUw8KQ7VT8gBYAoXL##customer_id", "d3Xdly-8hM2k7G_4C_00U$$_c-y6ZElPjaRE0uwDyvOa##customer_id", "dpVTOlMRJMi1oQC6fpGMd$$RcrIBUw8KQ7VT8gBYAoXL##last_name", "dpVTOlMRJMi1oQC6fpGMd$$RcrIBUw8KQ7VT8gBYAoXL##phone", "dpVTOlMRJMi1oQC6fpGMd$$RcrIBUw8KQ7VT8gBYAoXL##first_name", "dpVTOlMRJMi1oQC6fpGMd$$RcrIBUw8KQ7VT8gBYAoXL##email" ],
-        "allIn0" : null,
-        "whereClause" : null,
-        "headAlias" : "customers"
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.40&projectSubscriptionProjectId=12654&path=gems/Join",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
     "Source_28006" : {
       "id" : "Source_28006",
       "component" : "Source",
@@ -1811,8 +1584,8 @@
       "metadata" : {
         "label" : "distinct_customer_ids",
         "slug" : "distinct_customer_ids",
-        "x" : 600,
-        "y" : 60,
+        "x" : 580,
+        "y" : 40,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
