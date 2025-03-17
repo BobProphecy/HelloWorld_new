@@ -154,6 +154,22 @@ pipelines:
       outputs: []
     subgraphs: []
     dependencies: {}
+  pipelines/schemachange:
+    name: schemachange
+    description: Swap btw stooges and stoogesPlus to add remove columns - pipeline
+      doesn't fail.  However, to properly incorporate updates to schema - Infer schema
+      should be run whenever schema changes
+    author: bobw@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-03-14 19:14:48'
+    datasets:
+      inputs:
+      - datasets/stooges3
+      outputs: []
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/customer_totals:
     name: customer_totals
@@ -662,6 +678,19 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2025-03-13 20:44:21'
+  datasets/demodata1:
+    name: demodata1
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-03-14 19:25:24'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-03-14 19:25:24'
 templates: {}
 jobs:
   jobs/DBX_workflow:

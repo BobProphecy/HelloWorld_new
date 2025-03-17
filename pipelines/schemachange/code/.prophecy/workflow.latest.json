@@ -1,0 +1,311 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : {
+      "businessRules" : {
+        "rules" : [ ],
+        "sharedRules" : [ ]
+      }
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.8.2",
+        "pyPiVersion" : "1.9.36"
+      },
+      "sparkConfigJinjaEnabled" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/schemachange",
+    "sourceSuggestions" : [ ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "schemachange",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "9631",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "bobwprophecyioteam.helloworld.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.data_quality.functions", "prophecy.spark_basic.functions", "prophecy.streaming.functions", "prophecy.warehouse.functions", "maciejdemos.dataquality.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "32699",
+      "projectName" : "ProphecySparkDataQualityPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12656",
+      "projectName" : "ProphecyStreamingPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "27160",
+      "projectName" : "data_quality",
+      "externalDependencies" : [ {
+        "type" : "plibMaven",
+        "modifiedAt" : "2024-05-03T16:22:39.33938Z",
+        "name" : "plibMaven",
+        "enabled" : true,
+        "version" : "8.0.11",
+        "id" : "1766302595",
+        "createdAt" : "2024-05-03T16:22:39.339282Z",
+        "entity" : "Project"
+      }, {
+        "type" : "plibPypi",
+        "modifiedAt" : "2024-05-03T16:22:39.339487Z",
+        "name" : "plibPypi",
+        "enabled" : true,
+        "version" : "1.9.5",
+        "id" : "816884476",
+        "createdAt" : "2024-05-03T16:22:39.339452Z",
+        "entity" : "Project"
+      } ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "schemachange",
+    "configTopLevelPackage" : "schemachange",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "GBlImpfYW7LPgxHmsAk9G$$xxT6-JvkETunQrFpBZlXM",
+    "source" : "NRI2jvMgkrwQmCjhS9U1O$$r-Ws3WSzPAbUsjylVQxFI",
+    "sourcePort" : "DnPpvB1FjPcdqbPX-NHUG$$0VhkWr6ckpvHYXRO_zW2U",
+    "target" : "S4HwllVywxUujiJlV2jyZ$$ZlO2E_rjrMiu4AoygwNo3",
+    "targetPort" : "_JHIeBRY050QZL4P2A_dw$$QhnZEzRdnsxgYt69k8C4h"
+  } ],
+  "processes" : {
+    "NRI2jvMgkrwQmCjhS9U1O$$r-Ws3WSzPAbUsjylVQxFI" : {
+      "id" : "NRI2jvMgkrwQmCjhS9U1O$$r-Ws3WSzPAbUsjylVQxFI",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "stooges3",
+        "slug" : "stooges3",
+        "x" : -420,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Loads employee data from a CSV file, facilitating access to staff information for management and analysis.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "DnPpvB1FjPcdqbPX-NHUG$$0VhkWr6ckpvHYXRO_zW2U",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/stooges3"
+      }
+    },
+    "S4HwllVywxUujiJlV2jyZ$$ZlO2E_rjrMiu4AoygwNo3" : {
+      "id" : "S4HwllVywxUujiJlV2jyZ$$ZlO2E_rjrMiu4AoygwNo3",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "employee_details_selection",
+        "slug" : "employee_details_selection",
+        "x" : -240,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Extracts key details of employees for reporting or analysis purposes.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "_JHIeBRY050QZL4P2A_dw$$QhnZEzRdnsxgYt69k8C4h",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "employee_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "f_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "l_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "title",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "manager_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "test_flag",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "kkWfXHlrv5NcrOyXZ-t64$$joHDRBUHIcoaA4PvOaQoj",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "employee_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "employee_id"
+          },
+          "description" : ""
+        }, {
+          "target" : "f_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "f_name"
+          },
+          "description" : ""
+        }, {
+          "target" : "l_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "l_name"
+          },
+          "description" : ""
+        }, {
+          "target" : "title",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "title"
+          },
+          "description" : ""
+        }, {
+          "target" : "manager_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "manager_id"
+          },
+          "description" : ""
+        }, {
+          "target" : "test_flag",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "test_flag"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "_JHIeBRY050QZL4P2A_dw$$QhnZEzRdnsxgYt69k8C4h##employee_id", "_JHIeBRY050QZL4P2A_dw$$QhnZEzRdnsxgYt69k8C4h##test_flag", "_JHIeBRY050QZL4P2A_dw$$QhnZEzRdnsxgYt69k8C4h##manager_id", "_JHIeBRY050QZL4P2A_dw$$QhnZEzRdnsxgYt69k8C4h##f_name", "_JHIeBRY050QZL4P2A_dw$$QhnZEzRdnsxgYt69k8C4h##title", "_JHIeBRY050QZL4P2A_dw$$QhnZEzRdnsxgYt69k8C4h##l_name" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.40&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

@@ -9,6 +9,8 @@ from job.graph import *
 def pipeline(spark: SparkSession) -> None:
     df_load_customers_dataset = load_customers_dataset(spark)
     df_load_orders_dataset = load_orders_dataset(spark)
+    df_select_customer_id = select_customer_id(spark, df_load_orders_dataset)
+    df_distinct_customer_ids = distinct_customer_ids(spark, df_select_customer_id)
     df_data_quality_checks_out0, df_data_quality_checks_out1 = data_quality_checks(spark, df_load_orders_dataset)
     df_join_by_customer_id = join_by_customer_id(spark, df_load_orders_dataset, df_load_customers_dataset)
     df_customer_data_cleanup = customer_data_cleanup(spark, df_join_by_customer_id)
@@ -16,8 +18,6 @@ def pipeline(spark: SparkSession) -> None:
     df_by_sales_total_desc = by_sales_total_desc(spark, df_aggregate_sales_by_customer)
     save_us_sales_analysis(spark, df_by_sales_total_desc)
     write_customers_orders_csv(spark, df_by_sales_total_desc)
-    df_select_customer_id = select_customer_id(spark, df_load_orders_dataset)
-    df_distinct_customer_ids = distinct_customer_ids(spark, df_select_customer_id)
     df_apply_region_business_rule = apply_region_business_rule(spark, df_load_customers_dataset)
     df_customer_count_by_region = customer_count_by_region(spark, df_apply_region_business_rule)
     df_row_number_by_customer_count = row_number_by_customer_count(spark, df_customer_count_by_region)
