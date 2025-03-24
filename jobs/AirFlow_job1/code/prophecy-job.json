@@ -1,11 +1,11 @@
 {
   "metainfo" : {
     "type" : "Prophecy",
-    "fabricId" : "13760",
+    "fabricId" : "23631",
     "jobId" : "jobs/AirFlow_job1",
     "name" : "AirFlow_job1",
-    "dagName" : "l97tPHKAn9OBkQUDKbAFMg_",
-    "schedule" : "0 0 * * 1",
+    "dagName" : "_XXvFkZggTSnckIazoArSg_",
+    "schedule" : "0 0 * * *",
     "enabled" : false,
     "alerting" : {
       "emails" : "",
@@ -18,11 +18,12 @@
       "email" : "bobw@prophecy.io",
       "email_on_failure" : true,
       "ignore_first_depends_on_past" : true,
-      "pool" : "2AGL95yk",
+      "pool" : "_6YCC4gT",
       "do_xcom_push" : true
     },
-    "endDate" : "2024-07-01",
+    "endDate" : "2025-04-13",
     "catchup" : true,
+    "startDate" : "2025-03-24",
     "tags" : [ ],
     "scheduleTimeZone" : "UTC",
     "dagParams" : {
@@ -41,22 +42,22 @@
     }
   },
   "processes" : {
-    "k18LDqc4wrRthe5BeRa-3$$O690GBfX4RgSyR5KQUlNc" : {
-      "id" : "k18LDqc4wrRthe5BeRa-3$$O690GBfX4RgSyR5KQUlNc",
+    "62p_Gk1VB9_VN3jBfYxQw$$TmxCbaKC_Cb7UZKJb-cdh" : {
+      "id" : "62p_Gk1VB9_VN3jBfYxQw$$TmxCbaKC_Cb7UZKJb-cdh",
       "component" : "DatabricksPipeline",
       "metadata" : {
-        "label" : "Farmers_mkt_pipe",
-        "slug" : "Farmers_mkt_pipe",
-        "x" : 160,
-        "y" : 180
+        "label" : "DBX2Target",
+        "slug" : "DBX2Target",
+        "x" : 100,
+        "y" : 160
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "YuwgiKRKBBtWzhltDvMtA$$omFPtxXPzgAgsVgIMpnvz",
+          "id" : "5OZ48xc7XaUmrop8ouwUf$$8lyXr0KOoNkS53OL2-PYR",
           "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "WCLxxGPvRKtF79e9evtbN$$BYi_TNzKCxo7-1-TOFm0A",
+          "id" : "pnTzqBKzxMHcJHYhSH5vZ$$LUTr5CuTLGlKGusg0d7Yu",
           "slug" : ""
         } ]
       },
@@ -80,114 +81,12 @@
         "taskId" : null,
         "pipelineId" : {
           "type" : "literal",
-          "value" : "pipelines/farmers-markets-irs"
-        }
-      },
-      "connections" : [ ],
-      "processes" : { }
-    },
-    "nsQuha29GvJCu-CrNU1kY$$L4pAaVJCl4fTgSSiB9vK9" : {
-      "id" : "nsQuha29GvJCu-CrNU1kY$$L4pAaVJCl4fTgSSiB9vK9",
-      "component" : "DatabricksPipeline",
-      "metadata" : {
-        "label" : "join_agg_sort",
-        "slug" : "join_agg_sort",
-        "x" : 160,
-        "y" : 340
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "iQI3fV5S2m9tAjouZdeqK$$4FM6crFvAADp70lD02Z7N",
-          "slug" : ""
-        } ],
-        "outputs" : [ {
-          "id" : "cFXmNMkDjixOKK1M736RW$$bR1CJg-C3oWr_UVZzix_B",
-          "slug" : ""
-        } ]
-      },
-      "settings" : { },
-      "properties" : {
-        "runJson" : null,
-        "projectId" : "37461",
-        "databricksConnId" : "",
-        "clusterSize" : "9631/small",
-        "configurations" : {
-          "schema" : [ ],
-          "instances" : {
-            "HelloWorld_NEW" : [ "default" ]
-          },
-          "overrides" : { },
-          "selectedInstance" : {
-            "type" : "literal",
-            "value" : "default"
-          }
-        },
-        "taskId" : null,
-        "pipelineId" : {
-          "type" : "literal",
-          "value" : "pipelines/join_agg_sort"
-        }
-      },
-      "connections" : [ ],
-      "processes" : { }
-    },
-    "Z5IqEmjhHzopwlHi9iwVU$$dubAXapJfaoCuJntKOa0i" : {
-      "id" : "Z5IqEmjhHzopwlHi9iwVU$$dubAXapJfaoCuJntKOa0i",
-      "component" : "DatabricksPipeline",
-      "metadata" : {
-        "label" : "customers_orders",
-        "slug" : "customers_orders",
-        "x" : 540,
-        "y" : 260
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "TUiilK-FMVsZjco6uJxep$$9ijMTXTpgXLD7TMJBA4kW",
-          "slug" : ""
-        } ],
-        "outputs" : [ {
-          "id" : "5zCfq_VBRwcMHzRJNGt3k$$JVT0o_z_bFXzPyV5cHIwt",
-          "slug" : ""
-        } ]
-      },
-      "settings" : { },
-      "properties" : {
-        "runJson" : null,
-        "projectId" : "37461",
-        "databricksConnId" : "",
-        "clusterSize" : "9631/medium",
-        "configurations" : {
-          "schema" : [ ],
-          "instances" : {
-            "HelloWorld_NEW" : [ "default" ]
-          },
-          "overrides" : { },
-          "selectedInstance" : {
-            "type" : "literal",
-            "value" : "default"
-          }
-        },
-        "taskId" : null,
-        "pipelineId" : {
-          "type" : "literal",
-          "value" : "pipelines/customers_orders"
+          "value" : "pipelines/DBX2Target"
         }
       },
       "connections" : [ ],
       "processes" : { }
     }
   },
-  "connections" : [ {
-    "id" : "00przuRRryF2djtvvT3Py",
-    "source" : "k18LDqc4wrRthe5BeRa-3$$O690GBfX4RgSyR5KQUlNc",
-    "target" : "Z5IqEmjhHzopwlHi9iwVU$$dubAXapJfaoCuJntKOa0i",
-    "sourcePort" : "WCLxxGPvRKtF79e9evtbN$$BYi_TNzKCxo7-1-TOFm0A",
-    "targetPort" : "TUiilK-FMVsZjco6uJxep$$9ijMTXTpgXLD7TMJBA4kW"
-  }, {
-    "id" : "EctaW8wBHKiUFpYTyAx1U",
-    "source" : "nsQuha29GvJCu-CrNU1kY$$L4pAaVJCl4fTgSSiB9vK9",
-    "target" : "Z5IqEmjhHzopwlHi9iwVU$$dubAXapJfaoCuJntKOa0i",
-    "sourcePort" : "cFXmNMkDjixOKK1M736RW$$bR1CJg-C3oWr_UVZzix_B",
-    "targetPort" : "TUiilK-FMVsZjco6uJxep$$9ijMTXTpgXLD7TMJBA4kW"
-  } ]
+  "connections" : [ ]
 }

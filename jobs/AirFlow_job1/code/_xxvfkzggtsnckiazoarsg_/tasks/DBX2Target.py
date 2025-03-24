@@ -1,14 +1,14 @@
-from l97tphkan9obkqudkbafmg_.utils import *
+from _xxvfkzggtsnckiazoarsg_.utils import *
 
-@task_wrapper(task_id = "Farmers_mkt_pipe")
-def Farmers_mkt_pipe(ti=None, params=None, **context):
+@task_wrapper(task_id = "DBX2Target")
+def DBX2Target(ti=None, params=None, **context):
     from datetime import timedelta
     from airflow.providers.databricks.operators.databricks import DatabricksSubmitRunOperator # noqa
 
     return DatabricksSubmitRunOperator(  # noqa
-        task_id = "Farmers_mkt_pipe",
+        task_id = "DBX2Target",
         json = {
-          "task_key": "Farmers_mkt_pipe", 
+          "task_key": "DBX2Target", 
           "new_cluster": {
             "node_type_id": "i3.xlarge", 
             "spark_version": "12.2.x-scala2.12", 
@@ -41,13 +41,13 @@ def Farmers_mkt_pipe(ti=None, params=None, **context):
             "enable_elastic_disk": False
           }, 
           "python_wheel_task": {
-            "package_name": "farmers_markets_irs", 
+            "package_name": "DBX2Target", 
             "entry_point": "main", 
             "parameters": ["-i", "default", "-O", "{}"]
           }, 
           "libraries": [{"maven" : {"coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-8.8.2"}},                          {"pypi" : {"package" : "prophecy-libs==1.9.36"}},                          {
-                           "whl": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/farmers_markets_irs-1.0-py3-none-any.whl"
+                           "whl": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/DBX2Target-1.0-py3-none-any.whl"
                          }]
         },
-        databricks_conn_id = "",
+        databricks_conn_id = "mCm60kFBRdWxMVkzRSmtc",
     )

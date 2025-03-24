@@ -709,10 +709,9 @@ jobs:
       onSuccess: false
       onFailure: false
     pipelines:
-    - pipelines/demo_new
     - pipelines/join_agg_sort
-    - pipelines/customers_orders
     - pipelines/farmers-markets-irs
+    - pipelines/customers_orders
     jobClusterMode:
       clusterMode:
         Single: {}
@@ -725,12 +724,12 @@ jobs:
   jobs/AirFlow_job1:
     name: AirFlow_job1
     description: ''
-    fabricUID: 13760
+    fabricUID: 23631
     scheduler:
       Prophecy: {}
     cloudProvider: null
     jobSize: null
-    scheduleCron: 0 0 * * 1
+    scheduleCron: 0 0 * * *
     timeout: null
     alerting:
       emails: ''
@@ -738,9 +737,7 @@ jobs:
       onSuccess: false
       onFailure: false
     pipelines:
-    - pipelines/farmers-markets-irs
-    - pipelines/join_agg_sort
-    - pipelines/customers_orders
+    - pipelines/DBX2Target
     jobClusterMode:
       clusterMode:
         Multi: {}
@@ -773,32 +770,6 @@ jobs:
       clusterId: null
     enabled: null
     createdAt: '2024-10-18 13:14:38'
-    author: bobw@prophecy.io
-    models: []
-    sqlProjects: []
-  jobs/nightlyrun:
-    name: nightlyrun
-    description: ''
-    fabricUID: 9631
-    scheduler:
-      Databricks: {}
-    cloudProvider: null
-    jobSize: small
-    scheduleCron: 0 0 0 * * ? *
-    timeout: null
-    alerting:
-      emails: ''
-      onStart: false
-      onSuccess: false
-      onFailure: false
-    pipelines:
-    - pipelines/demo_new
-    jobClusterMode:
-      clusterMode:
-        Single: {}
-      clusterId: null
-    enabled: null
-    createdAt: '2025-02-19 20:40:01'
     author: bobw@prophecy.io
     models: []
     sqlProjects: []

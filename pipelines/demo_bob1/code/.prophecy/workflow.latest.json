@@ -71,23 +71,7 @@
     "codeMode" : "sparse",
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
-    "dependentProjectExternalDependencies" : [ {
-      "projectUID" : "32699",
-      "projectName" : "ProphecySparkDataQualityPython",
-      "externalDependencies" : [ ]
-    }, {
-      "projectUID" : "12654",
-      "projectName" : "ProphecySparkBasicsPython",
-      "externalDependencies" : [ ]
-    }, {
-      "projectUID" : "12656",
-      "projectName" : "ProphecyStreamingPython",
-      "externalDependencies" : [ ]
-    }, {
-      "projectUID" : "12655",
-      "projectName" : "ProphecyWarehousePython",
-      "externalDependencies" : [ ]
-    } ],
+    "dependentProjectExternalDependencies" : [ ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,

@@ -25,14 +25,6 @@
     }
   }, {
     "PipelineComponent" : {
-      "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/demo_new.jar",
-      "nodeName" : "demo_new",
-      "id" : "tkhCEAUy1XsyORXviMSfQ$$15wPcM6FQBZ5abZDROHj8",
-      "language" : "scala",
-      "pipelineId" : "pipelines/demo_new"
-    }
-  }, {
-    "PipelineComponent" : {
       "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/customers_orders-1.0-py3-none-any.whl",
       "nodeName" : "customers_orders",
       "id" : "XzqbboOqkhSr3-S-USd8o$$qfEp85McJkgVu5tLVSR59",
@@ -80,46 +72,6 @@
           "spot_bid_price_percent" : 100
         },
         "data_security_mode" : "SINGLE_USER"
-      }
-    }, {
-      "job_cluster_key" : "Cluster_1",
-      "new_cluster" : {
-        "spark_version" : "14.3.x-scala2.12",
-        "node_type_id" : "i4i.large",
-        "driver_node_type_id" : "i4i.large",
-        "num_workers" : 0,
-        "custom_tags" : {
-          "ResourceClass" : "SingleNode"
-        },
-        "enable_elastic_disk" : true,
-        "spark_conf" : {
-          "spark.databricks.cluster.profile" : "singleNode",
-          "spark.master" : "local[*, 4]",
-          "spark.prophecy.metadata.fabric.id" : "9631",
-          "spark.prophecy.metadata.job.uri" : "__PROJECT_ID_PLACEHOLDER__/jobs/DBX_workflow",
-          "spark.prophecy.metadata.is.interactive.run" : "false",
-          "spark.prophecy.project.id" : "__PROJECT_ID_PLACEHOLDER__",
-          "spark.prophecy.metadata.user.id" : "5088",
-          "spark.prophecy.tasks" : "H4sIAAAAAAAAAGXLQQqAIBCF4bvM2mjfZQbJSax0ZMZoEd09Cgms7fvef8DMIaH1HpWlwAA5ZFpDIu1bMTBZiSSK0cpCRTGINv/qXfXudgPjpoWfjsXRJ/mhAUeRMdHe/N7xvAB4UpAtsQAAAA==",
-          "spark.prophecy.metadata.job.branch" : "__PROJECT_RELEASE_VERSION_PLACEHOLDER__",
-          "spark.prophecy.metadata.url" : "__PROPHECY_URL_PLACEHOLDER__",
-          "spark.prophecy.execution.metrics.disabled" : "false",
-          "spark.prophecy.execution.service.url" : "wss://app.prophecy.io/execution/eventws",
-          "spark.databricks.isv.product" : "prophecy"
-        },
-        "spark_env_vars" : {
-          "SPARK_VERSION" : "3.5"
-        },
-        "cluster_source" : "API",
-        "runtime_engine" : "STANDARD",
-        "aws_attributes" : {
-          "first_on_demand" : 1,
-          "availability" : "SPOT_WITH_FALLBACK",
-          "zone_id" : "auto",
-          "spot_bid_price_percent" : 100
-        },
-        "data_security_mode" : "SINGLE_USER",
-        "enable_local_disk_encryption" : false
       }
     }, {
       "job_cluster_key" : "Analytic_pipelines",
@@ -258,28 +210,11 @@
       "email_notifications" : { },
       "max_retries" : 0
     }, {
-      "task_key" : "demo_new",
-      "job_cluster_key" : "Cluster_1",
-      "spark_jar_task" : {
-        "main_class_name" : "",
-        "parameters" : [ "-O", "{}" ]
-      },
-      "libraries" : [ {
-        "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.5.0-8.8.2"
-        }
-      }, {
-        "jar" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/demo_new.jar"
-      } ],
-      "email_notifications" : { }
-    }, {
       "task_key" : "customers_orders",
       "depends_on" : [ {
         "task_key" : "farmers_markets_irs"
       }, {
         "task_key" : "join_agg_sort"
-      }, {
-        "task_key" : "demo_new"
       } ],
       "job_cluster_key" : "Analytic_pipelines",
       "python_wheel_task" : {
