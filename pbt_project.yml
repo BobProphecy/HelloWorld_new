@@ -968,14 +968,6 @@ projectDependencies:
     isDefault: false
     author: null
     createdAt: '2025-02-18 14:50:03'
-  '27160':
-    projectUID: 27160
-    projectName: data_quality
-    repositoryPath: gitUri=https://github.com/BobProphecy/ProphecyDataQualityDemo&subPath=/
-    version: data_quality/1.3
-    isDefault: false
-    author: null
-    createdAt: '2024-06-12 19:30:55'
   '32699':
     projectUID: 32699
     projectName: ProphecySparkDataQualityPython

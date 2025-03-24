@@ -38,7 +38,7 @@
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "bobwprophecyioteam.helloworld.functions",
-      "sharedFunctionPackageNames" : [ "prophecy.data_quality.functions", "prophecy.spark_basic.functions", "prophecy.streaming.functions", "prophecy.warehouse.functions", "maciejdemos.dataquality.functions" ]
+      "sharedFunctionPackageNames" : [ "prophecy.data_quality.functions", "prophecy.spark_basic.functions", "prophecy.streaming.functions", "prophecy.warehouse.functions" ]
     },
     "udafs" : {
       "language" : "python",
@@ -86,28 +86,6 @@
       "projectUID" : "12655",
       "projectName" : "ProphecyWarehousePython",
       "externalDependencies" : [ ]
-    }, {
-      "projectUID" : "27160",
-      "projectName" : "data_quality",
-      "externalDependencies" : [ {
-        "type" : "plibMaven",
-        "modifiedAt" : "2024-05-03T16:22:39.33938Z",
-        "name" : "plibMaven",
-        "enabled" : true,
-        "version" : "8.0.11",
-        "id" : "1766302595",
-        "createdAt" : "2024-05-03T16:22:39.339282Z",
-        "entity" : "Project"
-      }, {
-        "type" : "plibPypi",
-        "modifiedAt" : "2024-05-03T16:22:39.339487Z",
-        "name" : "plibPypi",
-        "enabled" : true,
-        "version" : "1.9.5",
-        "id" : "816884476",
-        "createdAt" : "2024-05-03T16:22:39.339452Z",
-        "entity" : "Project"
-      } ]
     } ],
     "isImported" : false,
     "interimMode" : "Full",
