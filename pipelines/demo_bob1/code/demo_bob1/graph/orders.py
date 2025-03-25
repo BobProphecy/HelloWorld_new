@@ -3,11 +3,11 @@ from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from prophecy.utils import *
 from prophecy.libs import typed_lit
-from job.config.ConfigStore import *
-from job.udfs import *
+from demo_bob1.config.ConfigStore import *
+from demo_bob1.functions import *
 
 @instrument
-def load_orders_dataset(spark: SparkSession) -> DataFrame:
+def orders(spark: SparkSession) -> DataFrame:
     return spark.read\
         .schema(
           StructType([

@@ -8,10 +8,10 @@ from job.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_load_customers_dataset = load_customers_dataset(spark)
-    df_load_orders_dataset = load_orders_dataset(spark)
-    df_select_customer_id = select_customer_id(spark, df_load_orders_dataset)
+    df_orders = orders(spark)
+    df_select_customer_id = select_customer_id(spark, df_orders)
     df_distinct_customer_ids = distinct_customer_ids(spark, df_select_customer_id)
-    df_join_by_customer_id = join_by_customer_id(spark, df_load_orders_dataset, df_load_customers_dataset)
+    df_join_by_customer_id = join_by_customer_id(spark, df_orders, df_load_customers_dataset)
     df_customer_data_cleanup = customer_data_cleanup(spark, df_join_by_customer_id)
     df_aggregate_sales_by_customer = aggregate_sales_by_customer(spark, df_customer_data_cleanup)
     df_by_sales_total_desc = by_sales_total_desc(spark, df_aggregate_sales_by_customer)

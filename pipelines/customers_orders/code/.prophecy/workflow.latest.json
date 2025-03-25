@@ -98,12 +98,6 @@
     "target" : "pCGTk9MK",
     "targetPort" : "lpFNgNFS"
   }, {
-    "id" : "425",
-    "source" : "Source_28006",
-    "sourcePort" : "65082",
-    "target" : "Join_98619",
-    "targetPort" : "47810"
-  }, {
     "id" : "745",
     "source" : "Source_51275",
     "sourcePort" : "83296",
@@ -158,13 +152,46 @@
     "target" : "6VpI2JP_0dZYrodyDt2OQ$$Aux3NL14G7HEUtvQgo15L",
     "targetPort" : "iDAWcpkOS5A6hSC1HeBzT$$bzcrsSbQxR8PwNteDCbwc"
   }, {
-    "id" : "PDhjtE4Z3_QjwMuO3Hn4h",
-    "source" : "Source_28006",
-    "sourcePort" : "65082",
+    "id" : "3q--OCo8GPx9gPhR0WgUN",
+    "source" : "TGSlk5op2JsnZnf6dQAlO$$5-w9mlV7NhQxfkp_tJioB",
+    "sourcePort" : "pNLQVwoVdkyh9QdPJMVCd$$1K9Vuuuaf7QHQtqNMbiLd",
     "target" : "D7uGA61rN06GpZy6ooNN3$$IHADbZeEtr_g2Vbxil1y5",
     "targetPort" : "V7jS8jW2th4urXTbEda2G$$4YCHaMQtcs792xLnu_Pk7"
+  }, {
+    "id" : "qad-Z29lmKpa4fTcKaI-x",
+    "source" : "TGSlk5op2JsnZnf6dQAlO$$5-w9mlV7NhQxfkp_tJioB",
+    "sourcePort" : "pNLQVwoVdkyh9QdPJMVCd$$1K9Vuuuaf7QHQtqNMbiLd",
+    "target" : "Join_98619",
+    "targetPort" : "47810"
   } ],
   "processes" : {
+    "TGSlk5op2JsnZnf6dQAlO$$5-w9mlV7NhQxfkp_tJioB" : {
+      "id" : "TGSlk5op2JsnZnf6dQAlO$$5-w9mlV7NhQxfkp_tJioB",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "orders",
+        "slug" : "orders",
+        "x" : 140,
+        "y" : 60,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "pNLQVwoVdkyh9QdPJMVCd$$1K9Vuuuaf7QHQtqNMbiLd",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/orders"
+      }
+    },
     "Join_98619" : {
       "id" : "Join_98619",
       "component" : "Join",
@@ -1519,35 +1546,6 @@
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.40&projectSubscriptionProjectId=12654&path=gems/OrderBy",
         "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
-    "Source_28006" : {
-      "id" : "Source_28006",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "load_orders_dataset",
-        "slug" : "load_orders_dataset",
-        "x" : 60,
-        "y" : 40,
-        "phase" : -2,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false,
-        "comment" : "Loads order data from a CSV file, ensuring proper formatting for analysis.",
-        "autoUpdateComment" : true
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "65082",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/orders"
       }
     },
     "X1hquCjL" : {

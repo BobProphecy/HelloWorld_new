@@ -4,9 +4,12 @@ from pyspark.sql.types import *
 from demo_bob1.config.ConfigStore import *
 from demo_bob1.functions import *
 from prophecy.utils import *
+from demo_bob1.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    pass
+    df_customers = customers(spark)
+    df_orders = orders(spark)
+    df_order_customer_details = order_customer_details(spark, df_orders, df_customers)
 
 def main():
     spark = SparkSession.builder.enableHiveSupport().appName("demo_bob1").getOrCreate()
