@@ -204,8 +204,9 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Links customer orders with their account opening dates and personal details, providing a comprehensive view of customer transactions.",
-        "autoUpdateComment" : true
+        "comment" : "Combines customer order details with their account information for a comprehensive view of customer transactions.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false
       },
       "ports" : {
         "inputs" : [ {
@@ -416,6 +417,14 @@
           },
           "description" : "",
           "_row_id" : null
+        }, {
+          "target" : "email",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.email"
+          },
+          "description" : "",
+          "_row_id" : null
         } ],
         "hints" : [ {
           "id" : "47810",
@@ -430,7 +439,7 @@
         } ],
         "allIn1" : null,
         "activeTab" : "expressions",
-        "columnsSelector" : [ "2322##customer_id", "47810##customer_id", "47810##amount", "47810##customer_id", "2322##account_open_date", "47810##order_id", "2322##first_name", "2322##last_name" ],
+        "columnsSelector" : [ "47810##customer_id", "2322##customer_id", "2322##account_open_date", "47810##order_id", "47810##customer_id", "47810##amount", "2322##email", "2322##first_name", "2322##last_name" ],
         "allIn0" : null,
         "whereClause" : null,
         "headAlias" : "in0"
@@ -580,6 +589,15 @@
               "name" : "hash_order_id",
               "type" : "integer",
               "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "company_name",
+              "type" : "string",
+              "nullable" : true,
               "metadata" : {
                 "description" : "",
                 "mappings" : [ ],
@@ -810,8 +828,9 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Enhances customer data by creating full names and generating unique hashes for customer and order identifiers.",
-        "autoUpdateComment" : true
+        "comment" : "Cleans and formats customer data, enhancing it with unique identifiers and extracting company names from email addresses.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false
       },
       "ports" : {
         "inputs" : [ {
@@ -873,6 +892,15 @@
                 "mappings" : [ ],
                 "tags" : [ ]
               }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Email address of the customer; Used for communication and account-related notifications.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
             } ]
           },
           "isStreaming" : false
@@ -929,10 +957,17 @@
             "expression" : "hash(order_id)"
           },
           "description" : ""
+        }, {
+          "target" : "company_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "substring_index(email, '@', -1)"
+          },
+          "description" : ""
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##order_id", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##last_name", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##customer_id", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##amount", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##first_name" ]
+        "columnsSelector" : [ "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##last_name", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##email", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##order_id", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##customer_id", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##first_name", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##amount" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.40&projectSubscriptionProjectId=12654&path=gems/Reformat",

@@ -14,5 +14,6 @@ def customer_data_cleanup(spark: SparkSession, By_CustomerId: DataFrame) -> Data
         col("order_id"), 
         col("amount"), 
         hash(col("customer_id")).alias("hash_customer_id"), 
-        hash(col("order_id")).alias("hash_order_id")
+        hash(col("order_id")).alias("hash_order_id"), 
+        substring_index(col("email"), "@", -1).alias("company_name")
     )
