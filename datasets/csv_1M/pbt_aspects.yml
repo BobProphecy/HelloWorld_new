@@ -1,0 +1,74 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: transaction_id
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for each transaction
+      mappings: []
+      tags: []
+  - name: first_name
+    type: string
+    nullable: true
+    metadata:
+      description: The first name of the individual involved in the transaction
+      mappings: []
+      tags: []
+  - name: last_name
+    type: string
+    nullable: true
+    metadata:
+      description: The last name of the individual involved in the transaction
+      mappings: []
+      tags: []
+  - name: from_bank
+    type: string
+    nullable: true
+    metadata:
+      description: The bank from which the transaction originates
+      mappings: []
+      tags: []
+  - name: from_account_number
+    type: string
+    nullable: true
+    metadata:
+      description: Account number from which the transaction originates
+      mappings: []
+      tags: []
+  - name: to_bank
+    type: string
+    nullable: true
+    metadata:
+      description: The bank receiving the funds in the transaction
+      mappings: []
+      tags: []
+  - name: to_account_number
+    type: string
+    nullable: true
+    metadata:
+      description: Account number where the funds are being transferred to
+      mappings: []
+      tags: []
+  - name: originating_country
+    type: string
+    nullable: true
+    metadata:
+      description: Country from which the transaction originates
+      mappings: []
+      tags: []
+  - name: destination_country
+    type: string
+    nullable: true
+    metadata:
+      description: Country where the transaction is being sent.
+      mappings: []
+      tags: []
+  - name: transaction_amount
+    type: double
+    nullable: true
+    metadata:
+      description: The amount of money involved in the transaction
+      mappings: []
+      tags: []

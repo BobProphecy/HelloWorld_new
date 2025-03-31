@@ -20,6 +20,73 @@
     "id" : "1",
     "uri" : "pipelines/TestJSON",
     "sourceSuggestions" : [ {
+      "sourceLabel" : "csv_1M",
+      "sourceDatasetId" : "datasets/csv_1M",
+      "canJoinWith" : [ {
+        "processLabel" : "TestJSON",
+        "processId" : "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T",
+        "joinColumns" : [ "firstname", "lastname" ],
+        "isRecommended" : true,
+        "properties" : {
+          "columnsSelector" : [ "firstname", "lastname" ],
+          "conditions" : [ {
+            "alias" : "csv_1M",
+            "expression" : "((TestJSON.firstname = csv_1M.first_name) AND (TestJSON.lastname = csv_1M.last_name))",
+            "joinType" : "inner"
+          } ],
+          "expressions" : [ {
+            "alias" : "transaction_id",
+            "expression" : "csv_1M.transaction_id"
+          }, {
+            "alias" : "from_bank",
+            "expression" : "csv_1M.from_bank"
+          }, {
+            "alias" : "from_account_number",
+            "expression" : "csv_1M.from_account_number"
+          }, {
+            "alias" : "to_bank",
+            "expression" : "csv_1M.to_bank"
+          }, {
+            "alias" : "to_account_number",
+            "expression" : "csv_1M.to_account_number"
+          }, {
+            "alias" : "originating_country",
+            "expression" : "csv_1M.originating_country"
+          }, {
+            "alias" : "destination_country",
+            "expression" : "csv_1M.destination_country"
+          }, {
+            "alias" : "transaction_amount",
+            "expression" : "csv_1M.transaction_amount"
+          }, {
+            "alias" : "lastname",
+            "expression" : "TestJSON.lastname"
+          }, {
+            "alias" : "gender",
+            "expression" : "TestJSON.gender"
+          }, {
+            "alias" : "age_group",
+            "expression" : "TestJSON.age_group"
+          }, {
+            "alias" : "creation_date",
+            "expression" : "TestJSON.creation_date"
+          }, {
+            "alias" : "firstname",
+            "expression" : "TestJSON.firstname"
+          }, {
+            "alias" : "email",
+            "expression" : "TestJSON.email"
+          }, {
+            "alias" : "id",
+            "expression" : "TestJSON.id"
+          }, {
+            "alias" : "address",
+            "expression" : "TestJSON.address"
+          } ],
+          "headAlias" : "datasets/csv_1M"
+        }
+      } ]
+    }, {
       "sourceLabel" : "HW_customers_sample",
       "sourceDatasetId" : "datasets/HW_customers_sample",
       "canJoinWith" : [ {
@@ -194,73 +261,6 @@
         }
       } ]
     }, {
-      "sourceLabel" : "financial_crimes_wire_transfer",
-      "sourceDatasetId" : "datasets/financial_crimes_wire_transfer",
-      "canJoinWith" : [ {
-        "processLabel" : "TestJSON",
-        "processId" : "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T",
-        "joinColumns" : [ "firstname", "lastname" ],
-        "isRecommended" : true,
-        "properties" : {
-          "columnsSelector" : [ "firstname", "lastname" ],
-          "conditions" : [ {
-            "alias" : "financial_crimes_wire_transfer",
-            "expression" : "((TestJSON.firstname = financial_crimes_wire_transfer.first_name) AND (TestJSON.lastname = financial_crimes_wire_transfer.last_name))",
-            "joinType" : "inner"
-          } ],
-          "expressions" : [ {
-            "alias" : "transaction_id",
-            "expression" : "financial_crimes_wire_transfer.transaction_id"
-          }, {
-            "alias" : "from_bank",
-            "expression" : "financial_crimes_wire_transfer.from_bank"
-          }, {
-            "alias" : "from_account_number",
-            "expression" : "financial_crimes_wire_transfer.from_account_number"
-          }, {
-            "alias" : "to_bank",
-            "expression" : "financial_crimes_wire_transfer.to_bank"
-          }, {
-            "alias" : "to_account_number",
-            "expression" : "financial_crimes_wire_transfer.to_account_number"
-          }, {
-            "alias" : "originating_country",
-            "expression" : "financial_crimes_wire_transfer.originating_country"
-          }, {
-            "alias" : "destination_country",
-            "expression" : "financial_crimes_wire_transfer.destination_country"
-          }, {
-            "alias" : "transaction_amount",
-            "expression" : "financial_crimes_wire_transfer.transaction_amount"
-          }, {
-            "alias" : "lastname",
-            "expression" : "TestJSON.lastname"
-          }, {
-            "alias" : "gender",
-            "expression" : "TestJSON.gender"
-          }, {
-            "alias" : "age_group",
-            "expression" : "TestJSON.age_group"
-          }, {
-            "alias" : "creation_date",
-            "expression" : "TestJSON.creation_date"
-          }, {
-            "alias" : "firstname",
-            "expression" : "TestJSON.firstname"
-          }, {
-            "alias" : "email",
-            "expression" : "TestJSON.email"
-          }, {
-            "alias" : "id",
-            "expression" : "TestJSON.id"
-          }, {
-            "alias" : "address",
-            "expression" : "TestJSON.address"
-          } ],
-          "headAlias" : "datasets/financial_crimes_wire_transfer"
-        }
-      } ]
-    }, {
       "sourceLabel" : "customers_snow",
       "sourceDatasetId" : "datasets/customers_snow",
       "canJoinWith" : [ {
@@ -374,6 +374,207 @@
             "expression" : "TestJSON.address"
           } ],
           "headAlias" : "datasets/stooges3"
+        }
+      } ]
+    }, {
+      "sourceLabel" : "snow_1M",
+      "sourceDatasetId" : "datasets/snow_1M",
+      "canJoinWith" : [ {
+        "processLabel" : "TestJSON",
+        "processId" : "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T",
+        "joinColumns" : [ "firstname", "lastname" ],
+        "isRecommended" : false,
+        "properties" : {
+          "columnsSelector" : [ "firstname", "lastname" ],
+          "conditions" : [ {
+            "alias" : "snow_1M",
+            "expression" : "((TestJSON.firstname = snow_1M.first_name) AND (TestJSON.lastname = snow_1M.last_name))",
+            "joinType" : "inner"
+          } ],
+          "expressions" : [ {
+            "alias" : "transaction_id",
+            "expression" : "snow_1M.transaction_id"
+          }, {
+            "alias" : "from_bank",
+            "expression" : "snow_1M.from_bank"
+          }, {
+            "alias" : "from_account_number",
+            "expression" : "snow_1M.from_account_number"
+          }, {
+            "alias" : "to_bank",
+            "expression" : "snow_1M.to_bank"
+          }, {
+            "alias" : "to_account_number",
+            "expression" : "snow_1M.to_account_number"
+          }, {
+            "alias" : "originating_country",
+            "expression" : "snow_1M.originating_country"
+          }, {
+            "alias" : "destination_country",
+            "expression" : "snow_1M.destination_country"
+          }, {
+            "alias" : "transaction_amount",
+            "expression" : "snow_1M.transaction_amount"
+          }, {
+            "alias" : "lastname",
+            "expression" : "TestJSON.lastname"
+          }, {
+            "alias" : "gender",
+            "expression" : "TestJSON.gender"
+          }, {
+            "alias" : "age_group",
+            "expression" : "TestJSON.age_group"
+          }, {
+            "alias" : "creation_date",
+            "expression" : "TestJSON.creation_date"
+          }, {
+            "alias" : "firstname",
+            "expression" : "TestJSON.firstname"
+          }, {
+            "alias" : "email",
+            "expression" : "TestJSON.email"
+          }, {
+            "alias" : "id",
+            "expression" : "TestJSON.id"
+          }, {
+            "alias" : "address",
+            "expression" : "TestJSON.address"
+          } ],
+          "headAlias" : "datasets/snow_1M"
+        }
+      } ]
+    }, {
+      "sourceLabel" : "UC_1m_tranx",
+      "sourceDatasetId" : "datasets/UC_1m_tranx",
+      "canJoinWith" : [ {
+        "processLabel" : "TestJSON",
+        "processId" : "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T",
+        "joinColumns" : [ "firstname", "lastname" ],
+        "isRecommended" : false,
+        "properties" : {
+          "columnsSelector" : [ "firstname", "lastname" ],
+          "conditions" : [ {
+            "alias" : "UC_1m_tranx",
+            "expression" : "((TestJSON.firstname = UC_1m_tranx.first_name) AND (TestJSON.lastname = UC_1m_tranx.last_name))",
+            "joinType" : "inner"
+          } ],
+          "expressions" : [ {
+            "alias" : "transaction_id",
+            "expression" : "UC_1m_tranx.transaction_id"
+          }, {
+            "alias" : "from_bank",
+            "expression" : "UC_1m_tranx.from_bank"
+          }, {
+            "alias" : "from_account_number",
+            "expression" : "UC_1m_tranx.from_account_number"
+          }, {
+            "alias" : "to_bank",
+            "expression" : "UC_1m_tranx.to_bank"
+          }, {
+            "alias" : "to_account_number",
+            "expression" : "UC_1m_tranx.to_account_number"
+          }, {
+            "alias" : "originating_country",
+            "expression" : "UC_1m_tranx.originating_country"
+          }, {
+            "alias" : "destination_country",
+            "expression" : "UC_1m_tranx.destination_country"
+          }, {
+            "alias" : "transaction_amount",
+            "expression" : "UC_1m_tranx.transaction_amount"
+          }, {
+            "alias" : "lastname",
+            "expression" : "TestJSON.lastname"
+          }, {
+            "alias" : "gender",
+            "expression" : "TestJSON.gender"
+          }, {
+            "alias" : "age_group",
+            "expression" : "TestJSON.age_group"
+          }, {
+            "alias" : "creation_date",
+            "expression" : "TestJSON.creation_date"
+          }, {
+            "alias" : "firstname",
+            "expression" : "TestJSON.firstname"
+          }, {
+            "alias" : "email",
+            "expression" : "TestJSON.email"
+          }, {
+            "alias" : "id",
+            "expression" : "TestJSON.id"
+          }, {
+            "alias" : "address",
+            "expression" : "TestJSON.address"
+          } ],
+          "headAlias" : "datasets/UC_1m_tranx"
+        }
+      } ]
+    }, {
+      "sourceLabel" : "financial_crimes_wire_transfer",
+      "sourceDatasetId" : "datasets/financial_crimes_wire_transfer",
+      "canJoinWith" : [ {
+        "processLabel" : "TestJSON",
+        "processId" : "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T",
+        "joinColumns" : [ "firstname", "lastname" ],
+        "isRecommended" : false,
+        "properties" : {
+          "columnsSelector" : [ "firstname", "lastname" ],
+          "conditions" : [ {
+            "alias" : "financial_crimes_wire_transfer",
+            "expression" : "((TestJSON.firstname = financial_crimes_wire_transfer.first_name) AND (TestJSON.lastname = financial_crimes_wire_transfer.last_name))",
+            "joinType" : "inner"
+          } ],
+          "expressions" : [ {
+            "alias" : "transaction_id",
+            "expression" : "financial_crimes_wire_transfer.transaction_id"
+          }, {
+            "alias" : "from_bank",
+            "expression" : "financial_crimes_wire_transfer.from_bank"
+          }, {
+            "alias" : "from_account_number",
+            "expression" : "financial_crimes_wire_transfer.from_account_number"
+          }, {
+            "alias" : "to_bank",
+            "expression" : "financial_crimes_wire_transfer.to_bank"
+          }, {
+            "alias" : "to_account_number",
+            "expression" : "financial_crimes_wire_transfer.to_account_number"
+          }, {
+            "alias" : "originating_country",
+            "expression" : "financial_crimes_wire_transfer.originating_country"
+          }, {
+            "alias" : "destination_country",
+            "expression" : "financial_crimes_wire_transfer.destination_country"
+          }, {
+            "alias" : "transaction_amount",
+            "expression" : "financial_crimes_wire_transfer.transaction_amount"
+          }, {
+            "alias" : "lastname",
+            "expression" : "TestJSON.lastname"
+          }, {
+            "alias" : "gender",
+            "expression" : "TestJSON.gender"
+          }, {
+            "alias" : "age_group",
+            "expression" : "TestJSON.age_group"
+          }, {
+            "alias" : "creation_date",
+            "expression" : "TestJSON.creation_date"
+          }, {
+            "alias" : "firstname",
+            "expression" : "TestJSON.firstname"
+          }, {
+            "alias" : "email",
+            "expression" : "TestJSON.email"
+          }, {
+            "alias" : "id",
+            "expression" : "TestJSON.id"
+          }, {
+            "alias" : "address",
+            "expression" : "TestJSON.address"
+          } ],
+          "headAlias" : "datasets/financial_crimes_wire_transfer"
         }
       } ]
     }, {

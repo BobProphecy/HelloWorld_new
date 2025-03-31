@@ -140,10 +140,11 @@ pipelines:
     dependencies: {}
   pipelines/demo_bob1:
     name: demo_bob1
-    description: Processes customer and order data to generate a sales summary. It
-      combines customer details with order information, reformats the data, and aggregates
-      sales by customer. The results are sorted by total sales and limited to the
-      top 25 entries before being saved to a specified table.
+    description: Analyzes customer orders by merging customer and order datasets.
+      It reformats the combined data to extract full names and company names from
+      emails. The pipeline summarizes sales by customer, calculating total sales and
+      order counts, and sorts the results in descending order of total sales. Finally,
+      it limits the output to the top 25 results.
     author: bobw@prophecy.io
     mode: batch
     artefactID: ''
@@ -717,6 +718,58 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2025-03-25 14:39:59'
+  datasets/demo_cog:
+    name: demo_cog
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-03-26 15:13:41'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-03-26 15:13:41'
+  datasets/UC_1m_tranx:
+    name: UC_1m_tranx
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-03-28 16:20:37'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-03-28 16:20:37'
+  datasets/snow_1M:
+    name: snow_1M
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-03-28 16:36:20'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Warehouse
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-03-28 16:36:20'
+  datasets/csv_1M:
+    name: csv_1M
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-03-28 16:44:35'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: File
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-03-28 16:44:35'
 templates: {}
 jobs:
   jobs/DBX_workflow:

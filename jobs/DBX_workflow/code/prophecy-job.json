@@ -30,6 +30,42 @@
     }
   },
   "processes" : {
+    "ipYFr2PC0bfdtG7Rx6QkI$$LA_KlvqTVyU0tZsZxRDwt" : {
+      "id" : "ipYFr2PC0bfdtG7Rx6QkI$$LA_KlvqTVyU0tZsZxRDwt",
+      "component" : "DLTPipeline",
+      "metadata" : {
+        "label" : "DLTPipeline_1",
+        "slug" : "DLTPipeline_1",
+        "x" : 440,
+        "y" : -160
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "PnW2z8iC-W2_-F7KjscY9$$4LEb2l2z9-NgfcQByo-G-",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "49j5AUt3mvZKYxWyRqcUY$$MYkMfo46ELg8JF39UKeYw",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "properties" : {
+        "pipelineId" : "",
+        "configurations" : { }
+      }
+    },
     "hfQhk96Zjj_cbva8GatRx$$Tis8soV25YfGSVuKoP3Ff" : {
       "id" : "hfQhk96Zjj_cbva8GatRx$$Tis8soV25YfGSVuKoP3Ff",
       "component" : "Pipeline",
@@ -200,7 +236,7 @@
       "metadata" : {
         "label" : "Analytic_pipelines",
         "slug" : "Analytic_pipelines",
-        "x" : 1020,
+        "x" : 980,
         "y" : 0,
         "width" : 200,
         "height" : 260
@@ -219,8 +255,8 @@
       "metadata" : {
         "label" : "Prep_Pipelines",
         "slug" : "Prep_Pipelines",
-        "x" : 400,
-        "y" : 20,
+        "x" : 380,
+        "y" : -40,
         "width" : 400,
         "height" : 460
       },
