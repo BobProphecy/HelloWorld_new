@@ -140,19 +140,22 @@ pipelines:
     dependencies: {}
   pipelines/demo_bob1:
     name: demo_bob1
-    description: Analyzes customer orders by merging customer and order datasets.
-      It reformats the combined data to extract full names and company names from
-      emails. The pipeline summarizes sales by customer, calculating total sales and
-      order counts, and sorts the results in descending order of total sales. Finally,
-      it limits the output to the top 25 results.
+    description: Processes customer and order data to generate a sales summary. It
+      combines customer details with order information, reformats the data to extract
+      relevant fields, and aggregates sales amounts by customer. The final output
+      ranks customers by total sales, limits results to the top 25, and saves them
+      in a specified table.
     author: bobw@prophecy.io
     mode: batch
     artefactID: ''
     language: python
     createdAt: '2025-02-20 16:07:31'
     datasets:
-      inputs: []
-      outputs: []
+      inputs:
+      - datasets/customers
+      - datasets/orders
+      outputs:
+      - datasets/demo_danyelle
     subgraphs: []
     dependencies: {}
   pipelines/schemachange:
@@ -770,6 +773,32 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2025-03-28 16:44:35'
+  datasets/demo_web2:
+    name: demo_web2
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-03-31 18:36:45'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-03-31 18:36:45'
+  datasets/demo_danyelle:
+    name: demo_danyelle
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-03-31 20:27:20'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-03-31 20:27:20'
 templates: {}
 jobs:
   jobs/DBX_workflow:

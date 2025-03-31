@@ -142,6 +142,70 @@
       },
       "parent" : "DKbJq79NkMh4WeeujIpiB"
     },
+    "MUj3IYno7dR0UaAPC_lpM$$Z4o7Zs1Z4QRgfA2sKrvlF" : {
+      "id" : "MUj3IYno7dR0UaAPC_lpM$$Z4o7Zs1Z4QRgfA2sKrvlF",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "demo_bob1_1",
+        "slug" : "demo_bob1_1",
+        "x" : 100,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "NhlKf1nArkXfz1au5FbVP$$yc5bAYNH56UR8NIY0l9u1",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "fVTY5E5IE8l7C1Kv1f3vg$$Cr9cnJqlXCK_dZ9dId4l-",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/demo_bob1",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "HelloWorld_NEW" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        },
+        "projectId" : "37461"
+      },
+      "parent" : "oiYGYn1VOSOWjTquk9f4I"
+    },
+    "oiYGYn1VOSOWjTquk9f4I" : {
+      "id" : "oiYGYn1VOSOWjTquk9f4I",
+      "component" : "Cluster",
+      "metadata" : {
+        "label" : "Cluster_3",
+        "slug" : "Cluster_3",
+        "x" : -1060,
+        "y" : -320,
+        "width" : 280,
+        "height" : 280
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ ]
+      },
+      "properties" : {
+        "clusterSize" : "small"
+      }
+    },
     "S2OOqqxEJy89rOMhXLB9u$$EbzqGJQIC1m8XUV01dITz" : {
       "id" : "S2OOqqxEJy89rOMhXLB9u$$EbzqGJQIC1m8XUV01dITz",
       "component" : "DLTPipeline",
@@ -212,5 +276,11 @@
     "target" : "IqCokV0IwCqFsCg19mZF9",
     "sourcePort" : "PfY89Q9O6_2YbCDZld-S9$$TdGPKXlYKCI-c1exw1YWS",
     "targetPort" : "in"
+  }, {
+    "id" : "b2k3rxwxTREycrLZ1_QLH",
+    "source" : "MUj3IYno7dR0UaAPC_lpM$$Z4o7Zs1Z4QRgfA2sKrvlF",
+    "target" : "SnmXNwObLXq7k2VLyT-fR$$iLT0L7xjXhmvf5oUc7jdp",
+    "sourcePort" : "fVTY5E5IE8l7C1Kv1f3vg$$Cr9cnJqlXCK_dZ9dId4l-",
+    "targetPort" : "dmMUs9lH3N-ONuuC4va5Y$$emPJJg2rMSNjw5SJGvJbV"
   } ]
 }

@@ -48,8 +48,8 @@
       "metadata" : {
         "label" : "DBX2Target",
         "slug" : "DBX2Target",
-        "x" : 100,
-        "y" : 160
+        "x" : 0,
+        "y" : 40
       },
       "ports" : {
         "inputs" : [ {
