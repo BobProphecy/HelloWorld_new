@@ -1,0 +1,1 @@
+from .move_2_kenpei import *

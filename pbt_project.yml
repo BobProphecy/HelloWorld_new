@@ -151,11 +151,8 @@ pipelines:
     language: python
     createdAt: '2025-02-20 16:07:31'
     datasets:
-      inputs:
-      - datasets/customers
-      - datasets/orders
-      outputs:
-      - datasets/demo_danyelle
+      inputs: []
+      outputs: []
     subgraphs: []
     dependencies: {}
   pipelines/schemachange:
@@ -172,6 +169,23 @@ pipelines:
       inputs:
       - datasets/stooges3
       outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/move_2_kenpei:
+    name: move_2_kenpei
+    description: ''
+    author: bobw@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-04-02 16:59:18'
+    datasets:
+      inputs:
+      - datasets/customers
+      - datasets/orders
+      outputs:
+      - datasets/c2k
+      - datasets/o2k
     subgraphs: []
     dependencies: {}
 datasets:
@@ -799,6 +813,32 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2025-03-31 20:27:20'
+  datasets/c2k:
+    name: c2k
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-04-02 17:02:31'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-04-02 17:02:31'
+  datasets/o2k:
+    name: o2k
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-04-02 17:03:42'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-04-02 17:03:42'
 templates: {}
 jobs:
   jobs/DBX_workflow:
@@ -1027,10 +1067,10 @@ projectDependencies:
     projectUID: 12654
     projectName: ProphecySparkBasicsPython
     repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=
-    version: 0.2.40
+    version: 0.2.42
     isDefault: true
     author: null
-    createdAt: '2025-02-04 14:49:46'
+    createdAt: '2025-04-03 14:51:00'
   '12655':
     projectUID: 12655
     projectName: ProphecyWarehousePython

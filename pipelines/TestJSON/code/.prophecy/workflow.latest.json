@@ -20,44 +20,35 @@
     "id" : "1",
     "uri" : "pipelines/TestJSON",
     "sourceSuggestions" : [ {
-      "sourceLabel" : "csv_1M",
-      "sourceDatasetId" : "datasets/csv_1M",
+      "sourceLabel" : "c2k",
+      "sourceDatasetId" : "datasets/c2k",
       "canJoinWith" : [ {
         "processLabel" : "TestJSON",
         "processId" : "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T",
-        "joinColumns" : [ "firstname", "lastname" ],
+        "joinColumns" : [ "email", "firstname", "lastname" ],
         "isRecommended" : true,
         "properties" : {
-          "columnsSelector" : [ "firstname", "lastname" ],
+          "columnsSelector" : [ "email", "firstname", "lastname" ],
           "conditions" : [ {
-            "alias" : "csv_1M",
-            "expression" : "((TestJSON.firstname = csv_1M.first_name) AND (TestJSON.lastname = csv_1M.last_name))",
+            "alias" : "c2k",
+            "expression" : "(((TestJSON.email = c2k.email) AND (TestJSON.firstname = c2k.first_name)) AND (TestJSON.lastname = c2k.last_name))",
             "joinType" : "inner"
           } ],
           "expressions" : [ {
-            "alias" : "transaction_id",
-            "expression" : "csv_1M.transaction_id"
+            "alias" : "customer_id",
+            "expression" : "c2k.customer_id"
           }, {
-            "alias" : "from_bank",
-            "expression" : "csv_1M.from_bank"
+            "alias" : "phone",
+            "expression" : "c2k.phone"
           }, {
-            "alias" : "from_account_number",
-            "expression" : "csv_1M.from_account_number"
+            "alias" : "country_code",
+            "expression" : "c2k.country_code"
           }, {
-            "alias" : "to_bank",
-            "expression" : "csv_1M.to_bank"
+            "alias" : "account_open_date",
+            "expression" : "c2k.account_open_date"
           }, {
-            "alias" : "to_account_number",
-            "expression" : "csv_1M.to_account_number"
-          }, {
-            "alias" : "originating_country",
-            "expression" : "csv_1M.originating_country"
-          }, {
-            "alias" : "destination_country",
-            "expression" : "csv_1M.destination_country"
-          }, {
-            "alias" : "transaction_amount",
-            "expression" : "csv_1M.transaction_amount"
+            "alias" : "account_flags",
+            "expression" : "c2k.account_flags"
           }, {
             "alias" : "lastname",
             "expression" : "TestJSON.lastname"
@@ -83,7 +74,7 @@
             "alias" : "address",
             "expression" : "TestJSON.address"
           } ],
-          "headAlias" : "datasets/csv_1M"
+          "headAlias" : "datasets/c2k"
         }
       } ]
     }, {
@@ -319,35 +310,44 @@
         }
       } ]
     }, {
-      "sourceLabel" : "stooges3",
-      "sourceDatasetId" : "datasets/stooges3",
+      "sourceLabel" : "csv_1M",
+      "sourceDatasetId" : "datasets/csv_1M",
       "canJoinWith" : [ {
         "processLabel" : "TestJSON",
         "processId" : "PzuAp8ILULAf63Pm9Dg6U$$0jMccN-sm0xl8kAQHfr_T",
-        "joinColumns" : [ "firstname" ],
+        "joinColumns" : [ "firstname", "lastname" ],
         "isRecommended" : false,
         "properties" : {
-          "columnsSelector" : [ "firstname" ],
+          "columnsSelector" : [ "firstname", "lastname" ],
           "conditions" : [ {
-            "alias" : "stooges3",
-            "expression" : "(TestJSON.firstname = stooges3.f_name)",
+            "alias" : "csv_1M",
+            "expression" : "((TestJSON.firstname = csv_1M.first_name) AND (TestJSON.lastname = csv_1M.last_name))",
             "joinType" : "inner"
           } ],
           "expressions" : [ {
-            "alias" : "employee_id",
-            "expression" : "stooges3.employee_id"
+            "alias" : "transaction_id",
+            "expression" : "csv_1M.transaction_id"
           }, {
-            "alias" : "l_name",
-            "expression" : "stooges3.l_name"
+            "alias" : "from_bank",
+            "expression" : "csv_1M.from_bank"
           }, {
-            "alias" : "title",
-            "expression" : "stooges3.title"
+            "alias" : "from_account_number",
+            "expression" : "csv_1M.from_account_number"
           }, {
-            "alias" : "manager_id",
-            "expression" : "stooges3.manager_id"
+            "alias" : "to_bank",
+            "expression" : "csv_1M.to_bank"
           }, {
-            "alias" : "test_flag",
-            "expression" : "stooges3.test_flag"
+            "alias" : "to_account_number",
+            "expression" : "csv_1M.to_account_number"
+          }, {
+            "alias" : "originating_country",
+            "expression" : "csv_1M.originating_country"
+          }, {
+            "alias" : "destination_country",
+            "expression" : "csv_1M.destination_country"
+          }, {
+            "alias" : "transaction_amount",
+            "expression" : "csv_1M.transaction_amount"
           }, {
             "alias" : "lastname",
             "expression" : "TestJSON.lastname"
@@ -373,7 +373,7 @@
             "alias" : "address",
             "expression" : "TestJSON.address"
           } ],
-          "headAlias" : "datasets/stooges3"
+          "headAlias" : "datasets/csv_1M"
         }
       } ]
     }, {
@@ -1017,7 +1017,7 @@
         "columnsSelector" : [ "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##merchant_address", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##transaction_amount", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##merchant_name", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##merchant_city", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##merchant_country", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##card_type", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##merchant_state", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##transaction_id", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##_corrupt_record", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##card_number", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##transaction_seatlement_date", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##card_holder_id", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##merchant_postal_code", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##merchant_category", "hAza5mO8kWKrdNWL_x4Tm$$OKP9KYYGoHeI0tegGmSwB##transaction_datetime" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.40&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.42&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -1780,7 +1780,7 @@
         "delimiter" : "-"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.40&projectSubscriptionProjectId=12654&path=gems/FlattenSchema",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.42&projectSubscriptionProjectId=12654&path=gems/FlattenSchema",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -2010,7 +2010,7 @@
         "delimiter" : "_"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.40&projectSubscriptionProjectId=12654&path=gems/FlattenSchema",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.42&projectSubscriptionProjectId=12654&path=gems/FlattenSchema",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -2163,7 +2163,7 @@
         } ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.40&projectSubscriptionProjectId=12654&path=gems/Aggregate",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.42&projectSubscriptionProjectId=12654&path=gems/Aggregate",
         "projectName" : "ProphecySparkBasicsPython"
       }
     }
