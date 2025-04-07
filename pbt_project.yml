@@ -171,23 +171,6 @@ pipelines:
       outputs: []
     subgraphs: []
     dependencies: {}
-  pipelines/move_2_kenpei:
-    name: move_2_kenpei
-    description: ''
-    author: bobw@prophecy.io
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2025-04-02 16:59:18'
-    datasets:
-      inputs:
-      - datasets/customers
-      - datasets/orders
-      outputs:
-      - datasets/c2k
-      - datasets/o2k
-    subgraphs: []
-    dependencies: {}
 datasets:
   datasets/customer_totals:
     name: customer_totals
@@ -553,19 +536,6 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2025-02-18 19:42:30'
-  datasets/demo_rt:
-    name: demo_rt
-    description: ''
-    author: bobw@prophecy.io
-    createdAt: '2025-02-19 20:37:21'
-    mode: batch
-    physicalDatasets:
-      Databricks-Prophecy:
-        fabricId: 9631
-        datasetType: Database
-        description: ''
-        author: bobw@prophecy.io
-        createdAt: '2025-02-19 20:37:21'
   datasets/HW_customers_sample:
     name: HW_customers_sample
     description: ''
@@ -579,175 +549,6 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2025-02-20 16:13:23'
-  datasets/demo_kpmg:
-    name: demo_kpmg
-    description: ''
-    author: bobw@prophecy.io
-    createdAt: '2025-02-20 21:36:36'
-    mode: batch
-    physicalDatasets:
-      Databricks-Prophecy:
-        fabricId: 9631
-        datasetType: Database
-        description: ''
-        author: bobw@prophecy.io
-        createdAt: '2025-02-20 21:36:36'
-  datasets/demo_webinar1:
-    name: demo_webinar1
-    description: ''
-    author: bobw@prophecy.io
-    createdAt: '2025-02-27 17:29:37'
-    mode: batch
-    physicalDatasets:
-      Databricks-Prophecy:
-        fabricId: 9631
-        datasetType: Database
-        description: ''
-        author: bobw@prophecy.io
-        createdAt: '2025-02-27 17:29:37'
-  datasets/demo_orlando:
-    name: demo_orlando
-    description: ''
-    author: bobw@prophecy.io
-    createdAt: '2025-03-03 23:40:54'
-    mode: batch
-    physicalDatasets:
-      Databricks-Prophecy:
-        fabricId: 9631
-        datasetType: Database
-        description: ''
-        author: bobw@prophecy.io
-        createdAt: '2025-03-03 23:40:54'
-  datasets/demo_web1:
-    name: demo_web1
-    description: ''
-    author: bobw@prophecy.io
-    createdAt: '2025-03-04 16:46:50'
-    mode: batch
-    physicalDatasets:
-      Databricks-Prophecy:
-        fabricId: 9631
-        datasetType: Database
-        description: ''
-        author: bobw@prophecy.io
-        createdAt: '2025-03-04 16:46:50'
-  datasets/demo_gart22:
-    name: demo_gart22
-    description: ''
-    author: bobw@prophecy.io
-    createdAt: '2025-03-04 18:37:05'
-    mode: batch
-    physicalDatasets:
-      Databricks-Prophecy:
-        fabricId: 9631
-        datasetType: Database
-        description: ''
-        author: bobw@prophecy.io
-        createdAt: '2025-03-04 18:37:05'
-  datasets/demo_pc:
-    name: demo_pc
-    description: ''
-    author: bobw@prophecy.io
-    createdAt: '2025-03-10 17:31:35'
-    mode: batch
-    physicalDatasets:
-      Databricks-Prophecy:
-        fabricId: 9631
-        datasetType: Database
-        description: ''
-        author: bobw@prophecy.io
-        createdAt: '2025-03-10 17:31:35'
-  datasets/demo_dbx10:
-    name: demo_dbx10
-    description: ''
-    author: bobw@prophecy.io
-    createdAt: '2025-03-11 19:51:27'
-    mode: batch
-    physicalDatasets:
-      Databricks-Prophecy:
-        fabricId: 9631
-        datasetType: Database
-        description: ''
-        author: bobw@prophecy.io
-        createdAt: '2025-03-11 19:51:27'
-  datasets/demo_glic:
-    name: demo_glic
-    description: ''
-    author: bobw@prophecy.io
-    createdAt: '2025-03-13 17:30:43'
-    mode: batch
-    physicalDatasets:
-      Databricks-Prophecy:
-        fabricId: 9631
-        datasetType: Database
-        description: ''
-        author: bobw@prophecy.io
-        createdAt: '2025-03-13 17:30:43'
-  datasets/demo_bob22:
-    name: demo_bob22
-    description: ''
-    author: bobw@prophecy.io
-    createdAt: '2025-03-13 20:44:21'
-    mode: batch
-    physicalDatasets:
-      Databricks-Prophecy:
-        fabricId: 9631
-        datasetType: Database
-        description: ''
-        author: bobw@prophecy.io
-        createdAt: '2025-03-13 20:44:21'
-  datasets/demodata1:
-    name: demodata1
-    description: ''
-    author: bobw@prophecy.io
-    createdAt: '2025-03-14 19:25:24'
-    mode: batch
-    physicalDatasets:
-      Databricks-Prophecy:
-        fabricId: 9631
-        datasetType: Database
-        description: ''
-        author: bobw@prophecy.io
-        createdAt: '2025-03-14 19:25:24'
-  datasets/demo_bob23:
-    name: demo_bob23
-    description: ''
-    author: bobw@prophecy.io
-    createdAt: '2025-03-24 20:32:36'
-    mode: batch
-    physicalDatasets:
-      Databricks-Prophecy:
-        fabricId: 9631
-        datasetType: Database
-        description: ''
-        author: bobw@prophecy.io
-        createdAt: '2025-03-24 20:32:36'
-  datasets/demo_sl:
-    name: demo_sl
-    description: ''
-    author: bobw@prophecy.io
-    createdAt: '2025-03-25 14:39:59'
-    mode: batch
-    physicalDatasets:
-      Databricks-Prophecy:
-        fabricId: 9631
-        datasetType: Database
-        description: ''
-        author: bobw@prophecy.io
-        createdAt: '2025-03-25 14:39:59'
-  datasets/demo_cog:
-    name: demo_cog
-    description: ''
-    author: bobw@prophecy.io
-    createdAt: '2025-03-26 15:13:41'
-    mode: batch
-    physicalDatasets:
-      Databricks-Prophecy:
-        fabricId: 9631
-        datasetType: Database
-        description: ''
-        author: bobw@prophecy.io
-        createdAt: '2025-03-26 15:13:41'
   datasets/UC_1m_tranx:
     name: UC_1m_tranx
     description: ''
@@ -787,32 +588,6 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2025-03-28 16:44:35'
-  datasets/demo_web2:
-    name: demo_web2
-    description: ''
-    author: bobw@prophecy.io
-    createdAt: '2025-03-31 18:36:45'
-    mode: batch
-    physicalDatasets:
-      Databricks-Prophecy:
-        fabricId: 9631
-        datasetType: Database
-        description: ''
-        author: bobw@prophecy.io
-        createdAt: '2025-03-31 18:36:45'
-  datasets/demo_danyelle:
-    name: demo_danyelle
-    description: ''
-    author: bobw@prophecy.io
-    createdAt: '2025-03-31 20:27:20'
-    mode: batch
-    physicalDatasets:
-      Databricks-Prophecy:
-        fabricId: 9631
-        datasetType: Database
-        description: ''
-        author: bobw@prophecy.io
-        createdAt: '2025-03-31 20:27:20'
   datasets/c2k:
     name: c2k
     description: ''

@@ -2,13 +2,6 @@
   "fabric_id" : "9631",
   "components" : [ {
     "DLTPipelineComponent" : {
-      "id" : "ipYFr2PC0bfdtG7Rx6QkI$$LA_KlvqTVyU0tZsZxRDwt",
-      "nodeName" : "DLTPipeline_1",
-      "language" : "python",
-      "content" : ""
-    }
-  }, {
-    "DLTPipelineComponent" : {
       "id" : "YLq8y_je8yRbeODsVkHGW$$kgIafwRgMG0eswJkHwgVq",
       "nodeName" : "DLT_sales_prep",
       "language" : "python",
@@ -161,12 +154,6 @@
     } ],
     "email_notifications" : { },
     "tasks" : [ {
-      "task_key" : "DLTPipeline_1",
-      "pipeline_task" : {
-        "pipeline_id" : ""
-      },
-      "email_notifications" : { }
-    }, {
       "task_key" : "DLT_sales_prep",
       "pipeline_task" : {
         "pipeline_id" : "e441e44a-fe4d-4a3f-b33b-50257f2c0ff5",
@@ -260,5 +247,5 @@
     "clusterMode" : "Single"
   },
   "secret_scope" : "prophecy_jobs_7058",
-  "sorted_processes" : [ "ipYFr2PC0bfdtG7Rx6QkI$$LA_KlvqTVyU0tZsZxRDwt", "YLq8y_je8yRbeODsVkHGW$$kgIafwRgMG0eswJkHwgVq", "hfQhk96Zjj_cbva8GatRx$$Tis8soV25YfGSVuKoP3Ff", "PjdiPWju5utkLwUQ_E-uH$$p18Te6-b02NoUjdp4SYcu", "XzqbboOqkhSr3-S-USd8o$$qfEp85McJkgVu5tLVSR59" ]
+  "sorted_processes" : [ "YLq8y_je8yRbeODsVkHGW$$kgIafwRgMG0eswJkHwgVq", "hfQhk96Zjj_cbva8GatRx$$Tis8soV25YfGSVuKoP3Ff", "PjdiPWju5utkLwUQ_E-uH$$p18Te6-b02NoUjdp4SYcu", "XzqbboOqkhSr3-S-USd8o$$qfEp85McJkgVu5tLVSR59" ]
 }

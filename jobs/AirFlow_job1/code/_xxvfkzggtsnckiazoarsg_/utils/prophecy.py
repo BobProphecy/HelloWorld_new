@@ -8,7 +8,6 @@ db_pipeline_id_to_path_dict = {
     "pipelines/demo_bob1": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/demo_bob1-1.0-py3-none-any.whl", 
     "pipelines/farmers-markets-irs": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/farmers_markets_irs-1.0-py3-none-any.whl", 
     "pipelines/join_agg_sort": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/join_agg_sort-1.0-py3-none-any.whl", 
-    "pipelines/move_2_kenpei": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/move_2_kenpei-1.0-py3-none-any.whl", 
     "pipelines/sales_view": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/sales_view-1.0-py3-none-any.whl", 
     "pipelines/schemachange": "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/schemachange-1.0-py3-none-any.whl"
 }
@@ -35,7 +34,6 @@ pipeline_package_name = {
     "pipelines/sales_view": "sales_view", 
     "pipelines/demo_bob1": "demo_bob1", 
     "pipelines/TestJSON": "TestJSON", 
-    "pipelines/move_2_kenpei": "move_2_kenpei", 
     "pipelines/schemachange": "schemachange", 
     "pipelines/farmers-markets-irs": "farmers-markets-irs"
 }
