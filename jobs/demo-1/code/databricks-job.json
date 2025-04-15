@@ -62,11 +62,11 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-8.8.2"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-8.9.0"
         }
       }, {
         "pypi" : {
-          "package" : "prophecy-libs==1.9.36"
+          "package" : "prophecy-libs==1.9.45"
         }
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/customers_orders-1.0-py3-none-any.whl"
@@ -79,5 +79,6 @@
     "clusterMode" : "Single"
   },
   "secret_scope" : "prophecy_jobs_7058",
-  "sorted_processes" : [ "Wfl7hJ1lxM4nFjo_yjKXI$$0KxmbkmKe23Kdum_PQIBS" ]
+  "sorted_processes" : [ "Wfl7hJ1lxM4nFjo_yjKXI$$0KxmbkmKe23Kdum_PQIBS" ],
+  "is_prophecy_managed_fabric" : false
 }

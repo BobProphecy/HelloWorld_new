@@ -7,7 +7,7 @@ setup(
     package_data = {'prophecy_config_instances.schemachange' : ['*.json', '*.py', '*.conf']},
     description = 'workflow',
     install_requires = [
-'prophecy-libs==1.9.36'],
+'prophecy-libs==1.9.45'],
     entry_points = {
 'console_scripts' : [
 'main = schemachange.pipeline:main'], },

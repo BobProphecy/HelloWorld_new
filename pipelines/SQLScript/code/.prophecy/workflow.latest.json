@@ -13,8 +13,8 @@
     "codeGenConfiguration" : {
       "editableConfig" : true,
       "plibVersion" : {
-        "mavenVersion" : "8.8.2",
-        "pyPiVersion" : "1.9.36"
+        "mavenVersion" : "8.9.0",
+        "pyPiVersion" : "1.9.45"
       }
     },
     "id" : "1",
@@ -207,7 +207,7 @@
         "inputPortNames" : [ "in0" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.42&projectSubscriptionProjectId=12654&path=gems/SQLStatement",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.44&projectSubscriptionProjectId=12654&path=gems/SQLStatement",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },

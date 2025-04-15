@@ -174,11 +174,11 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-8.8.2"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-8.9.0"
         }
       }, {
         "pypi" : {
-          "package" : "prophecy-libs==1.9.36"
+          "package" : "prophecy-libs==1.9.45"
         }
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/join_agg_sort-1.0-py3-none-any.whl"
@@ -198,11 +198,11 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-8.8.2"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-8.9.0"
         }
       }, {
         "pypi" : {
-          "package" : "prophecy-libs==1.9.36"
+          "package" : "prophecy-libs==1.9.45"
         }
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/farmers_markets_irs-1.0-py3-none-any.whl"
@@ -224,11 +224,11 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.5.0-8.8.2"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.5.0-8.9.0"
         }
       }, {
         "pypi" : {
-          "package" : "prophecy-libs==1.9.36"
+          "package" : "prophecy-libs==1.9.45"
         }
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/customers_orders-1.0-py3-none-any.whl"
@@ -247,5 +247,6 @@
     "clusterMode" : "Single"
   },
   "secret_scope" : "prophecy_jobs_7058",
-  "sorted_processes" : [ "YLq8y_je8yRbeODsVkHGW$$kgIafwRgMG0eswJkHwgVq", "hfQhk96Zjj_cbva8GatRx$$Tis8soV25YfGSVuKoP3Ff", "PjdiPWju5utkLwUQ_E-uH$$p18Te6-b02NoUjdp4SYcu", "XzqbboOqkhSr3-S-USd8o$$qfEp85McJkgVu5tLVSR59" ]
+  "sorted_processes" : [ "YLq8y_je8yRbeODsVkHGW$$kgIafwRgMG0eswJkHwgVq", "hfQhk96Zjj_cbva8GatRx$$Tis8soV25YfGSVuKoP3Ff", "PjdiPWju5utkLwUQ_E-uH$$p18Te6-b02NoUjdp4SYcu", "XzqbboOqkhSr3-S-USd8o$$qfEp85McJkgVu5tLVSR59" ],
+  "is_prophecy_managed_fabric" : false
 }

@@ -201,11 +201,11 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-8.8.2"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-8.9.0"
         }
       }, {
         "pypi" : {
-          "package" : "prophecy-libs==1.9.36"
+          "package" : "prophecy-libs==1.9.45"
         }
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/demo_bob1-1.0-py3-none-any.whl"
@@ -224,11 +224,11 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.5.0-8.8.2"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.5.0-8.9.0"
         }
       }, {
         "pypi" : {
-          "package" : "prophecy-libs==1.9.36"
+          "package" : "prophecy-libs==1.9.45"
         }
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/customers_orders-1.0-py3-none-any.whl"
@@ -255,11 +255,11 @@
       },
       "libraries" : [ {
         "maven" : {
-          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-8.8.2"
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-8.9.0"
         }
       }, {
         "pypi" : {
-          "package" : "prophecy-libs==1.9.36"
+          "package" : "prophecy-libs==1.9.45"
         }
       }, {
         "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/demo_bob1-1.0-py3-none-any.whl"
@@ -277,5 +277,6 @@
     "clusterMode" : "Single"
   },
   "secret_scope" : "prophecy_jobs_7058",
-  "sorted_processes" : [ "MUj3IYno7dR0UaAPC_lpM$$Z4o7Zs1Z4QRgfA2sKrvlF", "SnmXNwObLXq7k2VLyT-fR$$iLT0L7xjXhmvf5oUc7jdp", "S2OOqqxEJy89rOMhXLB9u$$EbzqGJQIC1m8XUV01dITz", "IqCokV0IwCqFsCg19mZF9" ]
+  "sorted_processes" : [ "MUj3IYno7dR0UaAPC_lpM$$Z4o7Zs1Z4QRgfA2sKrvlF", "SnmXNwObLXq7k2VLyT-fR$$iLT0L7xjXhmvf5oUc7jdp", "S2OOqqxEJy89rOMhXLB9u$$EbzqGJQIC1m8XUV01dITz", "IqCokV0IwCqFsCg19mZF9" ],
+  "is_prophecy_managed_fabric" : false
 }

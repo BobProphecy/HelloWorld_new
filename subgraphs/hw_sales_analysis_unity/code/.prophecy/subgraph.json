@@ -351,10 +351,10 @@
         "updated" : true,
         "currentDatasetId" : "datasets/hello_world_hw_orders",
         "componentInfo" : {
-          "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.42&projectSubscriptionProjectId=12654&path=gems/catalogTable",
+          "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.44&projectSubscriptionProjectId=12654&path=gems/catalogTable",
           "projectId" : "12654",
           "projectName" : "ProphecySparkBasicsPython",
-          "version" : "0.2.42"
+          "version" : "0.2.44"
         },
         "dataset" : {
           "mergeCondition" : null,
@@ -764,10 +764,10 @@
         "updated" : true,
         "currentDatasetId" : "datasets/hello_world_hw_customers",
         "componentInfo" : {
-          "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.42&projectSubscriptionProjectId=12654&path=gems/catalogTable",
+          "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.44&projectSubscriptionProjectId=12654&path=gems/catalogTable",
           "projectId" : "12654",
           "projectName" : "ProphecySparkBasicsPython",
-          "version" : "0.2.42"
+          "version" : "0.2.44"
         },
         "dataset" : {
           "mergeCondition" : null,
@@ -1003,10 +1003,10 @@
         "headAlias" : "hello_world_hw_orders"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.42&projectSubscriptionProjectId=12654&path=gems/Join",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.44&projectSubscriptionProjectId=12654&path=gems/Join",
         "projectId" : "12654",
         "projectName" : "ProphecySparkBasicsPython",
-        "version" : "0.2.42"
+        "version" : "0.2.44"
       }
     }
   }
