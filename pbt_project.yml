@@ -151,11 +151,8 @@ pipelines:
     language: python
     createdAt: '2025-02-20 16:07:31'
     datasets:
-      inputs:
-      - datasets/customers
-      - datasets/orders
-      outputs:
-      - datasets/demo_dbx1
+      inputs: []
+      outputs: []
     subgraphs: []
     dependencies: {}
   pipelines/schemachange:

@@ -4,18 +4,9 @@ from pyspark.sql.types import *
 from demo_bob1.config.ConfigStore import *
 from demo_bob1.functions import *
 from prophecy.utils import *
-from demo_bob1.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_customers = customers(spark)
-    df_orders = orders(spark)
-    df_order_customer_details = order_customer_details(spark, df_orders, df_customers)
-    df_reformat_order_customer_details = reformat_order_customer_details(spark, df_order_customer_details)
-    df_sales_summary_by_customer = sales_summary_by_customer(spark, df_reformat_order_customer_details)
-    df_sales_summary = sales_summary(spark, df_sales_summary_by_customer)
-    df_sorted_by_total_sales = sorted_by_total_sales(spark, df_sales_summary)
-    df_limited_results = limited_results(spark, df_sorted_by_total_sales)
-    demo_dbx1(spark, df_limited_results)
+    pass
 
 def main():
     spark = SparkSession.builder.enableHiveSupport().appName("demo_bob1").getOrCreate()
