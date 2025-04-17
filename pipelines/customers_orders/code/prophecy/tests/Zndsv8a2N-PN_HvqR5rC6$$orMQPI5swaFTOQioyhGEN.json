@@ -169,6 +169,145 @@
     "name" : "Unit Test _1",
     "testType" : "outputRow",
     "language" : "python"
+  }, {
+    "data" : {
+      "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0" : {
+        "values" : [ [ "1", "26", "586.08", "Waite", "Petschelt", "wpetscheltp@cnn.com" ], [ "2", "26", "9.85", "Waite", "Petschelt", "wpetscheltp@cnn.com" ], [ "3", "94", "915.25", "Ogdan", "Bussetti", "obussetti2l@themeforest.net" ], [ "4", "65", "556.41", "Evelyn", "Goulbourne", "egoulbourne1s@i2i.jp" ], [ "5", "13", "877.45", "Violet", "Alston", "valstonc@wikispaces.com" ], [ "6", "77", "776.76", "Deeanne", "Kaye", "dkaye24@indiatimes.com" ], [ "7", "77", "843.36", "Deeanne", "Kaye", "dkaye24@indiatimes.com" ], [ "8", "64", "71.47", "Aguistin", "Lipman", "alipman1r@clickbank.net" ], [ "9", "25", "305.39", "Alyssa", "Mance", "amanceo@archive.org" ], [ "10", "48", "696.56", "Queenie", "Basire", "qbasire1b@etsy.com" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "order_id",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "customer_id",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "amount",
+            "type" : "double",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "first_name",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "last_name",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "email",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      },
+      "e5xsyduk576qtza7k7j46$$rS1d6kwam8f7gzjq4Gaoo" : {
+        "values" : [ [ "26", "Waite Petschelt", "1", "586.08", "-1223696181", "-559580957", "cnn.com" ], [ "26", "Waite Petschelt", "2", "9.85", "-1223696181", "1765031574", "cnn.com" ], [ "94", "Ogdan Bussetti", "3", "915.25", "209632257", "-1823081949", "themeforest.net" ], [ "65", "Evelyn Goulbourne", "4", "556.41", "1103002004", "-397064898", "i2i.jp" ], [ "13", "Violet Alston", "5", "877.45", "-1057351352", "1023896466", "wikispaces.com" ], [ "77", "Deeanne Kaye", "6", "776.76", "-1911646078", "-331964951", "indiatimes.com" ], [ "77", "Deeanne Kaye", "7", "843.36", "-1911646078", "1079293707", "indiatimes.com" ], [ "64", "Aguistin Lipman", "8", "71.47", "2015291073", "-132918897", "clickbank.net" ], [ "25", "Alyssa Mance", "9", "305.39", "1249949532", "-1731921111", "archive.org" ], [ "48", "Queenie Basire", "10", "696.56", "358751465", "-1401210078", "etsy.com" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "customer_id",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "full_name",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "order_id",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "amount",
+            "type" : "double",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "hash_customer_id",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "hash_order_id",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "company_name",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      }
+    },
+    "name" : "Unit Test _2",
+    "testType" : "outputRow",
+    "language" : "python"
   } ],
   "language" : "python"
 }

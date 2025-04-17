@@ -1,0 +1,1 @@
+{"type":"struct","fields":[{"name":"customer_id","type":"integer","nullable":true,"metadata":{"description":"Unique identifier for the customer who placed the order.","mappings":[],"tags":[]}}]}

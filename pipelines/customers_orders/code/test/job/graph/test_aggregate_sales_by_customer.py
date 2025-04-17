@@ -30,6 +30,26 @@ class aggregate_sales_by_customerTest(BaseTestCase):
             self.maxUnequalRowsToShow
         )
 
+    def test_unit_test__1(self):
+        dfClean_up = createDfFromResourceFiles(
+            self.spark,
+            'test/resources/data/job/graph/aggregate_sales_by_customer/clean_up/schema.json',
+            'test/resources/data/job/graph/aggregate_sales_by_customer/clean_up/data/test_unit_test__1.json',
+            'clean_up'
+        )
+        dfOut = createDfFromResourceFiles(
+            self.spark,
+            'test/resources/data/job/graph/aggregate_sales_by_customer/out/schema.json',
+            'test/resources/data/job/graph/aggregate_sales_by_customer/out/data/test_unit_test__1.json',
+            'out'
+        )
+        dfOutComputed = aggregate_sales_by_customer(self.spark, dfClean_up)
+        assertDFEquals(
+            dfOut.select("customer_id", "full_name", "order_count", "sales_total"),
+            dfOutComputed.select("customer_id", "full_name", "order_count", "sales_total"),
+            self.maxUnequalRowsToShow
+        )
+
     def setUp(self):
         BaseTestCase.setUp(self)
         import os

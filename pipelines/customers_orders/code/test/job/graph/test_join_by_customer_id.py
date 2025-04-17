@@ -57,6 +57,27 @@ class join_by_customer_idTest(BaseTestCase):
         )
         dfOutComputed = join_by_customer_id(self.spark, dfIn0, dfIn1)
 
+    def test_unit_test__2(self):
+        dfIn0 = createDfFromResourceFiles(
+            self.spark,
+            'test/resources/data/job/graph/join_by_customer_id/in0/schema.json',
+            'test/resources/data/job/graph/join_by_customer_id/in0/data/test_unit_test__2.json',
+            'in0'
+        )
+        dfIn1 = createDfFromResourceFiles(
+            self.spark,
+            'test/resources/data/job/graph/join_by_customer_id/in1/schema.json',
+            'test/resources/data/job/graph/join_by_customer_id/in1/data/test_unit_test__2.json',
+            'in1'
+        )
+        dfOut = createDfFromResourceFiles(
+            self.spark,
+            'test/resources/data/job/graph/join_by_customer_id/out/schema.json',
+            'test/resources/data/job/graph/join_by_customer_id/out/data/test_unit_test__2.json',
+            'out'
+        )
+        dfOutComputed = join_by_customer_id(self.spark, dfIn0, dfIn1)
+
     def setUp(self):
         BaseTestCase.setUp(self)
         import os

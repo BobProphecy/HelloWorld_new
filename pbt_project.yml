@@ -845,8 +845,6 @@ sqlMacros: {}
 sqlSeeds: {}
 sqlSources: {}
 sqlUnreferencedSources: {}
-sqlOrchestratorPipelines: {}
-sqlBusinessApps: {}
 sqlPipeline: null
 dependencies:
 - type: plibMaven
@@ -897,7 +895,7 @@ projectDependencies:
     version: 0.0.5
     isDefault: false
     author: null
-    createdAt: '2025-04-15 13:34:55'
+    createdAt: '2025-04-16 12:26:10'
 flags:
   shouldAddDefaultDependenciesIfAbsent: false
 pipelineConfigurations: {}

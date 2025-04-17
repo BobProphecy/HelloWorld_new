@@ -50,6 +50,42 @@ class customer_data_cleanupTest(BaseTestCase):
             self.maxUnequalRowsToShow
         )
 
+    def test_unit_test__2(self):
+        dfBy_CustomerId = createDfFromResourceFiles(
+            self.spark,
+            'test/resources/data/job/graph/customer_data_cleanup/By_CustomerId/schema.json',
+            'test/resources/data/job/graph/customer_data_cleanup/By_CustomerId/data/test_unit_test__2.json',
+            'By_CustomerId'
+        )
+        dfOut = createDfFromResourceFiles(
+            self.spark,
+            'test/resources/data/job/graph/customer_data_cleanup/out/schema.json',
+            'test/resources/data/job/graph/customer_data_cleanup/out/data/test_unit_test__2.json',
+            'out'
+        )
+        dfOutComputed = customer_data_cleanup(self.spark, dfBy_CustomerId)
+        assertDFEquals(
+            dfOut.select(
+              "customer_id",
+              "full_name",
+              "order_id",
+              "amount",
+              "hash_customer_id",
+              "hash_order_id",
+              "company_name"
+            ),
+            dfOutComputed.select(
+              "customer_id",
+              "full_name",
+              "order_id",
+              "amount",
+              "hash_customer_id",
+              "hash_order_id",
+              "company_name"
+            ),
+            self.maxUnequalRowsToShow
+        )
+
     def setUp(self):
         BaseTestCase.setUp(self)
         import os

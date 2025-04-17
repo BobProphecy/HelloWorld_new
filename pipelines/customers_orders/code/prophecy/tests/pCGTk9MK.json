@@ -1,0 +1,53 @@
+{
+  "unitTests" : [ {
+    "data" : {
+      "lpFNgNFS" : {
+        "values" : [ [ "Other" ], [ "Other" ], [ "Other" ], [ "Other" ], [ "Other" ], [ "Other" ], [ "Other" ], [ "Other" ], [ "Other" ], [ "Other" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "region",
+            "type" : "string",
+            "nullable" : false,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      },
+      "nCtNrcAN" : {
+        "values" : [ [ "Other", "10" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "region",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "CUSTOMER_COUNT",
+            "type" : "long",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      }
+    },
+    "name" : "Unit Test ",
+    "testType" : "outputRow",
+    "language" : "python"
+  } ],
+  "language" : "python"
+}

@@ -1,0 +1,71 @@
+{
+  "unitTests" : [ {
+    "data" : {
+      "1cr-_LwxamTCBEtnC1n_P$$Zi3whSJT4YPhw-ysPBDvE" : {
+        "values" : [ [ "Other", "91" ], [ "North America", "5" ], [ "South America", "4" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "region",
+            "type" : "string",
+            "nullable" : false,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "CUSTOMER_COUNT",
+            "type" : "long",
+            "nullable" : false,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      },
+      "uWKHovHbiKtlL_ByIT6Sp$$kF2lGsf4az5xyPfhsJeo4" : {
+        "values" : [ [ "Other", "91", "1" ], [ "North America", "5", "2" ], [ "South America", "4", "3" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "region",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "CUSTOMER_COUNT",
+            "type" : "long",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "row_count",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      }
+    },
+    "name" : "Unit Test ",
+    "testType" : "outputRow",
+    "language" : "python"
+  } ],
+  "language" : "python"
+}

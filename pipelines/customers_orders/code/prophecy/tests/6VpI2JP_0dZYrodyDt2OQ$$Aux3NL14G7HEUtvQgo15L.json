@@ -1,0 +1,80 @@
+{
+  "unitTests" : [ {
+    "data" : {
+      "iDAWcpkOS5A6hSC1HeBzT$$bzcrsSbQxR8PwNteDCbwc" : {
+        "values" : [ [ "Other", "91", "1" ], [ "North America", "5", "2" ], [ "South America", "4", "3" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "region",
+            "type" : "string",
+            "nullable" : false,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "CUSTOMER_COUNT",
+            "type" : "long",
+            "nullable" : false,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "row_count",
+            "type" : "integer",
+            "nullable" : false,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      },
+      "laorIt2TemEJRMluk55rE$$DBcsRHE35S9KnHZzPftou" : {
+        "values" : [ [ "1", "Other", "91" ], [ "2", "North America", "5" ], [ "3", "South America", "4" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "row_count",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "region",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "CUSTOMER_COUNT",
+            "type" : "long",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      }
+    },
+    "name" : "Unit Test ",
+    "testType" : "outputRow",
+    "language" : "python"
+  } ],
+  "language" : "python"
+}

@@ -1,0 +1,44 @@
+{
+  "unitTests" : [ {
+    "data" : {
+      "tdOaRcVh" : {
+        "values" : [ [ "26" ], [ "26" ], [ "94" ], [ "65" ], [ "13" ], [ "77" ], [ "77" ], [ "64" ], [ "25" ], [ "48" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "customer_id",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      },
+      "xj9iCrLL" : {
+        "values" : [ [ "26" ], [ "94" ], [ "65" ], [ "13" ], [ "77" ], [ "64" ], [ "48" ], [ "25" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "customer_id",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      }
+    },
+    "name" : "Unit Test ",
+    "testType" : "outputRow",
+    "language" : "python"
+  } ],
+  "language" : "python"
+}

@@ -1,8 +1,8 @@
 {
   "unitTests" : [ {
     "data" : {
-      "2T9gL1JVIp_GrcqL42djp$$-w93lO6ccI981o47KQ_S4" : {
-        "values" : [ [ "26", "Waite Petschelt", "1", "586.08" ], [ "26", "Waite Petschelt", "2", "9.85" ], [ "94", "Ogdan Bussetti", "3", "915.25" ], [ "65", "Evelyn Goulbourne", "4", "556.41" ], [ "13", "Violet Alston", "5", "877.45" ], [ "77", "Deeanne Kaye", "6", "776.76" ], [ "77", "Deeanne Kaye", "7", "843.36" ], [ "64", "Aguistin Lipman", "8", "71.47" ], [ "25", "Alyssa Mance", "9", "305.39" ], [ "48", "Queenie Basire", "10", "696.56" ] ],
+      "I93_AkXny8VGRPgOJbjjL$$1z8jjEdixu8b7jAk55zzU" : {
+        "values" : [ [ "1", "Griz", "Roubeix", "761-351-2493", "groubeix0@yellowpages.com", "RU", "2019-07-20", "E" ], [ "2", "Carleen", "Eles", "480-128-4143", "celes1@usa.gov", "CN", "2019-10-21", "E" ], [ "3", "Marjy", "Della", "328-629-6853", "mdella2@vimeo.com", "NO", "2019-05-04", "E" ], [ "4", "Osborne", "MacAdam", "473-395-4702", "omacadam3@sbwire.com", "ID", "2019-10-19", "C" ], [ "5", "Roselia", "Trethewey", "439-680-3415", "rtrethewey4@github.com", "AR", "2020-02-19", "E" ], [ "6", "Cassy", "Gainsford", "358-877-6530", "cgainsford5@vinaora.com", "BH", "2019-04-20", "E" ], [ "7", "Robers", "Scala", "947-957-9269", "rscala6@nasa.gov", "ID", "2020-01-14", "E" ], [ "8", "Sibley", "Reasun", "654-130-6632", "sreasun7@bing.com", "JP", "2019-03-25", "E" ], [ "9", "Natka", "Birdsey", "655-623-0342", "nbirdsey8@who.int", "CN", "2019-07-19", "A" ], [ "10", "Jonis", "Bigly", "670-356-1004", "jbigly9@prlog.org", "CN", "2019-05-15", "D" ] ],
         "schema" : {
           "type" : "struct",
           "fields" : [ {
@@ -15,7 +15,7 @@
               "tags" : [ ]
             }
           }, {
-            "name" : "full_name",
+            "name" : "first_name",
             "type" : "string",
             "nullable" : true,
             "metadata" : {
@@ -24,8 +24,8 @@
               "tags" : [ ]
             }
           }, {
-            "name" : "order_id",
-            "type" : "integer",
+            "name" : "last_name",
+            "type" : "string",
             "nullable" : true,
             "metadata" : {
               "description" : "",
@@ -33,8 +33,44 @@
               "tags" : [ ]
             }
           }, {
-            "name" : "amount",
-            "type" : "double",
+            "name" : "phone",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "email",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "country_code",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "account_open_date",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "account_flags",
+            "type" : "string",
             "nullable" : true,
             "metadata" : {
               "description" : "",
@@ -45,8 +81,8 @@
         },
         "predicates" : [ ]
       },
-      "QmnQejfrTPT8qFjCHLMQi$$sqJjiiISnteUS1b2aMaFo" : {
-        "values" : [ [ "26", "Waite Petschelt", "2", "595.9300000000001" ], [ "94", "Ogdan Bussetti", "1", "915.25" ], [ "65", "Evelyn Goulbourne", "1", "556.41" ], [ "13", "Violet Alston", "1", "877.45" ], [ "77", "Deeanne Kaye", "2", "1620.12" ], [ "64", "Aguistin Lipman", "1", "71.47" ], [ "25", "Alyssa Mance", "1", "305.39" ], [ "48", "Queenie Basire", "1", "696.56" ] ],
+      "rL1SR5nTnf6-iDCA8RAmb$$tqqGG9qqvEaW-8DEYJv1Y" : {
+        "values" : [ [ "1", "Griz", "Roubeix", "761-351-2493", "groubeix0@yellowpages.com", "RU", "2019-07-20", "E", "Other" ], [ "2", "Carleen", "Eles", "480-128-4143", "celes1@usa.gov", "CN", "2019-10-21", "E", "Other" ], [ "3", "Marjy", "Della", "328-629-6853", "mdella2@vimeo.com", "NO", "2019-05-04", "E", "Other" ], [ "4", "Osborne", "MacAdam", "473-395-4702", "omacadam3@sbwire.com", "ID", "2019-10-19", "C", "Other" ], [ "5", "Roselia", "Trethewey", "439-680-3415", "rtrethewey4@github.com", "AR", "2020-02-19", "E", "Other" ], [ "6", "Cassy", "Gainsford", "358-877-6530", "cgainsford5@vinaora.com", "BH", "2019-04-20", "E", "Other" ], [ "7", "Robers", "Scala", "947-957-9269", "rscala6@nasa.gov", "ID", "2020-01-14", "E", "Other" ], [ "8", "Sibley", "Reasun", "654-130-6632", "sreasun7@bing.com", "JP", "2019-03-25", "E", "Other" ], [ "9", "Natka", "Birdsey", "655-623-0342", "nbirdsey8@who.int", "CN", "2019-07-19", "A", "Other" ], [ "10", "Jonis", "Bigly", "670-356-1004", "jbigly9@prlog.org", "CN", "2019-05-15", "D", "Other" ] ],
         "schema" : {
           "type" : "struct",
           "fields" : [ {
@@ -59,7 +95,7 @@
               "tags" : [ ]
             }
           }, {
-            "name" : "full_name",
+            "name" : "first_name",
             "type" : "string",
             "nullable" : true,
             "metadata" : {
@@ -68,8 +104,8 @@
               "tags" : [ ]
             }
           }, {
-            "name" : "order_count",
-            "type" : "long",
+            "name" : "last_name",
+            "type" : "string",
             "nullable" : true,
             "metadata" : {
               "description" : "",
@@ -77,8 +113,53 @@
               "tags" : [ ]
             }
           }, {
-            "name" : "sales_total",
-            "type" : "double",
+            "name" : "phone",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "email",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "country_code",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "account_open_date",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "account_flags",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "region",
+            "type" : "string",
             "nullable" : true,
             "metadata" : {
               "description" : "",
@@ -91,100 +172,6 @@
       }
     },
     "name" : "Unit Test ",
-    "testType" : "outputRow",
-    "language" : "python"
-  }, {
-    "data" : {
-      "2T9gL1JVIp_GrcqL42djp$$-w93lO6ccI981o47KQ_S4" : {
-        "values" : [ [ "26", "Waite Petschelt", "1", "586.08" ], [ "26", "Waite Petschelt", "2", "9.85" ], [ "94", "Ogdan Bussetti", "3", "915.25" ], [ "65", "Evelyn Goulbourne", "4", "556.41" ], [ "13", "Violet Alston", "5", "877.45" ], [ "77", "Deeanne Kaye", "6", "776.76" ], [ "77", "Deeanne Kaye", "7", "843.36" ], [ "64", "Aguistin Lipman", "8", "71.47" ], [ "25", "Alyssa Mance", "9", "305.39" ], [ "48", "Queenie Basire", "10", "696.56" ] ],
-        "schema" : {
-          "type" : "struct",
-          "fields" : [ {
-            "name" : "customer_id",
-            "type" : "integer",
-            "nullable" : true,
-            "metadata" : {
-              "description" : "",
-              "mappings" : [ ],
-              "tags" : [ ]
-            }
-          }, {
-            "name" : "full_name",
-            "type" : "string",
-            "nullable" : true,
-            "metadata" : {
-              "description" : "",
-              "mappings" : [ ],
-              "tags" : [ ]
-            }
-          }, {
-            "name" : "order_id",
-            "type" : "integer",
-            "nullable" : true,
-            "metadata" : {
-              "description" : "",
-              "mappings" : [ ],
-              "tags" : [ ]
-            }
-          }, {
-            "name" : "amount",
-            "type" : "double",
-            "nullable" : true,
-            "metadata" : {
-              "description" : "",
-              "mappings" : [ ],
-              "tags" : [ ]
-            }
-          } ]
-        },
-        "predicates" : [ ]
-      },
-      "QmnQejfrTPT8qFjCHLMQi$$sqJjiiISnteUS1b2aMaFo" : {
-        "values" : [ [ "26", "Waite Petschelt", "2", "595.9300000000001" ], [ "94", "Ogdan Bussetti", "1", "915.25" ], [ "65", "Evelyn Goulbourne", "1", "556.41" ], [ "13", "Violet Alston", "1", "877.45" ], [ "77", "Deeanne Kaye", "2", "1620.12" ], [ "64", "Aguistin Lipman", "1", "71.47" ], [ "25", "Alyssa Mance", "1", "305.39" ], [ "48", "Queenie Basire", "1", "696.56" ] ],
-        "schema" : {
-          "type" : "struct",
-          "fields" : [ {
-            "name" : "customer_id",
-            "type" : "integer",
-            "nullable" : true,
-            "metadata" : {
-              "description" : "",
-              "mappings" : [ ],
-              "tags" : [ ]
-            }
-          }, {
-            "name" : "full_name",
-            "type" : "string",
-            "nullable" : true,
-            "metadata" : {
-              "description" : "",
-              "mappings" : [ ],
-              "tags" : [ ]
-            }
-          }, {
-            "name" : "order_count",
-            "type" : "long",
-            "nullable" : true,
-            "metadata" : {
-              "description" : "",
-              "mappings" : [ ],
-              "tags" : [ ]
-            }
-          }, {
-            "name" : "sales_total",
-            "type" : "double",
-            "nullable" : true,
-            "metadata" : {
-              "description" : "",
-              "mappings" : [ ],
-              "tags" : [ ]
-            }
-          } ]
-        },
-        "predicates" : [ ]
-      }
-    },
-    "name" : "Unit Test _1",
     "testType" : "outputRow",
     "language" : "python"
   } ],
