@@ -7,7 +7,7 @@ from demo_bob1.config.ConfigStore import *
 from demo_bob1.functions import *
 
 @instrument
-def sales_summary(spark: SparkSession, sales_summary_by_customer: DataFrame) -> DataFrame:
+def customer_sales_summary(spark: SparkSession, sales_summary_by_customer: DataFrame) -> DataFrame:
     return sales_summary_by_customer.select(
         col("full_name").alias("FULL_NAME"), 
         col("company_name").alias("COMPANY_NAME"), 

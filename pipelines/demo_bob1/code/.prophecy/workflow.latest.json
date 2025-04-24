@@ -71,23 +71,7 @@
     "codeMode" : "sparse",
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
-    "dependentProjectExternalDependencies" : [ {
-      "projectUID" : "32699",
-      "projectName" : "ProphecySparkDataQualityPython",
-      "externalDependencies" : [ ]
-    }, {
-      "projectUID" : "12654",
-      "projectName" : "ProphecySparkBasicsPython",
-      "externalDependencies" : [ ]
-    }, {
-      "projectUID" : "12656",
-      "projectName" : "ProphecyStreamingPython",
-      "externalDependencies" : [ ]
-    }, {
-      "projectUID" : "12655",
-      "projectName" : "ProphecyWarehousePython",
-      "externalDependencies" : [ ]
-    } ],
+    "dependentProjectExternalDependencies" : [ ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
@@ -100,388 +84,51 @@
     "configurationVersion" : "v2"
   },
   "connections" : [ {
-    "id" : "zXGAc37T",
-    "source" : "efRMVVMu",
-    "sourcePort" : "JeFTkjHS",
-    "target" : "kVAd6JjB",
-    "targetPort" : "N8W6ZGU1"
+    "id" : "W5CI8tGf",
+    "source" : "l66Tovez",
+    "sourcePort" : "yMISfU6t",
+    "target" : "nBade420",
+    "targetPort" : "zpbPlc5H"
   }, {
-    "id" : "xDCM22wh",
-    "source" : "kVAd6JjB",
-    "sourcePort" : "X9CzIUsM",
-    "target" : "NKVRDtte",
-    "targetPort" : "vByW8TKS"
+    "id" : "X7OzSSe2",
+    "source" : "nBade420",
+    "sourcePort" : "Q8qdR14l",
+    "target" : "iXvtQ7He",
+    "targetPort" : "QYCqILvf"
   }, {
-    "id" : "OK0WN1OV",
-    "source" : "NHMtzlXX",
-    "sourcePort" : "OKPYFwkH",
-    "target" : "efRMVVMu",
-    "targetPort" : "N8VAgVxh"
+    "id" : "ynqg0xTf",
+    "source" : "iXvtQ7He",
+    "sourcePort" : "Dallwe8m",
+    "target" : "fu4I6sld",
+    "targetPort" : "YWyLugCh"
   }, {
-    "id" : "jma6FxLq",
-    "source" : "JN6-QGomCLPg_mvKBRmtc$$Z0ONqLOV0Xuzrivz5nFDr",
-    "sourcePort" : "MwWU-ijbSJ7FUDmdqfOq5$$P8imskYzlsCtC5Wx44h-m",
-    "target" : "NHMtzlXX",
-    "targetPort" : "ceN3xhrs"
+    "id" : "Xecw2Qk0",
+    "source" : "ZWrCG_IjXe86i40BYAi1t$$YMc-Dx0iDDl8St27yZI9h",
+    "sourcePort" : "9wrKAlnyBH_pXC9ufQ9eQ$$4A6c8bt4KJrQEtCe-yc1Y",
+    "target" : "l66Tovez",
+    "targetPort" : "OUgPRP0N"
   }, {
-    "id" : "x9ENqMOe",
-    "source" : "EIZLrUyH",
-    "sourcePort" : "I4AJkdhY",
-    "target" : "CKVXtQ8L",
-    "targetPort" : "nQzVMPCZ"
+    "id" : "DmdKxQJp",
+    "source" : "qHeEU5U0",
+    "sourcePort" : "pHlOkskO",
+    "target" : "AplW0lvu",
+    "targetPort" : "OvTwZhcu"
   }, {
-    "id" : "xQRoTswF",
-    "source" : "kTEVsTYJ",
-    "sourcePort" : "LgVYYtbQ",
-    "target" : "CKVXtQ8L",
-    "targetPort" : "WWE28pIz"
+    "id" : "WaFBFlZw",
+    "source" : "Pa2ABKjG",
+    "sourcePort" : "tY5P8jPQ",
+    "target" : "AplW0lvu",
+    "targetPort" : "v86CsjEB"
   }, {
-    "id" : "e_3HJlq7jo8eICQUarie8$$VCUNrjaNRQi1KvBV0VI48",
-    "source" : "CKVXtQ8L",
-    "sourcePort" : "hpPXuDPk",
-    "target" : "JN6-QGomCLPg_mvKBRmtc$$Z0ONqLOV0Xuzrivz5nFDr",
-    "targetPort" : "Y2XXV6_cBb-w6d0rSjMwI$$6xc_eLvM3sDEBVbgf85kM"
-  }, {
-    "id" : "c36uD6v89k1mqjM1RaOo8$$XuwF6z8Cu-hrYsEH58paw",
-    "source" : "NKVRDtte",
-    "sourcePort" : "qQW95hun",
-    "target" : "TfPJnrnOAAgfsqBeVisRR$$IJAs9nUqDjTKDfe23EFFF",
-    "targetPort" : "Y8H8VGPMVcOC03BE2iCim$$7Z5A6LJLmiBQirz_zRAHQ"
+    "id" : "mO2Hf2CgGCjpH9Uu5lKFs$$k9lj-YpGvieqiUIx3WyVZ",
+    "source" : "AplW0lvu",
+    "sourcePort" : "YVsI6UFz",
+    "target" : "ZWrCG_IjXe86i40BYAi1t$$YMc-Dx0iDDl8St27yZI9h",
+    "targetPort" : "tK4bbpp-h6AMWSoyasG4i$$8HR9qBQv2kB2WWvEaf5K1"
   } ],
   "processes" : {
-    "NHMtzlXX" : {
-      "id" : "NHMtzlXX",
-      "component" : "Aggregate",
-      "metadata" : {
-        "label" : "sales_summary_by_customer",
-        "slug" : "sales_summary_by_customer",
-        "x" : 580,
-        "y" : 120,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "ceN3xhrs",
-          "slug" : "reformatted_order_customer_details",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "CUSTOMER_ID",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Unique identifier for the customer who placed the order.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "full_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ORDER_ID",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Unique identifier for each order placed by customers.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "SALES_AMOUNT",
-              "type" : "double",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Total monetary value of the order; Represents the cost associated with the order.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "company_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "days_since_account_open",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "OKPYFwkH",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "allIns" : false,
-        "doPivot" : false,
-        "aggregate" : [ {
-          "target" : "SUM_SALES_AMOUNT",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "SUM(SALES_AMOUNT)"
-          },
-          "description" : ""
-        }, {
-          "target" : "ORDER_COUNT",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "COUNT(ORDER_ID)"
-          },
-          "description" : ""
-        } ],
-        "allowSelection" : true,
-        "pivotColumn" : null,
-        "pivotValues" : [ ],
-        "activeTab" : "aggregate",
-        "columnsSelector" : [ ],
-        "groupBy" : [ {
-          "target" : "full_name",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "full_name"
-          },
-          "description" : ""
-        }, {
-          "target" : "company_name",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "company_name"
-          },
-          "description" : ""
-        } ]
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.44&projectSubscriptionProjectId=12654&path=gems/Aggregate",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
-    "EIZLrUyH" : {
-      "id" : "EIZLrUyH",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "orders",
-        "slug" : "orders",
-        "x" : 20,
-        "y" : 20,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "I4AJkdhY",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/orders"
-      }
-    },
-    "efRMVVMu" : {
-      "id" : "efRMVVMu",
-      "component" : "Reformat",
-      "metadata" : {
-        "label" : "sales_summary",
-        "slug" : "sales_summary",
-        "x" : 780,
-        "y" : 120,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "N8VAgVxh",
-          "slug" : "sales_summary_by_customer",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "full_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "company_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "SUM_SALES_AMOUNT",
-              "type" : "double",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ORDER_COUNT",
-              "type" : "long",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "JeFTkjHS",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
-        "expressions" : [ {
-          "target" : "FULL_NAME",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "full_name"
-          },
-          "description" : ""
-        }, {
-          "target" : "COMPANY_NAME",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "company_name"
-          },
-          "description" : ""
-        }, {
-          "target" : "TOTAL_SALES",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "ROUND(SUM_SALES_AMOUNT, 2)"
-          },
-          "description" : ""
-        }, {
-          "target" : "ORDER_COUNT",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "ORDER_COUNT"
-          },
-          "description" : ""
-        } ],
-        "importString" : "",
-        "activeTab" : "expressions",
-        "columnsSelector" : [ ]
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.44&projectSubscriptionProjectId=12654&path=gems/Reformat",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
-    "TfPJnrnOAAgfsqBeVisRR$$IJAs9nUqDjTKDfe23EFFF" : {
-      "id" : "TfPJnrnOAAgfsqBeVisRR$$IJAs9nUqDjTKDfe23EFFF",
-      "component" : "Target",
-      "metadata" : {
-        "label" : "demo_sony",
-        "slug" : "demo_sony",
-        "x" : 1360,
-        "y" : 120,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "Y8H8VGPMVcOC03BE2iCim$$7Z5A6LJLmiBQirz_zRAHQ",
-          "slug" : "limited_sort_results",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "FULL_NAME",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "COMPANY_NAME",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "TOTAL_SALES",
-              "type" : "double",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "ORDER_COUNT",
-              "type" : "long",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/demo_sony"
-      }
-    },
-    "CKVXtQ8L" : {
-      "id" : "CKVXtQ8L",
+    "AplW0lvu" : {
+      "id" : "AplW0lvu",
       "component" : "Join",
       "metadata" : {
         "label" : "order_customer_details",
@@ -495,7 +142,7 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "nQzVMPCZ",
+          "id" : "OvTwZhcu",
           "slug" : "orders",
           "schema" : {
             "type" : "struct",
@@ -557,7 +204,7 @@
           },
           "isStreaming" : false
         }, {
-          "id" : "WWE28pIz",
+          "id" : "v86CsjEB",
           "slug" : "customers",
           "schema" : {
             "type" : "struct",
@@ -638,7 +285,7 @@
           "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "hpPXuDPk",
+          "id" : "YVsI6UFz",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -769,12 +416,146 @@
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
-    "kVAd6JjB" : {
-      "id" : "kVAd6JjB",
+    "Pa2ABKjG" : {
+      "id" : "Pa2ABKjG",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "customers",
+        "slug" : "customers",
+        "x" : 20,
+        "y" : 220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "tY5P8jPQ",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/customers"
+      }
+    },
+    "nBade420" : {
+      "id" : "nBade420",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "customer_sales_summary",
+        "slug" : "customer_sales_summary",
+        "x" : 780,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "zpbPlc5H",
+          "slug" : "sales_summary_by_customer",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "full_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "company_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SUM_SALES_AMOUNT",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "Q8qdR14l",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "FULL_NAME",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "full_name"
+          },
+          "description" : ""
+        }, {
+          "target" : "COMPANY_NAME",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "company_name"
+          },
+          "description" : ""
+        }, {
+          "target" : "TOTAL_SALES",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "ROUND(SUM_SALES_AMOUNT, 2)"
+          },
+          "description" : ""
+        }, {
+          "target" : "ORDER_COUNT",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "ORDER_COUNT"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.44&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "iXvtQ7He" : {
+      "id" : "iXvtQ7He",
       "component" : "OrderBy",
       "metadata" : {
-        "label" : "total_sales_ordered",
-        "slug" : "total_sales_ordered",
+        "label" : "total_sales_desc",
+        "slug" : "total_sales_desc",
         "x" : 980,
         "y" : 120,
         "phase" : 0,
@@ -784,8 +565,8 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "N8W6ZGU1",
-          "slug" : "sales_summary",
+          "id" : "QYCqILvf",
+          "slug" : "customer_sales_summary",
           "schema" : {
             "type" : "struct",
             "fields" : [ {
@@ -829,7 +610,7 @@
           "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "X9CzIUsM",
+          "id" : "Dallwe8m",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -851,23 +632,67 @@
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
-    "kTEVsTYJ" : {
-      "id" : "kTEVsTYJ",
-      "component" : "Source",
+    "fu4I6sld" : {
+      "id" : "fu4I6sld",
+      "component" : "Limit",
       "metadata" : {
-        "label" : "customers",
-        "slug" : "customers",
-        "x" : 20,
-        "y" : 220,
+        "label" : "limited_results",
+        "slug" : "limited_results",
+        "x" : 1180,
+        "y" : 120,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false
       },
       "ports" : {
-        "inputs" : [ ],
+        "inputs" : [ {
+          "id" : "YWyLugCh",
+          "slug" : "total_sales_desc",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "FULL_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "COMPANY_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TOTAL_SALES",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
         "outputs" : [ {
-          "id" : "LgVYYtbQ",
+          "id" : "QIo6Njil",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -875,15 +700,19 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "datasetId" : "datasets/customers"
+        "limit" : "25"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.44&projectSubscriptionProjectId=12654&path=gems/Limit",
+        "projectName" : "ProphecySparkBasicsPython"
       }
     },
-    "JN6-QGomCLPg_mvKBRmtc$$Z0ONqLOV0Xuzrivz5nFDr" : {
-      "id" : "JN6-QGomCLPg_mvKBRmtc$$Z0ONqLOV0Xuzrivz5nFDr",
+    "ZWrCG_IjXe86i40BYAi1t$$YMc-Dx0iDDl8St27yZI9h" : {
+      "id" : "ZWrCG_IjXe86i40BYAi1t$$YMc-Dx0iDDl8St27yZI9h",
       "component" : "Reformat",
       "metadata" : {
-        "label" : "reformatted_order_customer_details",
-        "slug" : "reformatted_order_customer_details",
+        "label" : "reformatted_customer_orders",
+        "slug" : "reformatted_customer_orders",
         "x" : 380,
         "y" : 120,
         "phase" : 0,
@@ -894,7 +723,7 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "Y2XXV6_cBb-w6d0rSjMwI$$6xc_eLvM3sDEBVbgf85kM",
+          "id" : "tK4bbpp-h6AMWSoyasG4i$$8HR9qBQv2kB2WWvEaf5K1",
           "slug" : "order_customer_details",
           "schema" : {
             "type" : "struct",
@@ -1020,7 +849,7 @@
           "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "MwWU-ijbSJ7FUDmdqfOq5$$P8imskYzlsCtC5Wx44h-m",
+          "id" : "9wrKAlnyBH_pXC9ufQ9eQ$$4A6c8bt4KJrQEtCe-yc1Y",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -1064,30 +893,23 @@
             "expression" : "substring_index(substring_index(EMAIL, '@', -1), '.', 1)"
           },
           "description" : ""
-        }, {
-          "target" : "days_since_account_open",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "datediff(current_date(), to_date(ACCOUNT_OPEN_DATE))"
-          },
-          "description" : ""
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "Y2XXV6_cBb-w6d0rSjMwI$$6xc_eLvM3sDEBVbgf85kM##EMAIL", "Y2XXV6_cBb-w6d0rSjMwI$$6xc_eLvM3sDEBVbgf85kM##LAST_NAME", "Y2XXV6_cBb-w6d0rSjMwI$$6xc_eLvM3sDEBVbgf85kM##CUSTOMER_ID", "Y2XXV6_cBb-w6d0rSjMwI$$6xc_eLvM3sDEBVbgf85kM##ACCOUNT_OPEN_DATE", "Y2XXV6_cBb-w6d0rSjMwI$$6xc_eLvM3sDEBVbgf85kM##AMOUNT", "Y2XXV6_cBb-w6d0rSjMwI$$6xc_eLvM3sDEBVbgf85kM##ORDER_ID", "Y2XXV6_cBb-w6d0rSjMwI$$6xc_eLvM3sDEBVbgf85kM##FIRST_NAME" ]
+        "columnsSelector" : [ "tK4bbpp-h6AMWSoyasG4i$$8HR9qBQv2kB2WWvEaf5K1##ORDER_ID", "tK4bbpp-h6AMWSoyasG4i$$8HR9qBQv2kB2WWvEaf5K1##EMAIL", "tK4bbpp-h6AMWSoyasG4i$$8HR9qBQv2kB2WWvEaf5K1##LAST_NAME", "tK4bbpp-h6AMWSoyasG4i$$8HR9qBQv2kB2WWvEaf5K1##FIRST_NAME", "tK4bbpp-h6AMWSoyasG4i$$8HR9qBQv2kB2WWvEaf5K1##CUSTOMER_ID", "tK4bbpp-h6AMWSoyasG4i$$8HR9qBQv2kB2WWvEaf5K1##AMOUNT" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.44&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
-    "NKVRDtte" : {
-      "id" : "NKVRDtte",
-      "component" : "Limit",
+    "l66Tovez" : {
+      "id" : "l66Tovez",
+      "component" : "Aggregate",
       "metadata" : {
-        "label" : "limited_sort_results",
-        "slug" : "limited_sort_results",
-        "x" : 1180,
+        "label" : "sales_summary_by_customer",
+        "slug" : "sales_summary_by_customer",
+        "x" : 580,
         "y" : 120,
         "phase" : 0,
         "cache" : false,
@@ -1096,12 +918,21 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "vByW8TKS",
-          "slug" : "total_sales_ordered",
+          "id" : "OUgPRP0N",
+          "slug" : "reformatted_customer_orders",
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "FULL_NAME",
+              "name" : "CUSTOMER_ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the customer who placed the order.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "full_name",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
@@ -1110,27 +941,27 @@
                 "tags" : [ ]
               }
             }, {
-              "name" : "COMPANY_NAME",
-              "type" : "string",
+              "name" : "ORDER_ID",
+              "type" : "integer",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
+                "description" : "Unique identifier for each order placed by customers.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "TOTAL_SALES",
+              "name" : "SALES_AMOUNT",
               "type" : "double",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
+                "description" : "Total monetary value of the order; Represents the cost associated with the order.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "ORDER_COUNT",
-              "type" : "long",
-              "nullable" : false,
+              "name" : "company_name",
+              "type" : "string",
+              "nullable" : true,
               "metadata" : {
                 "description" : "",
                 "mappings" : [ ],
@@ -1141,7 +972,7 @@
           "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "qQW95hun",
+          "id" : "yMISfU6t",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -1149,11 +980,74 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "limit" : "25"
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ {
+          "target" : "SUM_SALES_AMOUNT",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "SUM(SALES_AMOUNT)"
+          },
+          "description" : ""
+        }, {
+          "target" : "ORDER_COUNT",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "COUNT(ORDER_ID)"
+          },
+          "description" : ""
+        } ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ ],
+        "groupBy" : [ {
+          "target" : "full_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "full_name"
+          },
+          "description" : ""
+        }, {
+          "target" : "company_name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "company_name"
+          },
+          "description" : ""
+        } ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.44&projectSubscriptionProjectId=12654&path=gems/Limit",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.44&projectSubscriptionProjectId=12654&path=gems/Aggregate",
         "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "qHeEU5U0" : {
+      "id" : "qHeEU5U0",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "orders",
+        "slug" : "orders",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "pHlOkskO",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/orders"
       }
     }
   },

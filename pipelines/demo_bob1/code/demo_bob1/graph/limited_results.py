@@ -7,5 +7,5 @@ from demo_bob1.config.ConfigStore import *
 from demo_bob1.functions import *
 
 @instrument
-def demo_sony(spark: SparkSession, limited_sort_results: DataFrame):
-    limited_sort_results.write.format("delta").mode("overwrite").saveAsTable("`bobwelshmer`.`demo_output`.`demo_sony`")
+def limited_results(spark: SparkSession, total_sales_desc: DataFrame) -> DataFrame:
+    return total_sales_desc.limit(25)

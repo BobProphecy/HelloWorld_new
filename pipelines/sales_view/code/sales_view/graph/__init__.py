@@ -1,2 +1,3 @@
 from .sales_view_raw import sales_view_raw
 from .sales_view_unity import sales_view_unity
+from .calculate_factorial import calculate_factorial

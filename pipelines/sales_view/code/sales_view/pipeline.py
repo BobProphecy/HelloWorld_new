@@ -9,6 +9,7 @@ from sales_view.graph import *
 def pipeline(spark: SparkSession) -> None:
     df_sales_view_raw = sales_view_raw(spark, Config.sales_view_raw)
     df_sales_view_unity = sales_view_unity(spark, Config.sales_view_unity)
+    df_calculate_factorial = calculate_factorial(spark, df_sales_view_unity)
 
 def main():
     spark = SparkSession.builder\
