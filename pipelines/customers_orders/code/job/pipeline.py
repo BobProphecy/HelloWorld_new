@@ -7,8 +7,8 @@ from prophecy.utils import *
 from job.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_load_customers_dataset = load_customers_dataset(spark)
     df_orders = orders(spark)
+    df_load_customers_dataset = load_customers_dataset(spark)
     df_select_customer_id = select_customer_id(spark, df_orders)
     df_distinct_customer_ids = distinct_customer_ids(spark, df_select_customer_id)
     df_join_by_customer_id = join_by_customer_id(spark, df_orders, df_load_customers_dataset)

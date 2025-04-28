@@ -6,7 +6,7 @@ schema:
     type: long
     nullable: true
     metadata:
-      description: Unique identifier for each wire transfer transaction
+      description: The unique identifier for each wire transfer transaction
       mappings: []
       tags: []
   - name: first_name
@@ -41,7 +41,7 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: The bank receiving the funds in the wire transfer
+      description: The bank receiving the wire transfer
       mappings: []
       tags: []
   - name: to_account_number
@@ -69,6 +69,6 @@ schema:
     type: double
     nullable: true
     metadata:
-      description: The total amount of money transferred in the transaction
+      description: The amount of money being transferred in the transaction
       mappings: []
       tags: []

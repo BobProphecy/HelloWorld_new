@@ -173,7 +173,7 @@
         "slug" : "orders",
         "x" : 140,
         "y" : 60,
-        "phase" : 0,
+        "phase" : -2,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false
@@ -967,7 +967,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##last_name", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##email", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##order_id", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##customer_id", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##first_name", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##amount" ]
+        "columnsSelector" : [ "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##order_id", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##email", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##last_name", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##amount", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##first_name", "BwiXyQn5TkHsvfFRzrR0n$$HqpefueRkwj7DsBHUeyZ0##customer_id" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.44&projectSubscriptionProjectId=12654&path=gems/Reformat",
