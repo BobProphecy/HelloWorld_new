@@ -150,8 +150,11 @@ pipelines:
     language: python
     createdAt: '2025-02-20 16:07:31'
     datasets:
-      inputs: []
-      outputs: []
+      inputs:
+      - datasets/customers
+      - datasets/orders
+      outputs:
+      - datasets/demo_bob429
     subgraphs: []
     dependencies: {}
   pipelines/schemachange:
@@ -678,6 +681,19 @@ datasets:
         description: ''
         author: bobw@prophecy.io
         createdAt: '2025-04-24 19:20:47'
+  datasets/demo_bob429:
+    name: demo_bob429
+    description: ''
+    author: bobw@prophecy.io
+    createdAt: '2025-04-29 16:01:50'
+    mode: batch
+    physicalDatasets:
+      Databricks-Prophecy:
+        fabricId: 9631
+        datasetType: Database
+        description: ''
+        author: bobw@prophecy.io
+        createdAt: '2025-04-29 16:01:50'
 templates: {}
 jobs:
   jobs/DBX_workflow:
