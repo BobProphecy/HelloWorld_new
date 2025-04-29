@@ -64,12 +64,11 @@ pipelines:
     dependencies: {}
   pipelines/customers_orders:
     name: customers_orders
-    description: Analyzes customer orders by integrating customer and order datasets.
-      It performs data quality checks, joins data on customer IDs, and cleans up the
-      resulting DataFrame. The pipeline aggregates sales data by customer, orders
-      it by total sales, and applies regional business rules. Finally, it counts customers
-      by region and ranks them based on customer count. The results are saved in both
-      Delta format and CSV.
+    description: Processes sales and customer data to analyze orders, aggregate sales
+      by customer, and count customers by region. It joins order and customer datasets,
+      cleans the data, and applies business rules. The results are saved in Delta
+      format and as CSV files, providing insights into sales performance and customer
+      distribution across regions.
     author: bobw@prophecy.io
     mode: batch
     artefactID: ''
